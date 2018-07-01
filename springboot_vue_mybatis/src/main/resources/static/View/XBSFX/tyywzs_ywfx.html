@@ -1,0 +1,154 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>统一业务助手子界面</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <link rel="stylesheet" type="text/css" href="../../style/tab_tytwzs.css" />
+    <link rel="stylesheet" type="text/css" href="../../style/tyywzs_home.css" />
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Script/View/TJ/TYYWLYST.js"></script>
+    <style>
+        /*@media screen and (min-width: 1550px) and (max-width:1600px) {
+            #tyyw_pie1, #tyyw_pie2, #tyyw_pie3, #xiaoer_tyywywfx1, #xiaoer_tyywywfx2, #xiaoer_tyywywfx3 {
+                zoom: 1.41;
+            }
+        }
+
+        @media screen and (min-width: 1400px) and (max-width:1440px) {
+            #tyyw_pie1, #tyyw_pie2, #tyyw_pie3, #xiaoer_tyywywfx1, #xiaoer_tyywywfx2, #xiaoer_tyywywfx3 {
+                zoom: 1.41;
+            }
+        }
+
+        @media screen and (min-width: 1300px) and (max-width:1370px) {
+            #tyyw_pie1, #tyyw_pie2, #tyyw_pie3, #xiaoer_tyywywfx1, #xiaoer_tyywywfx2, #xiaoer_tyywywfx3 {
+                zoom: 1.41;
+            }
+        }*/
+        .calendar-menu-year {
+                width: 60px !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="tyywzs_home">
+        <div id="dwDiv" class="blbb_title">
+            <div class="int">
+                <span style="line-height: 34px;">单位:</span>
+                <select id="cb_tyywywfx_dwbm" class="easyui-combotree Company" panelwidth="320px" style="height: 100%;"></select>
+            </div>
+            <!--      <div class="chek">
+                          <input id="radio" class="r-input" type="checkbox" name="calogin" checked="checked">
+                          <label for="radio" style="cursor: pointer; font-weight: normal; color: #018ab7; font-size: 14px">
+                              包含下级院</label>
+                      </div>-->
+                      
+           <!-- <div>
+                <input id="date" name="date" class="easyui-datebox Company cc" data-options="buttonText: '时间', 
+　　buttonAlign: 'left', width: 180, height: 34, panelAlign: 'right', editable: false">
+            </div>-->
+            <div id="btnSearch_tyywywfx" class="wbk cx">
+                <div class="cxan_ys">
+                </div>
+                <span style="padding: 0px 16px 0px 6px;">查询</span>
+            </div>
+            <div class="time">
+                <div class="kais">
+                    <input id="dateStart_tyywywfx" class="easyui-datebox Company cc" name="dept" />
+                </div>
+                <span style="margin-left: 10px">至</span>
+                <div class="kais">
+                    <input id="dateEnd_tyywywfx" class="easyui-datebox Company cc" name="dept" />
+                </div>
+            </div>
+            <div class="date_but">
+                <div class="day" value="1" changeatrr="今日">
+                    日</div>
+                <div class="month" value="2" changeatrr="本月" style="border-right: 1px solid #9ad0ff">
+                    月</div>
+                <div class="quarter" value="3" changeatrr="本季">
+                    季</div>
+                <div class="year date_but_click" value="4" changeatrr="本年">
+                    年</div>
+            </div>
+        </div>
+        <div class="tyywzs_home_big">
+            <div class="tyywzs_home_big_left">
+                <p class="tit">业务分类</p>
+                <div class="tyywzs_home_big_left_foot" id="ywDiv">
+                </div>
+            </div>
+            <div class="tyywzs_home_big_center">
+                <div class="tyywzs_home_big_center_top"style="cursor: pointer"  ondblclick="tyywywfxModal1Open()">
+                    <div class="tyywzs_ajrq tit">
+                        <p class="tyywzs_home_big_right_top_tit" style="margin-bottom: 0px; float: left">
+                            案件受理数（件）</p>
+                    </div>
+                    <div class="chart_con" id='tyyw_pie1'>
+                    </div>
+                </div>
+                <div class="tyywzs_home_big_center_fot">
+                    <p class="tyywzs_home_big_right_top_tit tit">
+                        案件分配数（件）</p>
+                    <div class="tyywzs_home_uldiv">
+                        <ul id="bmTabs" class="">
+                        </ul>
+                        <div class="tyywzs_home_table_div" id="ryfpajList">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tyywzs_home_big_right">
+                <div class="tyywzs_home_big_right_top" style="cursor: pointer" ondblclick="tyywywfxModal2Open()">
+                    <p class="tyywzs_home_big_right_top_tit tit">
+                        案件类别受理趋势（件）</p>
+                    <div class="chart_con" id='tyyw_pie2'>
+                    </div>
+                </div>
+                <div class="tyywzs_home_big_right_fot">
+                    <p class="tyywzs_home_big_right_top_tit tit" style="cursor: pointer" ondblclick="tyywywfxModal3Open()">
+                        送案送卷分析（件）</p>
+                    <div class="chart_con" id='tyyw_pie3'>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="tyywywfxModal1" class="easyui-window" modal="true" shadow="true" width="97%"
+            height="97%" title="案件分配数（件）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+            <div class="tit_con">
+                <div id="xiaoer_tyywywfx1" class="chart_con" style="min-width: 90%; height: 85%;width:99%">
+                </div>
+            </div>
+        </div>
+        <div id="tyywywfxModal2" class="easyui-window" modal="true" shadow="true" width="97%"
+            height="97%" title="案件类别受理趋势（件）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+            <div class="tit_con">
+                <div id="xiaoer_tyywywfx2" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;">
+                </div>
+            </div>
+        </div>
+        <div id="tyywywfxModal3" class="easyui-window" modal="true" shadow="true" width="97%"
+            height="97%" title="送案送卷分析（件）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+            <div class="tit_con">
+                <div id="xiaoer_tyywywfx3" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.tyywzs_home_title div').click(function () {
+            $('.tyywzs_home_title_sy').removeClass('tyywzs_home_title_sy');
+            $(this).addClass('tyywzs_home_title_sy');
+        });
+        $('.tyywzs_home_uldiv ul li').click(function () {
+            $('.tyywzs_home_uldiv_click').removeClass('tyywzs_home_uldiv_click');
+            $(this).addClass('tyywzs_home_uldiv_click');
+        });
+        $('.date_but div').click(function () {
+            $('.date_but_click').removeClass('date_but_click');
+            $(this).addClass('date_but_click');
+        });
+    </script>
+</body>
+</html>

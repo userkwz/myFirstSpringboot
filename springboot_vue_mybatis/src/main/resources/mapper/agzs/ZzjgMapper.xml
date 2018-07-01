@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swx.dao.ZzjgMapper">
+    <resultMap id="map" type="map"></resultMap>
+    <select id="getDwbm" parameterType="java.util.HashMap" statementType="CALLABLE" >
+        <![CDATA[
+        CALL pkg_common.proc_get_dwbm(
+                                          #{p_dwbm,mode=IN,jdbcType=VARCHAR },
+                                          #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=map,javaType=java.sql.ResultSet},
+                                          #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+
+     ]]>
+    </select>
+    <select id="getDwbmJs" parameterType="java.util.HashMap" statementType="CALLABLE" >
+        <![CDATA[
+        CALL pkg_zzjg_manage.proc_get_dwbmjs(
+                                          #{p_dwbm,mode=IN,jdbcType=VARCHAR },
+                                          #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=map,javaType=java.sql.ResultSet},
+                                          #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+
+     ]]>
+    </select>
+    <!-- 通过单位编码来获取人员信息 -->
+    <select id="getRyInfo" parameterType="java.util.HashMap" statementType="CALLABLE" >
+        <![CDATA[
+        CALL pkg_zzjg_manage.proc_get_ryinfobydwbm(#{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                                     #{p_bmbm,mode=IN,jdbcType=VARCHAR},
+                                                     #{p_jsbm,mode=IN,jdbcType=VARCHAR},
+                                                     #{p_gh,mode=IN,jdbcType=VARCHAR},
+                                                     #{p_gzzh,mode=IN,jdbcType=VARCHAR},
+                                                     #{p_xm,mode=IN,jdbcType=VARCHAR},
+                                                     #{p_pagesize,mode=IN,jdbcType=NUMERIC},
+                                                     #{p_pageindex,mode=IN,jdbcType=NUMERIC},
+                                                     #{p_count,mode=OUT,jdbcType=NUMERIC,javaType=Integer},
+                                                     #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=map,javaType=java.sql.ResultSet},
+                                                     #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+
+     ]]>
+    </select>
+    <select id="getAllGnqx" parameterType="java.util.HashMap" statementType="CALLABLE">
+        <![CDATA[
+
+                call pkg_zzjg_manage.proc_get_allgnqx(
+                                                #{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_xzdwbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_djdwbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=map,javaType=java.sql.ResultSet},
+                                               #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+        ]]>
+    </select>
+    <select id="addJsgnfp" parameterType="java.util.HashMap" statementType="CALLABLE">
+    <![CDATA[
+
+                call pkg_zzjg_manage.proc_add_jsgnfp(
+                                                #{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_bmbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_jsbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_gnbmj,mode=IN,jdbcType=VARCHAR},
+                                               #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+        ]]>
+    </select>
+    <!--单位权限分配.删除-->
+    <delete id="removeDwGnQx" parameterType="java.util.HashMap" statementType="CALLABLE">
+        <![CDATA[
+               call pkg_zzjg_manage.proc_del_dwgnqx(#{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                             #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+        ]]>
+    </delete>
+
+    <!--单位权限分配.添加-->
+    <insert id="addDwGnQx" parameterType="java.util.HashMap" statementType="CALLABLE">
+        <![CDATA[
+               call pkg_zzjg_manage.proc_add_dwgnqx(#{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                             #{p_gnbm,mode=IN,jdbcType=VARCHAR},
+                                             #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+             ]]>
+    </insert>
+    <insert id="addRygnfp" parameterType="java.util.HashMap" statementType="CALLABLE">
+        <![CDATA[
+              call pkg_zzjg_manage.proc_add_rygnfp(#{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                              #{p_gh,mode=IN,jdbcType=VARCHAR}
+                                             #{p_gnbmj,mode=IN,jdbcType=VARCHAR},
+                                             #{p_errmsg,mode=OUT,jdbcType=VARCHAR}
+
+              )
+        ]]>
+    </insert>
+    <select id="getWfpRyInfo" parameterType="java.util.HashMap" statementType="CALLABLE">
+        <![CDATA[
+
+                call pkg_zzjg_manage.proc_get_wfpryinfo(
+                                                #{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_gh,mode=IN,jdbcType=VARCHAR},
+                                               #{p_xm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_jsbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_bmbm,mode=IN,jdbcType=VARCHAR},
+                                               #{p_pagesize,mode=IN,jdbcType=NUMERIC},
+                                                 #{p_pageindex,mode=IN,jdbcType=NUMERIC},
+                                                 #{p_count,mode=OUT,jdbcType=NUMERIC,javaType=Integer},
+                                                 #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=map,javaType=java.sql.ResultSet},
+                                                 #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+        ]]>
+    </select>
+
+</mapper>

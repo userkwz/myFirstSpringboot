@@ -1,0 +1,236 @@
+.basechart
+{
+    width: 100%;
+    height: 100%;
+    padding: 14px 0;
+}
+.basechart_header
+{
+    width: 100%;
+    height: 48px;
+    line-height: 48px;
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(137,159,253,0.5);
+}
+.basechart_header span
+{
+    color: #666;
+    font-size: 14px;
+}
+.basechart_header > input
+{
+    height: 25px;
+    width: 10%;
+}
+.basechart_header > select > option
+{
+    height: 25px;
+    width: 14%;
+}
+.basechart_header > select > option:hover
+{
+    background-color: #004FA2;
+}
+.basechart_left
+{
+    width: 30%;
+    height: calc(100% - 50px);
+    margin-top: 10px;
+    float: left;
+    border-radius: 3px;
+}
+.basechart_right
+{
+    width: calc(70% - 20px);
+    height: calc(100% - 50px);
+    margin-top: 10px;
+    margin-left: 20px;
+    float: left;
+}
+.basechart_right_div2 .basechart_right-head div
+{
+    display: none;
+}
+.basechart_right_div2 .basechart_right-head
+{
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgba(255,255,255,0.6);
+}
+.basechart_left_header
+{
+    width: 100%;
+    color: #0a65b3;
+    font-size: 16px;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 10px;
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(137,159,253,0.3);
+}
+.basechart_left_header div
+{
+    height: 15px;
+    float: left;
+    margin-top: 13px;
+    margin-right: 10px;
+    border-left: 3px solid #094d77;
+}
+.basechart_left_table
+{
+    width: 100%;
+    height: calc(100% - 40px);
+    padding: 10px;
+    background: #fff;
+    overflow: auto;
+    background-color: rgba(255,255,255,0.5);
+}
+.basechart_right_div1
+{
+    width: 100%;
+    height: 140px;
+    border-radius: 3px;
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(137,159,253,0.5);
+}
+.basechart_right_div2
+{
+    width: 100%;
+    height: calc(100% - 160px);
+    margin-top: 20px;
+    border-radius: 3px;
+    padding: 10px 0 10px 0;
+    overflow: auto;
+}
+
+.basechart_right_div2 div:first-of-type div:last-of-type
+{
+    background-color: rgba(255,255,255,0.5);
+}
+.basechart_right_div2 div:last-of-type div:last-of-type
+{
+    background-color: rgba(255,255,255,0.5);
+}
+.basechart table
+{
+    width: 100%;
+    text-align: center;
+}
+.basechart table thead tr
+{
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(137,159,253,0.3);
+    height: 35px;
+    color: #23547d;
+    font-size: 14px;
+}
+.basechart table thead tr td
+{
+    line-height: 35px;
+}
+.basechart table tbody tr
+{
+    height: 35px;
+}
+.basechart table tbody tr td
+{
+    height: 35px;
+    color: #323333;
+    font-size: 14px;
+    text-align: left;
+    padding: 0 10px;
+    border: 1px dashed #062950;
+}
+.basechart_right_div2 table tbody tr td
+{
+    max-width: 260px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.basechart table tbody tr td:last-child
+{
+    border-right: 0;
+}
+/*.basechart table tbody tr:nth-of-type(odd){*/
+/*background: #E9F4F9;*/
+/*}*/
+/*.basechart table tbody tr:nth-of-type(even){*/
+/*background: #CAE7F8;*/
+/*}*/
+.basechart_right_div1_message
+{
+    width: 100%;
+    height: calc(100% - 40px);
+    padding: 10px;
+    overflow: auto;
+}
+.basechart_right_div1_message p
+{
+    font-size: 14px;
+    color: #666;
+}
+.basechart_right_div2 div
+{
+    float: left;
+}
+.basechart_right_div2_center
+{
+    width: 100px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.basechart_right_div2_center button
+{
+    display: block;
+    background: #4984B9;
+    border: 0;
+    border-radius: 3px;
+    color: #fff;
+    padding: 5px 15px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -15px;
+    margin-left: -30px;
+    cursor: pointer;
+}
+.basechart_right_div2_center button:hover
+{
+    background: #2b679e;
+}
+.checkData
+{
+    margin-top: 6px;
+    padding: 4px 10px;
+    color: #fff;
+    background: #4984B9;
+    border: 1px solid #4984B9;
+    border-radius: 3px;
+    margin-left: 15px;
+    background-size: 100% 100%;
+    margin-right: 55px;
+    cursor: pointer;
+}
+.checkData:hover
+{
+    background: url(../../images/jiaohu_03.png) no-repeat center !important;
+}
+.basechart table tbody tr:hover
+{
+    background: #F5C47C;
+}
+.basechart_header .textbox
+{
+    /*border-color: #003A6A;*/
+}
+.basechart_header .textbox-text
+{
+    background: initial !important;
+}
+.basechart_header .combo-arrow
+{
+    background-color: initial !important;
+}

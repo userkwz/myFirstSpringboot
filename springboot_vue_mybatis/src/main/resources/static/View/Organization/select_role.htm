@@ -1,0 +1,51 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <!--页面JS加载，放在头部不能正确加载-->
+    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("/Script/Organization/select_role.js");
+    </script>
+
+    <!--角色权限管理-->
+    <div style="margin:2px">
+      <!--  <a href="#" class="easyui-linkbutton" disabled="disabled">添加部门</a> 
+        <a href="#" class="easyui-linkbutton" disabled="disabled">删除部门</a> 
+        <a href="#" class="easyui-linkbutton" disabled="disabled">添加角色</a> 
+        <a id="btn_org_role_delete" href="#" class="easyui-linkbutton"> 删除角色</a>-->
+    </div>
+    <div id="div_org_role_right" class="easyui-panel" data-options="fit:'true'"
+        style="border-left:0px; border-right:0px; border-bottom:0px;">
+        <div id="pnl_org_role_info" class="easyui-panel" title="角色信息" 
+            style="width: 100%; height: 100%;padding: 10px;" data-options="closed:false,border:false">
+            <div id="div_org_role_info">
+                角色名称 <input id="txt_org_role_jsmc" class="easyui-textbox" style="width: 200px; height: 22px"/>
+                <lable style="margin-left: 10px" />
+                角色序号 <input id="txt_org_role_jsxh" class="easyui-textbox" style="width: 200px; height: 22px"/>
+                <lable style="margin-left: 10px" />
+                所属部门 <input id="txt_org_role_ssbm" class="easyui-textbox" style="width: 200px; height: 22px"/>
+            </div>
+            <div id="div_org_role_right_edit" style="margin-top: 10px">
+       <!--         <a id="btn_org_role_edit" href="#" class="easyui-linkbutton" 
+                    data-options="iconCls:'icon-edit'">编辑</a>             
+                <a id="btn_org_role_right_edit" href="#" class="easyui-linkbutton" 
+                    data-options="iconCls:'icon-add'">编辑权限</a>-->
+            </div>                
+        </div>
+    </div>
+    
+    <div id="win_org_role_right" class="easyui-window" title="设置角色权限" style="width: 760px; height: 500px;"
+        data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <div id="toolbar_org_role_right" class="easyui-toolbar" data-options="border:false" 
+            style="padding: 5px 0px 5px 8px">
+            <a id="btn_org_role_right_add" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">分配权限</a>
+        </div>
+        <div class="easyui-panel" data-options="fit:true,border:false">
+            <table id="dg_org_role_rightlist" border="0">
+            </table>
+        </div>
+    </div>
+</body>
+</html>

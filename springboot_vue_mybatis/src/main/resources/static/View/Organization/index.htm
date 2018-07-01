@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>组织机构管理</title>
+    <!--        <link href="../../Style/GlobalStyleDefine.css" rel="stylesheet" type="text/css"/>-->
+    <link href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../Script/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css"/>
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="../../Script/kindeditor-4.1.9/kindeditor.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Script/View/Organization/index.js"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+    
+    <style id="datagrid-group-style" type="text/css">
+    </style>
+    <style type="text/css">
+        body
+        {
+            font-family: 微软雅黑;
+            font-size: .9em;
+            background-color: #EAF4FD;
+            margin: 0px;
+            padding: 0px;
+            letter-spacing: 1px;
+        }
+        .datagrid-group {
+            height: 34px;
+            overflow: hidden;
+            font-weight: bold;
+            border-bottom: 1px dashed #062950;
+            line-height: 34px;
+            color: #0a66b3;
+            font-size: 16px;
+        }
+        #photo_dj > div
+        {
+            border: 1px solid #3399FF;
+            background-color: #F3F3F3;
+            margin: 5px 5px 5px 45px;
+            padding: 2px;
+            text-align: center;
+        }
+        #photo_dj > div > input
+        {
+            margin: 3px;
+        }
+        #zzjgMainLayWest{
+            background: transparent !important;
+            color: #027eaa;
+        }
+        #zzjgBMTool {
+            background: rgba(255,255,255,.3) !important;
+        }
+         #ZzjgDwqxInfo>.panel 
+        {
+            width:1557px !important;
+            height:907px !important;
+         }
+        .panel-header {
+            background: rgba(255,255,255,.6) !important;
+        }
+        #zzjgMainLay .panel-title {
+            color: #0a65b1;
+        }
+        .datagrid-toolbar {
+            background: rgba(255,255,255,.3) !important;
+        }
+        #panelMainRy {
+            background: rgba(255,255,255,.3) !important;
+        }
+        #zzjgMainLayWest {
+            background: rgba(255,255,255,.3) !important;
+        }
+        #zzjgMainLay .panel-header .panel-title {
+            line-height: 29px !important;
+            font-size: 16px;
+            color: #0966af;
+            padding: 0px 0px 0px 30px;
+            height: 30px;
+            font-weight: lighter;
+        }
+
+        .panel-tool a {
+            width: 17px !important;
+        }
+     
+    </style>
+</head>
+<body>
+    <div id="zzjgMainLay" class="easyui-layout" data-options="fit:'true'">
+        <div id="zzjgMainLayWest" data-options="region:'west',title:'组织机构',border:false" style="width: 200px; padding: 10px;">
+            <ul id="dWBmJs">
+            </ul>
+        </div>
+        <div data-options="region:'center',border:false" style="width: 100%; padding: 1px;">
+            <div id="zzjgBMTool" class="easyui-panel" style="padding: 3px 0px 3px 6px; margin-bottom: 1px;width:100%">
+                <div class="int" style="width: 19%;margin: 5px 20px 10px 0px">
+                    <span style="line-height: 34px;font-size: 16px">单位：</span>
+                    <input id="dwbm_zzjg" class="easyui-combotree Company" style="height: 100%;" />
+                </div>
+                <div id="btn_ZZJG_FPQXGXJY" class="wbk" style="float: right;margin: 5px 0px 10px 0px" data-options="iconCls:'icon-mail'">
+                    <!--<div class="cxan_ys"></div>-->
+                    <span style="padding: 0px 16px 0px 6px;line-height: 34px">分配权限给下级院</span>
+                </div>
+                <!--单位:<input id="dwbm_zzjg" class="easyui-combotree" style="width: 150px" />-->
+                <div id="btn_ZZJG_JSQX" class="wbk" style="float: right;margin: 5px 20px 10px 0px;display: none" data-options="iconCls:'icon-mail'">
+                    <!--<div class="cxan_ys"></div>-->
+                    <span style="padding: 0px 16px 0px 6px;line-height: 34px">角色权限</span>
+                </div>
+                <!--<a id="btnJSQX" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">角色权限</a>-->
+                <!--<a id="btnFPQXGXJY" class="easyui-linkbutton" data-options="iconCls:'icon-ok'">分配权限给下级院</a>-->
+            </div>
+            <div id="pRYInfo" class="easyui-panel" title="人员信息" data-options="fit:'true'">
+                <div id="divRyReseach" class="easyui-toolbar" data-options="border:false,fit:'true'" style="padding: 5px 0px 5px 8px;height: 46px;border: none;width:100%">
+                    <div class="time" style="margin: 0px 20px 10px 0px;">
+                        <span style="color: #018ab7">姓名： </span>
+                        <div class="kais" style="width: 160px">
+                            <input id="xm" class="easyui-textbox Company cc" name="dept" />
+                        </div>
+                    </div>
+                    <div class="time" style="margin: 0px 20px 10px 0px;">
+                        <span style="color: #018ab7">工号： </span>
+                        <div class="kais" style="width: 160px">
+                            <input id="gh" class="easyui-textbox Company cc" name="dept" />
+                        </div>
+                    </div>
+                    <div class="time" style="margin: 0px 20px 10px 0px;">
+                        <span style="color: #018ab7">工作证号： </span>
+                        <div class="kais" style="width: 160px">
+                            <input id="gzzh" class="easyui-textbox Company cc" name="dept" />
+                        </div>
+                    </div>
+                    <div id="btnMainSearchRys" class="wbk cx" style="float: right;margin: 0px 20px 10px 0px" data-options="iconCls:'icon-search'" onclick="RegistEvent_MainRy();">
+                        <div class="cxan_ys"></div>
+                        <span style="padding: 0px 16px 0px 6px">查询</span>
+                    </div>
+                    <!--姓名：<input id="xm" class="easyui-textbox" style="width: 200px" />-->
+                    <!--&nbsp; -->
+                    <!--工号：<input id="gh" class="easyui-textbox" style="width: 90px" />-->
+                    <!--&nbsp;-->
+                    <!--工作证号：<input id="gzzh"-->
+                    <!--class="easyui-textbox" style="width: 90px" />-->
+                    <!--<label style="margin-left: 10px">-->
+                    <!--</label>-->
+                    <!--占位标签-->
+                    <!--<a id="btnMainSearchRy" class="easyui-linkbutton" data-options="iconCls:'icon-search'">-->
+                    <!--查询</a>-->
+                    <!--<a id="btnMainAddRy" class="easyui-linkbutton" data-options="iconCls:'icon-add'">
+            添加人员</a>-->
+                </div>
+                <div id="panelMainRy" class="easyui-panel" data-options="fit:true,border:false">
+                    <table id="gridMainRyList" border="0"></table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="winZzjgRyInfo" class="easyui-window" title="选择人员信息" style="width: 850px;
+        height: 590px;" data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <div id="divSelectRyTool" class="easyui-toolbar" data-options="border:false" style="padding: 5px 0px 5px 8px">
+            <!--单位:<input id="winRyDw" class="easyui-combotree" style="width:150px"/>-->
+            姓名：<input id="winRyXm" class="easyui-textbox" style="width: 150px" />&nbsp; 工号：<input
+                id="winRyGh" class="easyui-textbox" style="width: 90px" />
+            <label style="margin-left: 5px">
+            </label>
+            <!--占位标签-->
+            <a id="btnSelectRySearch" class="easyui-linkbutton" data-options="iconCls:'icon-search'">
+                查询</a> <a id="btnSelectRyAdd" class="easyui-linkbutton" data-options="iconCls:'icon-add'">
+                    添加</a>
+        </div>
+        <div id="panelSelectRy" class="easyui-panel" data-options="fit:true,border:false">
+            <table id="gridSelectRyList" border="0">
+            </table>
+        </div>
+    </div>
+    <div id="winZzjgJSQX" class="easyui-window" title="设置角色权限" style="width: 97%; height: 97%;"
+        data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <div id="divJSQXTool" class="easyui-toolbar" data-options="border:false" style="padding: 5px 0px 5px 8px;width: 100%;float: left">
+            <a id="btnJSQXAdd" onclick="jsqxfp()" style="float: left" class="wbk" >分配权限</a>
+        </div>
+        <div id="panelJSQX" class="easyui-panel" data-options="fit:true,border:false">
+            <table id="gridJSQXList" border="0" data-options="fit:true">
+            </table>
+        </div>
+    </div>
+    <div id="winZzjgRYQX" class="easyui-window" title="设置人员权限" style="width: 97%; height: 97%;"
+        data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <div id="divRYQXTool" class="easyui-toolbar" data-options="border:false" style="padding: 5px 0px 5px 8px;width: 100%;float: left">
+            <a id="btnRYQXAdd" onclick="ryqxfp()" style="float: left; color: #fff; padding:5px 12px;"  class="wbk cx" >分配权限</a>
+        </div>
+        <div id="panelRYQX" class="easyui-panel" data-options="fit:true,border:false">
+            <table id="gridRYQXList" border="0" data-options="fit:true">
+            </table>
+        </div>
+    </div>
+    <div id="winZzjgXJYQX" class="easyui-window" title="分配权限给下级院" style="width: 97%;
+        height: 97%;" data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <div class="easyui-layout" data-options="fit:'true'">
+            <div id="ZzjgDwMainLayWest" data-options="region:'west',split:false,title:'单位',border:true"
+                style="width: 340px; padding: 10px;">
+                <ul id="ZzjgDwTree" class="easyui-tree">
+                </ul>
+            </div>
+            <div data-options="region:'center',border:false" style="width: 100%; padding: 1px;">
+                <div id="ZzjgDwqxInfo" class="easyui-panel" title="模块信息" style="width: 100%; height: 100%;"
+                    data-options="fit:true,border:false">
+                    <div id="divDwqxfpTool" class="easyui-toolbar" data-options="border:false,fitColumns:true" style="padding: 5px 0px 5px 8px;float: left;width: 100%">
+                        <!--占位标签-->
+                        <!--<a id="btnDwqxfp" class="easyui-linkbutton" data-options="iconCls:'icon-add'">分配</a>-->
+                        <div id="btnDwqxfp" onclick="dwqxfp()" class="wbk" data-options="iconCls:'icon-add'" style=";padding: 0 22px 0px 22px;font-size: 14px;float: left">
+                            <span>分配</span>
+                        </div>
+                    </div>
+                    <table id="dgZzjgDwqxInfo" border="0">
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--功能授权的窗体-->
+    <div id="win_org_gnryqx">
+        <div id="org_gn_bm" style="display: none;">
+        </div>
+        <div id="org_ry_gh" style="display: none;">
+        </div>
+        <!--保存权限编辑器的类型1：角色2：人员-->
+        <input id="org_editType" style="display: none" />
+        <input id="org_bmbm" style="display: none" />
+        <input id="org_jsbm" style="display: none" />
+        <div id="panel_org_right" class="easyui-panel" style="width: 100%; height: 100%;">
+        </div>
+    </div>
+</body>
+</html>

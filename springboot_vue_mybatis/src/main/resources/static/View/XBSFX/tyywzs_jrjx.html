@@ -1,0 +1,105 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/txl_common.css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/jrjx_home.css" />
+    <script type="text/javascript" src="../../Script/View/TJ/JRJX.js"></script>
+</head>
+<body>
+<div class="data_home">
+    <!--<div class="blbb_title">
+        <div class="int">
+            <span style="line-height: 34px;">单位:</span>
+            <input id="cboDWBM" class="easyui-combotree Company combotree-f combo-f textbox-f" style="height: 100%; display: none;"><span class="textbox easyui-fluid combo" style="width: 156px; height: 34px;"><span class="textbox-addon textbox-addon-right" style="right: 0px;"><a href="javascript:void(0)" class="textbox-icon combo-arrow" icon-index="0" tabindex="-1" style="width: 18px; height: 29px;"></a></span><input type="text" class="textbox-text validatebox-text" autocomplete="off" readonly="readonly" placeholder="" style="margin-left: 0px; margin-right: 18px; padding-top: 4px; padding-bottom: 4px; width: 136px;"><input type="hidden" class="textbox-value" name="" value="370000"></span>
+        </div>
+        <div class="chek">
+            <input id="ckbDWBM" class="r-input" type="checkbox" name="calogin" on-click="{this.loginSwich(2)}" checked="true">
+            <label for="ckbDWBM" style="cursor: pointer;font-weight: normal;color: #018ab7;font-size: 14px">包含下级院</label>
+        </div>
+    </div>-->
+    <div class="data_home_con">
+        <ul>
+            <li>
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(0,0,5,0,'各院案管受理数（件）')">
+                    <p>各院案管受理数（件）</p>
+                    <span id="pan_agsls">0</span>
+                </div>
+            </li>
+            <li class="li_center">
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(4,3,0,0,'今日超期案件数（件）')">
+                    <p>今日超期案件数（件）</p>
+                    <span id="pan_cqajs">0</span>
+                </div>
+            </li>
+            <li>
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(1,2,6,0,'接收卷宗册数（卷）')">
+                    <p>接收卷宗册数（卷）</p>
+                    <span id="pan_jsjzcs">0</span>
+                </div>
+            </li>
+            <!-- <li>
+                     <div class="icon_tab"></div>
+                     <div class="num" onclick="onClickAJXX(2,0,7,0,'流程监控口头提示数（件）')">
+                         <p>流程监控口头提示数（件）</p>
+                         <span id="pan_kttss">0</span>
+                     </div>
+                 </li>-->
+            <li>
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(9,0,8,0,'未办结案件（件）')">
+                    <p>未办结案件（件）</p>
+                    <span id="pan_wbjaj">0</span>
+                </div>
+            </li>
+             <li class="li_center">
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(10,0,8,0,'已办结流程未结束（件）')">
+                    <p>已办结流程未结束（件）</p>
+                    <span id="pan_ybjlcwjs">0</span>
+                </div>
+            </li>
+            <li>
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(5,4,9,0,'辩护与代理受理数（件）')">
+                    <p>辩护与代理受理数（件）</p>
+                    <span id="pan_smtzs">0</span>
+                </div>
+            </li>
+           <!-- <li>
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(3,0,8,0,'流程监控书面通知数（件）')">
+                    <p>流程监控书面通知数（件）</p>
+                    <span id="pan_smtzs">0</span>
+                </div>
+            </li>-->
+            <li>
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(6,0,10,0,'领导干部办案数据统计（件）')">
+                    <p>领导干部办案数据统计（件）</p>
+                    <span id="pan_ldgbbas">0</span>
+                </div>
+            </li>
+            <li  class="li_center">
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(7,0,0,0,'案件公开数（件）')">
+                    <p>案件公开数（件）</p>
+                    <span id="pan_ajgks">0</span>
+                </div>
+            </li>
+            <li>
+                <div class="icon_tab"></div>
+                <div class="num" onclick="onClickAJXX(8,0,0,0,'文书公开数（件）')">
+                    <p>文书公开数（件）</p>
+                    <span id="pan_wsgks">0</span>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

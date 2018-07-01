@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>案件信息公开数据导入导出内网的情况</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../Script/View/AJXXGK/ajxxgk3.js"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+</head>
+<body style="height: 100%; padding: 10px;">
+    <div class="blbb_home">
+        <div class="glbb_big">
+            <div class="blbb_title">
+                <div class="int">
+                    <span style="line-height: 34px;">单位：</span>
+                    <select id="cboDWBM" class="easyui-combotree Company" style="height: 100%;" panelwidth="320px"></select>
+                </div>
+                <div class="time">
+                    <span>导出时间： </span>
+                    <div class="kais">
+                        <input id="dateStart_ajxxgkdg3" class="easyui-datebox Company cc" name="dept" />
+                    </div>
+                    <span style="margin-left: 10px">至</span>
+                    <div class="kais">
+                        <input id="dateEnd_ajxxgkdg3" class="easyui-datebox Company cc" name="dept" />
+                    </div>
+                </div>
+                <div id="btn_ajxxgk3_Search" class="wbk" style="float: left;margin-left: 20px">
+                    <div class="cxan_ys"></div>
+                    <span style="padding: 0px 16px 0px 6px">查询</span>
+                </div>
+                <div id="btn_ajxxgk3_Export" class="wbk" style="margin-right: 15px">
+                    <span>导出Excel</span>
+                </div>
+            </div>
+            <div data-options="region:'center'" class="easy_tabel">
+                <table id="dg_ajxxgk3" data-options="singleSelect:true"></table>
+            </div>
+        </div>
+        <div class="easy_model">
+            <div class="easy_model_kuang" style="width: 350px;height: 230px">
+                <div class="easy_model_kuang_top">
+                    <div class="easy_model_kuang_top_title">
+                        <span style="text-align: center;margin-top: -6px;margin-left: 30px">请选择类型</span>
+                        <span class="easy_model_gb"></span>
+                    </div>
+                    <div class="easy_model_iput">
+                        <intput id="dclb" class="easyui-combobox Company cc" style="width: 100%;" />
+                    </div>
+                </div>
+                <div class="easy_model_kuang_fot">
+                    <span class="easy_model_kuang_fot_btqd">确定</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

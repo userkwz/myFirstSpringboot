@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--基础表配置-->
+  <GcInfo>
+    <!--案卡项目分隔符-->
+    <Card>
+      <CardName>CARD0</CardName>
+      <TITLE>案件详情</TITLE>
+      <OutTab>
+        <OutTabName>CARDD0</OutTabName>
+        <TITLE>案件详情</TITLE>
+        <OtherTab>
+          <!--Tab页-->
+          <TabItem Title="案件超期记录" SFFY="TRUE">
+            <TableItem Name="YX_YJ_AJCQJL">
+              <FieldItem BM="KSCQRQ" XSMC ="开始超期日期"  COLS="1"  TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <TabItem Title="变更承办人" SFFY="TRUE">
+            <TableItem Name="YX_AG_BGCBRJL">
+              <FieldItem BM="BGRQ" XSMC ="变更日期"  COLS="1"  TYPE="date"/>
+              <FieldItem BM="BGYY" XSMC ="变更原因"  COLS="1"  TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <TabItem Title="送案日志" SFFY="TRUE">
+            <TableItem Name="YX_AG_SARZ">
+              <FieldItem BM="SASHR" XSMC ="送案审核人"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SASHRQ" XSMC ="送案审核日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="SJSARQ" XSMC ="实际送案日期"  COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <TabItem Title="受理日期修改记录" SFFY="TRUE">
+            <TableItem Name="YX_AG_SLRQXGJL">
+              <FieldItem BM="XGSJ" XSMC ="修改时间"  COLS="1" TYPE="text"/>
+              <FieldItem BM="YSLRQ" XSMC ="原受理日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="XSLRQ" XSMC ="新受理日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="XGYY" XSMC ="修改原因"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SPRYJ" XSMC ="审批人意见"  COLS="1" TYPE="date"/>
+              <FieldItem BM="SFSPTG" XSMC ="是否审批通过"  COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+        </OtherTab>
+      </OutTab> 
+    </Card>
+    <Card>
+      <CardName>CARD1</CardName>
+      <TITLE>辩护代理信息</TITLE>
+      <OutTab>
+        <OutTabName>CARDD1</OutTabName>
+        <TITLE>辩护代理信息</TITLE>
+        <OtherTab>
+          <!--Tab页-->
+          <TabItem Title="辩护代理信息登记" SFFY="TRUE">
+            <TableItem Name="YX_AG_BHDLDJ">
+              <FieldItem BM="FZXYRBH" XSMC ="犯罪嫌疑人编号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SQRXM" XSMC ="申请人姓名"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SQRLX" XSMC ="申请人类型"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SQRSF" XSMC ="申请人身份"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SQRQ" XSMC ="申请日期"  COLS="1"  TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <TabItem Title="辩护与代理情况" SFFY="TRUE">
+            <TableItem Name="YX_AG_BHYDLQK">
+              <FieldItem BM="CJSJ" XSMC ="创建时间"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZHXGSJ" XSMC ="最后修改时间"  COLS="1" TYPE="date"/>
+              <FieldItem BM="TQBHRDYJRQ" XSMC ="听取辩护人等意见日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="LSHJSQBLRQ" XSMC ="律师会见申请的办理日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="LSHJSQBLQK_MC" XSMC ="律师会见申请的办理情况"  COLS="1" TYPE="date"/>
+              <FieldItem BM="ZJCLSJDQSQBLRQ" XSMC ="证据材料收集调取申请的办理日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="ZJCLSJDQSQBLQK_MC" XSMC ="证据材料收集调取申请的办理情况"  COLS="1" TYPE="date"/>
+              <FieldItem BM="FLYZBLRQ" XSMC ="法律援助办理日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="FLYZBLQK_MC" XSMC ="法律援助办理情况"  COLS="1" TYPE="date"/>
+              <FieldItem BM="CYZCFZSQBLRQ" XSMC ="查阅、摘抄、复制、申请办理日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="CYZCFZSQBLQK_MC" XSMC ="查阅、摘抄、复制、申请办理情况"  COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+        </OtherTab>
+      </OutTab>
+    </Card>
+    <Card>
+      <CardName>CARD2</CardName>
+      <TITLE>涉案款物信息</TITLE>
+      <OutTab>
+        <OutTabName>CARDD2</OutTabName>
+        <TITLE>涉案款物信息</TITLE>
+        <OtherTab>
+          <!--Tab页-->
+          <TabItem Title="涉案款物登记" SFFY="TRUE">
+            <TableItem Name="YX_AG_SAKWDJ">
+              <FieldItem BM="YWBM" XSMC ="业务类别"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SAKWMC" XSMC ="涉案款物名称"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SAKWLB" XSMC ="类别"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="DW" XSMC ="单位"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SL" XSMC ="数量"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="JZ" XSMC ="价值"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SL_KC" XSMC ="库存数量"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="JZ_KC" XSMC ="库存价值"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="BZ" XSMC ="币种"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="RKJSR" XSMC ="入库接收人"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="RKSJ" XSMC ="入库时间"  COLS="1"  TYPE="date"/>
+              <FieldItem BM="JZ_DW" XSMC ="价值单位"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SAKWLY" XSMC ="涉案款物来源"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="CSLB" XSMC ="措施类别"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="KYRQ" XSMC ="扣押日期"  COLS="1"  TYPE="date"/>
+              <FieldItem BM="CLSL" XSMC ="承办人给出处理意见时，所处理财物的具体条目和数量"  COLS="1"  TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <TabItem Title="涉案款物处理意见" SFFY="TRUE">
+            <TableItem Name="YX_AG_SAKWCLYJ">
+              <FieldItem BM="CJSJ" XSMC ="创建时间"  COLS="1" TYPE="date"/>
+              <FieldItem BM="ZHXGSJ" XSMC ="最后修改时间"  COLS="1" TYPE="date"/>
+              <FieldItem BM="CBR" XSMC ="承办人"  COLS="1" TYPE="text"/>
+              <FieldItem BM="CBBM_MC" XSMC ="承办部门"  COLS="1" TYPE="text"/>
+              <FieldItem BM="CBDW_MC" XSMC ="承办单位"  COLS="1" TYPE="text"/>
+              <FieldItem BM="CBRYJ" XSMC ="承办人意见"  COLS="1" TYPE="text"/>
+              <FieldItem BM="XH" XSMC ="财物序号"  COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+        </OtherTab>
+      </OutTab>
+    </Card>
+    <Card>
+      <CardName>CARD3</CardName>
+      <TITLE>案件公开信息</TITLE>
+      <OutTab>
+        <OutTabName>CARDD3</OutTabName>
+        <TITLE>案件公开信息</TITLE>
+        <OtherTab>
+          <!--Tab页-->
+          <TabItem Title="案件公开日志表" SFFY="TRUE">
+            <TableItem Name="YX_JWGK_AJGKRZ">
+              <FieldItem BM="ZHXGSJ" XSMC ="最后修改时间"  COLS="1" TYPE="text"/>
+              <FieldItem BM="GKZT" XSMC ="是否公开"  COLS="1"  TYPE="text" JGZH="0:审批中,1:公开,2:不公开"/>
+              <FieldItem BM="XGLX" XSMC ="修改类型"  COLS="1"  TYPE="text" JGZH="1:自动修改,2:手动修改"/>
+            </TableItem>
+          </TabItem>
+          <TabItem Title="文书公开日志表" SFFY="TRUE">
+            <TableItem Name="YX_JWGK_WSGKRZ">
+              <FieldItem BM="CJSJ" XSMC ="创建时间"  COLS="1" TYPE="date"/>
+              <FieldItem BM="ZHXGSJ" XSMC ="最后修改时间"  COLS="1" TYPE="date"/>
+              <FieldItem BM="GKSJ" XSMC ="公开时间"  COLS="1" TYPE="text"/>
+              <FieldItem BM="GKZT" XSMC ="公开状态"  COLS="1" TYPE="text"  />
+            </TableItem>
+          </TabItem>
+        </OtherTab>
+      </OutTab>
+    </Card>
+  </GcInfo>
+</Root>

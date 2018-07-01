@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>小博士分析容器</title>
+		<link rel="stylesheet" type="text/css" href="../../Style/common.css"/>
+		<link rel="stylesheet" type="text/css" href="../../Style/tabs.css"/>
+		<script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.min.js"></script>		
+	</head>
+	<body>
+		<div class="tabs">
+			<ul class="tab">
+				<li class="tab_click" id='home'>首页</li>
+				<li class="tab_menu">
+					<div class="menu_con">
+						<p>全部关闭</p>
+					</div>
+				</li>
+			</ul>
+			<div class="tab_con"></div>
+		</div>
+		<script type="text/javascript">
+		    $('#home').click(function() {
+		        $.ajax({
+		            url: "View/GLBB/glbb_home.html",
+		            cache: false,
+		            success: function(html) {
+		                $(".tab_con").html(html);
+		            }
+		        });
+		    });
+		    $('#tyywzs').click(function () {
+		        $.ajax({
+		            url: "View/xbsfx/tab_tyywzs.html",
+		            cache: false,
+		            dataType: 'html',
+		            success: function (html) {
+		                $(".tab_con").html(html);
+		            }
+		        });
+		    });
+		    $('#home').click();
+		</script>
+	</body>
+</html>

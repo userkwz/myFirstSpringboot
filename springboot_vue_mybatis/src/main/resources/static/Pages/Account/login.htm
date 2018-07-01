@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+ <title>单文编码获取测试</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="/Style/Login/login.css"/>
+<link rel="stylesheet" type="text/css" href="/Style/Login/base.css"/>
+<script src="../../Script/jquery1.9.0.min.js" type="text/javascript" ></script>
+<link href="/Script/jquery-easyui-1.4.3/themes/bootstrap/easyui.css" rel="stylesheet" type="text/css" />
+<script src="/Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+<script src="/Script/Extend.js" type="text/javascript"></script>
+<script src="/Script/Account/login.js" type="text/javascript"></script>
+<script src="/Script/bootstrap.min.js" type="text/javascript"></script>
+<script src="/Script/jquery.timer.js" type="text/javascript"></script>
+<style type="text/css">
+#footer{z-index:999; position:fixed; bottom:0; left:0; width:100%; _position:absolute;
+ _top: expression_r(documentElement.scrollTop + documentElement.clientHeight-this.offsetHeight); overflow:visible; }
+
+.textbox .textbox-text 
+{
+    font-size:14px;
+    margin-top:0px;
+}
+
+</style>
+</head>
+
+<body>
+<div class="top">
+    <div class="tf-logo"></div>
+</div>
+<div class="cont">
+    <div class="warp ma pl-115 pr-115">
+        <div class="cont">
+            <div class="form-row mb-15">
+               <select id="txtUnit" class="easyui-combotree" style="width:285px; height:35px;"></select>
+            </div>
+<!--            <div class="form-row mb-15">
+                <input id="txtUserName" type="text"  placeholder="请输入用户名" class="login_input login_user" />
+            </div>
+            <div class="form-row mb-20">
+                <input id="txtPassword" type="password"  placeholder="请输入密码" class="login_input login_password" />
+            </div>-->
+          <!--  <div class="btn-row">
+                <input id="btnLogin" name="" type="button"  value="登&nbsp;&nbsp;录"  class="login-btn" onclick="login()"/>
+            </div>-->
+    </div>
+</div>
+</div>
+<div class="warp ma footer" id="footer">
+    <p class="copyright">Copryright © 2016-2017 同方赛威讯信息技术有限公司</p>
+</div>
+</body>
+<script type="text/javascript">
+    $(function () {
+        $('.login-select').click(function () {
+            $('.form-row ul').show();
+            event.cancelBubble = true;
+        })
+        $('#d').click(function () {
+            $('.form-row ul').toggle();
+            event.cancelBubble = true;
+        })
+        $('body').click(function () {
+            $('.form-row ul').hide();
+        })
+        $('.form-row li').click(function () {
+            var v = $(this).text();
+            $('.login-select').val(v);
+            $('.form-row ul').hide();
+        })
+    })
+</script>
+</html>

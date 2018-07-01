@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>案件公开分析助手</title>
+    <!--<link rel="stylesheet" type="text/css" href="css/common.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <!--<link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.3/themes/default/easyui.css">
+		<link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.3/themes/icon.css">-->
+    <link rel="stylesheet" type="text/css" href="../../Style/tab_tytwzs.css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/tab_ajgkfx.css" />
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"
+            charset="utf-8"></script>
+            <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+    <script type="text/javascript" src="../../Script/View/AJXXGK/ajxxgk.js"></script>
+    <style>
+        @media screen and (min-width: 1550px) and (max-width:1600px) {
+            .chart_con > p > span {
+                zoom: 0.7;
+            }
+        }
+
+        @media screen and (min-width: 1400px) and (max-width:1440px) {
+            .chart_con > p > span {
+                zoom: 0.7;
+            }
+        }
+
+        @media screen and (min-width: 1300px) and (max-width:1370px) {
+            .chart_con > p > span {
+                zoom: 0.7;
+            }
+        }
+        .ajcxxx_hover {
+            width: 310px !important;
+            height: 350px !important;
+        }
+        @media screen and (min-width: 1300px) and (max-width:1370px) {
+            .ajcxxx_hover {
+                top: 62px;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    <div class="tab_tyywzs">
+        <div class="blbb_title" style="margin-top:0px">
+            <div class="int">
+                <span style="line-height: 34px;">单位:</span>
+                <select id="cboDWBM" class="easyui-combotree Company" panelwidth="320px" value="122" style="height: 100%;"></select>
+            </div>
+            <div class="chek">
+                <input id="ckbDWBM" class="r-input" type="checkbox" name="calogin" on-click="{this.loginSwich(2)}"
+                    checked="true">
+                <label for="ckbDWBM" style="cursor: pointer; font-weight: normal; color: #018ab7;
+                    font-size: 14px">
+                    包含下级院</label>
+            </div>
+                    <div id="btn_ajgkfx_Search" class="wbk cx" style="margin-left: 20px">
+                        <div class="cxan_ys"></div>
+                        <span style="padding: 0px 16px 0px 6px">查询</span>
+                    </div>
+            <!--<div class="time">
+                <span>受理日期</span>
+                <div class="kais">
+                    <input id="dateStart_ajgkfx" class="easyui-datebox Company cc" name="dept" />
+                </div>
+                <span style="margin-left: 10px">至</span>
+                <div class="kais">
+                    <input id="dateEnd_ajgkfx" class="easyui-datebox Company cc" name="dept" />
+                </div>
+            </div>-->
+            <div class="time">
+                    <span id="">受理日期： </span>
+                    <div class="kais">
+                        <input id="cmbYearS" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                    </div>
+                    <div class="kais">
+                        <input id="cmbMonthS" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'"/>
+                    </div>
+                    <span style="margin-left: 10px">至</span>
+                    <div class="kais">
+                        <input id="cmbYearE" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                    </div>
+                    <div class="kais">
+                        <input id="cmbMonthE" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                    </div>
+              </div>
+        </div>
+        <div class="tyywzs_map">
+            <div class="map_top">
+                <div>
+                    <ul>
+                        <li class="div_ajs" style="position: relative;">
+                            <p>
+                                程序性信息(件)</p>
+                            <span class="div_yzzajs" id="div_ajcxxxx"></span>
+                            <p>
+                            </p>
+                            <div id="span_v1" class="openMessage ajcxxx_hover" style="height: 120px">
+                            </div>
+                        </li>
+                        <li class="div_ajs" style="position: relative;">
+                            <p>
+                                应公开法律文书(份)</p>
+                            <span class="div_yzzajs" id="div_flwsgk"></span>
+                            <p>
+                            </p>
+                            <div id="gk_wslb" class="openMessage ajcxxx_hover" style="height: 120px">
+                            </div>
+                        </li>
+                        <li class="div_ajs" style="position: relative;">
+                            <p>
+                                已公开法律文书(份)</p>
+                            <span class="div_yzzajs" id="div_flwsygk"></span>
+                            <p>
+                            </p>
+                            <div id="ygk_wslb" class="openMessage ajcxxx_hover" style="height: 120px">
+                            </div>
+                        </li>
+                        <li class="div_ajs" style="position: relative;">
+                            <p>
+                                未公开法律文书(份)</p>
+                            <span class="div_yzzajs" id="div_flwswgk"></span>
+                            <p>
+                            </p>
+                            <div id="wgk_wslb" class="openMessage ajcxxx_hover" style="height: 120px">
+                            </div>
+                        </li>
+                        <li class="div_ajs" style="position: relative;">
+                            <p>
+                                公开率(%)</p>
+                            <span class="div_yzzajs" id="div_flwsgkl"></span>
+                            <p>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map_con">
+                <iframe id="iframe2" name="iframe2" src="" frameborder="0" scrolling="auto" style="border: none;
+                    margin-top: 4%" width="99%" height="94%"></iframe>
+            </div>
+        </div>
+        <div class="tyywzs_rig">
+            <div class="tyywzs_rig_top">
+                <p class="tit"  style="cursor: pointer" ondblclick="ajwsgkqk()">
+                    <span id="div_tit1" class="tit_bag tab_1">法律文书公开情况（件）</span> <span>▎</span><span id="div_tit2" class="tab_2">法律文书公开比例（%）</span>
+                </p>
+                <div class="chart_con" style="width: 100%; ">
+                    <p style="height: 30px;line-height: 30px;">
+                        <span class="col_cilck col_tab1 " style="cursor: pointer">起诉书公开</span> 
+                        <span class="col_tab2 " style="cursor: pointer">刑事抗诉书公开</span>
+                        <span class="col_tab3 " style="cursor: pointer">不起诉决定书公开</span> 
+                        <span class="col_tab4 " style="cursor: pointer">刑事申诉复查决定书公开</span>
+                    </p>
+                    <div class="tab_ajgjfx" id="ajxxgk_chart_con" style="width: 100%; height: calc(100% - 45px)">
+                        <div id="ajxxgk_1" style="display: block; height: calc(100%);">
+                        </div>
+                        <div id="ajxxgk_bl" style="display: none; height: calc(100%);">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tyywzs_rig_bot">
+                <p id="div_tit3" class="tit tit_bag1 tit_bag" style="cursor: pointer" ondblclick="jdxx()">
+                    案件辩护人、诉讼代理人接待信息（次）
+                </p>
+                <div class="tab_ajgjfxs" style="width: 100%; height:100%">
+                    <div id="ajxxgk_jdxx" class="chart_con">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <div id="ajxxgkModal_qk" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="法律文书公开情况（件）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true">
+            <div class="tit_con">
+                <div id="ajxxgk_index" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+            </div>
+        </div>
+        <div id="ajxxgkModal_bl" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="法律文书公开比例（%）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true">
+            <div class="tit_con">
+                <div id="ajxxgk_bl1" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+            </div>
+        </div>
+        <div id ="ajxxgkModal_jdxx" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="案件辩护人、诉讼代理人接待信息（次）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+            <div class="tit_con">
+                <div id="ajxxgk_jdxx1" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+            </div>
+        </div>
+    <!--<script type="text/javascript" src="jquery-easyui-1.4.3/jquery.min.js"></script>
+            <script type="text/javascript" src="jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+            <script src="jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+            <script src="js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+            <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>-->
+</body>
+</html>

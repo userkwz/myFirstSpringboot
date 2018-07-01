@@ -1,0 +1,509 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>各类报表首页</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/icon.css">
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+</head>
+<body> 
+        <div class="blbb_home">
+            <div class="glbb_big">
+                <div class="blbb_title">
+                    <!--<p style="color: white">dssadasdasdasdsadasdasdas</p>-->
+                    <div class="int">
+                        <span style="line-height: 34px;">单位:</span>
+                        <input class="easyui-combotree Company" value="122" style="height: 100%;">
+                    </div>
+                    <div class="chek">
+                        <input id="radio" class="r-input" type="checkbox" name="calogin" on-click={this.loginSwich(2)} checked="true">
+                        <label for="radio" style="cursor: pointer;font-weight: normal;color: #018ab7;font-size: 14px">包含下级院</label>
+                    </div>
+                    <div class="time">
+                        <span>受理日期:</span>
+                        <div class="kais">
+                            <input  class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text',url:'get_data.php'" />
+                        </div>
+                        <div class="kais">
+                            <input  class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text',url:'get_data.php'" />
+                        </div>
+                        <span style="margin-left: 10px">至</span>
+                        <div class="kais">
+                            <input  class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text',url:'get_data.php'" />
+                        </div>
+                        <div class="kais">
+                            <input  class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text',url:'get_data.php'" />
+                        </div>
+                    </div>
+                    <div class="wbk" style="float: left;margin-left: 20px">
+                        <!--<img src="../../img/chax_06.png" alt="">-->
+                        <div class="cxan_ys"></div>
+                        <span style="padding: 0px 16px 0px 6px">查询</span>
+                    </div>
+                    <div class="wbk">
+                        <span>导出Word文档</span>
+                    </div>
+                    <div class="wbk" style="margin-right: 15px">
+                        <span>导出Excel</span>
+                    </div>
+                </div>
+                <div class="blbb_divs">
+                <div class="glbb_table1">
+                    <p><span style="font-size: 15px;font-weight: bold;padding-right: 20px">|</span>不同案件类别电子卷宗制作情况统计表</p>
+                </div>
+                <div class="glbb_bg">
+                    <table cellpadding="0" cellspacing="0" style="border:0px;">
+                        <thead>
+                        <tr>
+                            <td>
+                                <span>案件名称</span>
+                            </td>
+                            <td><span>应制作数据（件）</span>
+                            </td>
+                            <td><span>已制作数据（件）</span>
+                            </td>
+                            <td><span>未制作数据（件）</span></td>
+                            <td><span style="width: 100%">制作率（%）</span>
+                            </td>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr >
+                            <td >
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <span>二审抗诉案件</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div>
+                            </td>
+                            <td><span>1</span>
+                                <div></div></td>
+                            <td><span>0.00</span>
+                                <div></div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <!--<ul>-->
+                        <!--<li>案件名称</li>-->
+                        <!--<li>应制作数据（件）</li>-->
+                        <!--<li>已制作数据（件）</li>-->
+                        <!--<li>未制作数据（件）</li>-->
+                        <!--<li>制作率（%）</li>-->
+                    <!--</ul>-->
+                    <!--<div class="lb_one">-->
+                        <!--<ul>-->
+                            <!--<li>二审抗诉案件</li>-->
+                            <!--<li>1</li>-->
+                            <!--<li>1</li>-->
+                            <!--<li>1</li>-->
+                            <!--<li>0.00</li>-->
+                        <!--</ul>-->
+                    <!--</div>-->
+                </div>
+                <div class="glbb_table1">
+                        <p><span style="font-size: 15px;font-weight: bold;padding-right: 20px">|</span>不同案件类别电子卷宗制作情况统计表</p>
+                    </div>
+                <div class="glbb_bg">
+                        <table cellpadding="0" cellspacing="0" style="border:0px;">
+                            <thead>
+                            <tr>
+                                <td>
+                                    <span>案件名称</span>
+                                </td>
+                                <td><span>应制作数据（件）</span>
+                                </td>
+                                <td><span>已制作数据（件）</span>
+                                </td>
+                                <td><span>未制作数据（件）</span></td>
+                                <td><span style="width: 100%">制作率（%）</span>
+                                </td>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr >
+                                <td >
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <span>二审抗诉案件</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div>
+                                </td>
+                                <td><span>1</span>
+                                    <div></div></td>
+                                <td><span>0.00</span>
+                                    <div></div>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <!--<ul>-->
+                        <!--<li>案件名称</li>-->
+                        <!--<li>应制作数据（件）</li>-->
+                        <!--<li>已制作数据（件）</li>-->
+                        <!--<li>未制作数据（件）</li>-->
+                        <!--<li>制作率（%）</li>-->
+                        <!--</ul>-->
+                        <!--<div class="lb_one">-->
+                        <!--<ul>-->
+                        <!--<li>二审抗诉案件</li>-->
+                        <!--<li>1</li>-->
+                        <!--<li>1</li>-->
+                        <!--<li>1</li>-->
+                        <!--<li>0.00</li>-->
+                        <!--</ul>-->
+                        <!--</div>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

@@ -1,0 +1,117 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>小博士分析容器</title>
+	<!--<link rel="stylesheet" type="text/css" href="../../css/common.css"/>-->
+	<link rel="stylesheet" type="text/css" href="../../Style/tabs.css" />
+	<!--<script type="text/javascript" src="../../jquery-easyui-1.4.3/jquery.min.js"></script>-->
+</head>
+
+<body>
+	<div class="tabs_a">
+		<div style="width: 100%;;height: 35px">
+			<div class="tab_left">
+				<p style="color: #fff;font-size: 30px"> < </p>
+			</div>
+			<div class="tab_hide" style="overflow: hidden;float: left;width: 90%;height: 35px;position: relative;">
+				<!--<div class="tab">-->
+					<ul class="tab" id="tabTop">
+						<li class="tab_click  leef_width" id='home'>首页</li>
+					</ul>
+				<!--</div>-->
+			</div>
+			<div class="tab_right">
+				<p style="color: #fff;font-size: 30px"> > </p>
+			</div>
+			<div class="tab_menu">
+				<div class="menu_con">
+					<p onclick="closeAll();">全部关闭</p>
+				</div>
+			</div>
+		</div>
+		<div class="tab_con"></div>
+	</div>
+	<script type="text/javascript">
+
+	    $('ul.tab li').click(function() {
+	        $('.tab_click').removeClass('tab_click');
+	        //$('.close_click').removeClass('close_click');
+	        $(this).addClass('tab_click');
+	        //$(this).find('.close').addClass('close_click');
+	    });
+	    $('#home').click(function() {
+	        $.ajax({
+	            url: homeUrl,
+	            cache: false,
+	            dataType: 'html',
+	            success: function(html) {
+	                $(".tab_con>div").remove();
+	                /*
+	                * 版    本：1.0.2018.0123
+	                * 修 改 者：zp
+	                * 修改内容：关闭全部时selectedUrl初始化为首页地址
+	                * 修改日期：2018-01-19
+	                */
+	                selectedUrl = homeUrl;
+	                $(".tab_con").html(html);
+	            }
+	        });
+	    });
+		$('.tab_right').click(function () {
+			var leftlength=0;
+			for(var i=0;i<$("#tabTop>li").length;i++){
+				leftlength+=parseInt($('.leef_width').eq(i).width() + 46);
+			}
+			 var allwidth = $('.tab_hide').width();
+//			console.log(parseInt($('.tab').css("left")));
+//			console.log(leftlength);
+			//debugger
+			if(parseInt($('.tab').width()) <parseInt($('.tab_hide').width()) ){
+				return;
+			}
+//			if(Math.abs(parseInt($('.tab').css("left")))>($('.tab').css("left"))-parseInt($('#home').width())){
+//				return
+//			}
+			if(allwidth - parseInt($('.tab').css("left")) > leftlength) {
+			    return;
+			}
+			$('.tab').css("left",parseInt($('.tab').css("left"))-parseInt($('.leef_width').width()));
+		});
+		$('.tab_left').click(function () {
+			if(parseInt($('.tab').css("left")) == 0){
+				return;
+			}else {
+				$('.tab').css("left",parseInt($('.tab').css("left"))+parseInt($('#home').width()));
+			}
+
+		});
+	    function closeAll() {
+	        $('#tabTop').html('');
+	        $('div.combo-p').remove();
+	        $('#tabTop').append("<li id=\"home\" class=\"tab_click\"><div onClick=\"opOnClick('首页','" + homeUrl + "','home')\">首页</div></li>");
+	        $('#tabTop').append("<li class=\"tab_menu\"><div class=\"menu_con\"><p onclick=\"closeAll();\">全部关闭</p></div></li>");
+	        $.ajax({
+	            url: homeUrl,
+	            cache: false,
+	            dataType: 'html',
+	            success: function (html) {
+	                $('.tab').css("left", 0);
+	                $(".tab_con>div").remove();
+	                /*
+	                * 版    本：1.0.2018.0123
+	                * 修 改 者：zp
+	                * 修改内容：关闭全部时selectedUrl初始化为首页地址
+	                * 修改日期：2018-01-19
+	                */
+	                selectedUrl = homeUrl;
+	                $(".tab_con").html(html);
+	            }
+	        });
+	    }
+
+	    $('#home').click();
+	</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+.header{
+				height: 90px;
+				background: #091440 url(../images/shouye_logo_03.png) no-repeat 30px 65%;
+			}
+			.header ul{
+				/*width: 810px;*/
+				height: 100%;
+				margin-left: 430px;
+				float: left;
+				/*border: 1px solid red;*/
+				list-style: none;
+			}
+			.header ul li{
+				width: 161px;
+				height: 44px;
+				font-size: 24px;
+				color: #00ace6;
+				float: left;
+				margin-top: 23px;
+				text-align: center;
+				line-height: 47px;
+				cursor: pointer;
+			}
+			
+			.header ul li:hover,.menu_click{				
+				background: url(../images/shouye_xuanzhong_03.png) no-repeat;
+				color: #f48c04 !important;
+			}
+			.header>div{
+				width: 220px;
+				height: 100%;
+				line-height: 90px;
+				float: right;				
+				color: #028cc1;
+			}
+			.header>div span{
+				display: inline-block;
+				width: 40px;
+				font-size: 35px;
+				cursor: pointer;
+				text-align: center;
+				float: right;
+			}
+			.header>div span:nth-child(1){
+				line-height: 80px;
+			}
+			.header>div span:nth-child(4){
+				width: 90px;
+				font-size: 16px;
+			}
+			.header>div span:hover{
+				color: #00ace6 !important;
+			}
+			.con{
+				height: calc(100% - 90px);
+				background: #050a30;
+			}
+			.setClose{
+				background: url("../images/shouye_toubu_icon_05.png") no-repeat;
+				width: 20px;
+				height: 15px;
+				margin-top: 45px;
+			}
+			.setMax{
+				background: url("../images/shouye_toubu_icon_03.png") no-repeat;
+				width: 20px;
+				height: 15px;
+				margin-top: 45px;
+			}
+			.setMin{
+				background: url("../images/shouye_toubu_icon_08.png") no-repeat;
+				width: 20px;
+				height: 15px;
+				margin-top: 45px;
+			}

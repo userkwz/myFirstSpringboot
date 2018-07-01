@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--李蛟龙-->
+  <!--案件信息关联配置-->
+  <CaseInfo>
+	 <AjlbItem>
+		<AJLBBM>1619</AJLBBM>
+		<AJLBMC>临场监督执行死刑案件</AJLBMC>
+	<!--案卡项-->
+      <!--案卡项目分隔符-->
+		<Card>
+			<CardName>Card01</CardName>
+			<TITLE>临场监督执行死刑案件</TITLE>
+			<type>0</type>
+			<OutTab>
+				 <OutTabName>CARDD1</OutTabName>
+				 <TITLE>临场监督执行死刑案件</TITLE>
+				 <TYPE>0</TYPE>
+				   <!--主Tab页-->
+				  <TabItem Title="受理情况">
+					  <TableItem Name="TYYW_GG_AJJBXX">
+							 <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+					  </TableItem>
+					  <TableItem Name="TYYW_ZXJC_SXLCJDXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_ZXJC_SXLCJDXX.BMSAH(+)">
+							<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+							<FieldItem BM="RYBM" XSMC="人员编码" COLS="1" TYPE="text"/>
+							<FieldItem BM="PJZM_AYMC" XSMC="判决罪名" COLS="1" TYPE="text"/>
+							<FieldItem BM="PJQTZM_AYMCS" XSMC="判决其他罪名" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZXWSXDRQ" XSMC="执行文书下达日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="ZXRQ" XSMC="执行日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="JYFYTZZXSXRQ" XSMC="建议法院停止执行死刑日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="SMTCJZYJRQ" XSMC="书面提出纠正意见日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="WFQXY_MC" XSMC="违法情形因" COLS="1" TYPE="text"/>
+							<FieldItem BM="FYFKRQ" XSMC="法院反馈日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="FYSFCN_MC" XSMC="法院是否采纳" COLS="1" TYPE="text"/>
+							<FieldItem BM="CXTZZXSXRQ" XSMC="撤销停止执行死刑日期" COLS="1" TYPE="date"/>
+					   </TableItem>
+					   <TableItem Name="TYYW_ZXJC_RYXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_ZXJC_RYXX.BMSAH(+)">
+							<FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+							<FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+							<FieldItem BM="CSRQ" XSMC="出生日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="ZASNL" XSMC="作案时年龄" COLS="1" TYPE="text"/>
+							<FieldItem BM="MZ_MC" XSMC="民族" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZSD_MC" XSMC="住所地" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZSDXXDZ" XSMC="住所地详细地址" COLS="1" TYPE="text"/>
+					   </TableItem>
+					</TabItem>
+			</OutTab>
+		</Card>
+	  </AjlbItem>
+  </CaseInfo>
+</Root>

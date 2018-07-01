@@ -1,0 +1,580 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>0323</AJLBBM>
+      <AJLBMC>一审公诉(市级院,基层院适用)</AJLBMC>
+      <!--案卡项-->
+      <Card>
+        <CardName>card1</CardName>
+        <TITLE>审查起诉受理情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>SLQK</OutTabName>
+          <TITLE>受理情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="基本信息">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GS_SCQS.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSWSWH" XSMC="移送文书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZCJG_DWMC" XSMC="侦查机关" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSDW_DWMC" XSMC="移送单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSAY_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSQTAY_AYMCS" XSMC="移送其他案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSYJ_MC" XSMC="移送意见" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFGZAJ" XSMC="是否关注案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFZXHD" XSMC="是否专项活动" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZXHDMC" XSMC="专项活动名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFSWAJ" XSMC="是否涉外案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFDBAJ" XSMC="是否督办案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+              <FieldItem BM="FZ" XSMC="附注" COLS="3" TYPE="text"/>
+              <FieldItem BM="YSRJDH" XSMC="移送人及电话" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GS_SCQS">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFTYSLSCQSHGBGX" XSMC="是否他院受理审查起诉后改变管辖" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFSTAJ" XSMC="是否涉台案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFZDZRSG" XSMC="是否重大责任事故" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZWFZAJSALY_MC" XSMC="职务犯罪案件涉案领域" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZWFZAJSAQTLY_MCS" XSMC="职务犯罪案件涉案其他领域" COLS="1" TYPE="text"/>
+              <FieldItem BM="TQJRLB_MCS" XSMC="提前介入类别名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="TQJRFS_MC" XSMC="提前介入方式名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="JRZCRQ" XSMC="介入侦查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="GGFZXZ_MC" XSMC="共同犯罪性质名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="GTFZRS" XSMC="共同犯罪人数" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZTXYRXMHCH" XSMC="在逃嫌疑人姓名或绰号" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZTFZXYRRS" XSMC="在逃犯罪嫌疑人人数" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+		<OutTab>
+          <OutTabName>FZXYRQK</OutTabName>
+          <TITLE>犯罪嫌疑人情况</TITLE>
+          <TYPE>1</TYPE>
+          <TabItem Title="基本信息">
+            <TableItem Name="TYYW_GG_XYRJBXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFWDW" XSMC="是否为单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="CYM" XSMC="曾用名" COLS="1" TYPE="text"/>
+              <FieldItem BM="CH" XSMC="绰号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJLX_MC" XSMC="证件类型" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJHM" XSMC="证件号码" COLS="1" TYPE="text"/>
+              <FieldItem BM="MZ_MC" XSMC="民族" COLS="1" TYPE="text"/>
+              <FieldItem BM="CSRQ" XSMC="出生日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZASNL" XSMC="作案时年龄" COLS="1" TYPE="text"/>
+              <FieldItem BM="GJ_MC" XSMC="国籍" COLS="1" TYPE="text"/>
+              <FieldItem BM="HJSZD_MC" XSMC="户籍所在地" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZSD_MC" XSMC="住所地" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZSDXXDZ" XSMC="住所地详细地址" COLS="1" TYPE="text"/>
+              <FieldItem BM="GZDW" XSMC="工作单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="GZDWSZD_MC" XSMC="工作单位所在地" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZW" XSMC="职务" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJ_MC" XSMC="职级" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZY_MC" XSMC="职业" COLS="1" TYPE="text"/>
+              <FieldItem BM="SF_MC" XSMC="身份" COLS="1" TYPE="text"/>
+              <FieldItem BM="QTGZSF_MC" XSMC="其他关注身份" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFDWLD" XSMC="是否单位领导" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFDRSZ" XSMC="是否担任实职" COLS="1" TYPE="text"/>
+              <FieldItem BM="SJYZK_MC" XSMC="受教育状况" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZZMM_MC" XSMC="政治面貌" COLS="1" TYPE="text"/>
+              <FieldItem BM="RDDB_MC" XSMC="人大代表" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZXWY_MC" XSMC="政协委员" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFNCJCZZRY" XSMC="是否农村基层组织人员" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFCJZZRY" XSMC="是否村级组织人员" COLS="1" TYPE="text"/>
+              <FieldItem BM="WCNFZXYRDJHRQK_MC" XSMC="未成年犯罪嫌疑人的监护人情况" COLS="1" TYPE="text"/>
+              <FieldItem BM="FDDLR" XSMC="法定代理人" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFCJR" XSMC="是否残疾人" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="涉案情况">
+              <TableItem Name="TYYW_GS_XYRQK">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="BCYSQSSLRQ" XSMC="补充移送起诉受理日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="YSYJ_MC" XSMC="移送意见" COLS="1" TYPE="text"/>
+                <FieldItem BM="YS_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSQT_AYMCS" XSMC="移送其他案由" COLS="1" TYPE="text"/>
+                <FieldItem BM="ZYZAD_MC" XSMC="主要作案地" COLS="1" TYPE="text"/>
+                <FieldItem BM="ZWFZLARQ" XSMC="职务犯罪立案日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="QK_MC" XSMC="前科" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFJZLBDX" XSMC="是否为纠正漏捕对象" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFLAJDDX" XSMC="是否立案监督对象" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSAJXZZFJGLB_MC" XSMC="移送案件的行政执法机关类别" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFJDXZZFJGYSAJDX" XSMC="是否监督行政执法机关移送案件对象" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSLHQT" XSMC="是否受理后潜逃" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+            <TabItem Title="强制措施情况">
+              <TableItem Name="TYYW_GG_QZCSQK">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="QZCSBH" XSMC="强制措施编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="QZCSCQRQ" XSMC="强制措施采取日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="QZCS_MC" XSMC="强制措施名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="PZJG" XSMC="批准机关" COLS="1" TYPE="text"/>
+                <FieldItem BM="QZCSBGLY_MC" XSMC="强制措施变更来源" COLS="1" TYPE="text"/>
+                <FieldItem BM="ZXJG" XSMC="执行机关" COLS="1" TYPE="text"/>
+                <FieldItem BM="ZXRQ" XSMC="执行日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="QZCSDD" XSMC="强制措施地点" COLS="1" TYPE="text"/>
+                <FieldItem BM="BZRXM" XSMC="保证人姓名" COLS="1" TYPE="text"/>
+                <FieldItem BM="BZJ" XSMC="保证金" COLS="1" TYPE="text"/>
+                <FieldItem BM="ZXHZRQ" XSMC="执行回执日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="QZCSJCRQ" XSMC="强制措施解除日期" COLS="1" TYPE="date"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+        
+      </Card>
+	  
+	  
+      <Card>
+        <CardName>card2</CardName>
+        <TITLE>案件办理及审结情况</TITLE>
+        <TYPE>1</TYPE>
+        <OutTab>
+          <OutTabName>SCQSSJQK</OutTabName>
+          <TITLE>审查起诉审结情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="审查起诉审结情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GS_SCQS.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GS_SCQS">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="FDMSSSQK_MC" XSMC="附带民事诉讼情况" COLS="1" TYPE="text"/>
+              <FieldItem BM="YQBZJSRQ" XSMC="要求补正解释日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YQTGFTSPZJTZSRQ" XSMC="要求提供法庭审判证据通知书日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZXBCZCRQ" XSMC="自行补充侦查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YCYCRQ" XSMC="一次延长日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ECYCRQ" XSMC="二次延长日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SCPYRQ" XSMC="三次延长日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YCTCRQ" XSMC="一次退查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YCTCLY_MCS" XSMC="一次退查理由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YCCBRQ" XSMC="一次重报日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ECTCRQ" XSMC="二次退查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ECTCLY_MCS" XSMC="二次退查理由" COLS="1" TYPE="text"/>
+              <FieldItem BM="ECCBRQ" XSMC="二次重报日期" COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="审结情况">
+              <TableItem Name="TYYW_GS_SCQS">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJRQ" XSMC="审结日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="SDAY_AYMC" XSMC="审定案由" COLS="1" TYPE="text"/>
+                <FieldItem BM="SDQTAY_AYMCS" XSMC="审定其他案由" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJQK_MC" XSMC="审结情况" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSHJCYRQ" XSMC="移送何检察院日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="YSHJCY_MC" XSMC="移送何检察院名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSHJG" XSMC="移送何机关" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSFYRQ" XSMC="移送法院日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="YSHFY" XSMC="移送何法院" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJSE" XSMC="审结数额（万元）" COLS="1" TYPE="text"/>
+                <FieldItem BM="RDZCJJSS" XSMC="认定造成经济损失（万元）" COLS="1" TYPE="text"/>
+                <FieldItem BM="WHJJSS" XSMC="挽回经济损失" COLS="1" TYPE="text"/>
+                <FieldItem BM="FYTHRQ" XSMC="法院退回日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="AJZCSWQK_MC" XSMC="案件造成伤亡情况" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJZTD_MC" XSMC="审结重特大" COLS="1" TYPE="text"/>
+                <FieldItem BM="FYTHSY_MC" XSMC="法院退回事由名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="FYTHHCLJG_MC" XSMC="法院退回后处理结果名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="FYTHHCLRQ" XSMC="法院退回后处理日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="FYTHHYSHJCY_MC" XSMC="法院退回后移送何检察院代码" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+            <TabItem Title="案件其他有关情况">
+              <TableItem Name="TYYW_GS_SCQS">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYBHR" XSMC="是否有被害人/单位" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYWCNBHR" XSMC="是否有不满18周岁未成年被害人" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYWCNBHR1" XSMC="是否有不满14周岁以下未成年被害人" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYLNBHR" XSMC="是否有老年被害人" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYLSETBHR" XSMC="是否有留守儿童被害人" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYNMBHR" XSMC="是否有进城务工农民被害人" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYCJBHR" XSMC="是否有残疾被害人" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFYXFGYZAJ" XSMC="是否影响非公有制经济发展案件" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSWFZAJ" XSMC="是否涉外犯罪案件" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSTFZAJ" XSMC="是否涉台犯罪案件" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSGATFZAJ" XSMC="是否涉港澳犯罪案件" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSQFZAJ" XSMC="是否涉侨犯罪案件" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSYFZAJ" XSMC="是否涉医犯罪案件" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFWLFZ" XSMC="是否利用网络实施犯罪" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFDXFZ" XSMC="是否利用电信实施犯罪" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSJJTBL" XSMC="犯罪案件是否涉及家庭暴力" COLS="1" TYPE="text"/>
+                <FieldItem BM="SFSJXYBL" XSMC="犯罪案件是否涉及校园暴力" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+        <OutTab>
+          <OutTabName>xrysjjbgqk</OutTabName>
+          <TITLE>嫌疑人审结及变更情况</TITLE>
+          <TYPE>1</TYPE>
+          <TabItem Title="审结情况">
+            <TableItem Name="TYYW_GG_XYRJBXX" GLLX="1"  GLTJ="   and TYYW_GG_XYRJBXX.BMSAH=TYYW_GS_XYRQK.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GS_XYRQK">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="FLYZBLRQ" XSMC="法律援助办理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="FLYZBLQK_MC" XSMC="法律援助办理情况名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFWTBHR" XSMC="是否委托辩护人" COLS="1" TYPE="text"/>
+              <FieldItem BM="TQBHRYJRQ" XSMC="听取辩护人意见日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="TQBHRYJRQ" XSMC="听取辩护人意见日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZSWFSJYY_MC" XSMC="暂时无法审结原因" COLS="1" TYPE="text"/>
+              <FieldItem BM="NBQSBPRQ" XSMC="拟不起诉报批日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="NBQSGKSCRQ" XSMC="拟不起诉公开审查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SJYSPJG_MC" XSMC="上级院审批结果" COLS="1" TYPE="text"/>
+              <FieldItem BM="ECTCWCBSY" XSMC="二次退查未重报事由" COLS="1" TYPE="text"/>
+              <FieldItem BM="TCHWCBSY" XSMC="退查后未重报事由" COLS="1" TYPE="text"/>
+              <FieldItem BM="SJRQ" XSMC="审结日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SJCLQK_MC" XSMC="审结处理情况" COLS="1" TYPE="text"/>
+              <FieldItem BM="XJJJCTBSCQSQKRQ" XSMC="向纪检监察通报审查起诉情况日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="XJJJCYSSXWJXSRQ" XSMC="向纪检监察移送涉嫌违纪线索日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="XXYRSZJGSYDWGZSCQSQKRQ" XSMC="向嫌疑人所在机关事业单位告知审查起诉情况日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SFDNBQSFZXYRGKSC" XSMC="是否对拟不起诉犯罪嫌疑人公开审查" COLS="1" TYPE="text"/>
+              <FieldItem BM="GKSCRQ" XSMC="公开审查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SJQTAY_AYMCS" XSMC="审结其他案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="SJAY_AYMC" XSMC="审结案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="BQSSWH" XSMC="（不）起诉书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SDSE" XSMC="审定数额（万元）" COLS="1" TYPE="text"/>
+              <FieldItem BM="SJZTD_MC" XSMC="审结重特大" COLS="1" TYPE="text"/>
+              <FieldItem BM="FDLXQJ_MCS" XSMC="法定量刑情节" COLS="1" TYPE="text"/>
+              <FieldItem BM="GBSJJGQX_MC" XSMC="改变审结结果情形" COLS="1" TYPE="text"/>
+              <FieldItem BM="SCQSZSFJZYLZX" XSMC="审查起诉中是否纠正遗漏起诉罪行" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFYQBCYSQSTAF" XSMC="是否为要求补充移送起诉的同案犯" COLS="1" TYPE="text"/>
+              <FieldItem BM="TQGSRQ" XSMC="提起公诉日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="BCQSRQ" XSMC="补充起诉日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="LXJYQK" XSMC="量刑建议情况" COLS="1" TYPE="text"/>
+              <FieldItem BM="XSHJLB_MC" XSMC="刑事和解类别" COLS="1" TYPE="text"/>
+              <FieldItem BM="BQSJDXBRQ" XSMC="不起诉决定宣布日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="BQSSFRQ" XSMC="不起诉释放日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="THGAJGCXZCRQ" XSMC="退回公安机关并建议重新侦查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JSBJDKSRQ" XSMC="精神病鉴定开始日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JSBJDJZRQ" XSMC="精神病鉴定截止日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JSJBJDYJ_MC" XSMC="精神疾病鉴定意见" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="审结变更情况">
+              <TableItem Name="TYYW_GS_XYRQK">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="GBSJJGRQ" XSMC="改变审结结果日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="GBSJJGQX_MC" XSMC="改变审结结果情形" COLS="1" TYPE="text"/>
+                <FieldItem BM="CHQSHCLRQ" XSMC="撤回起诉后处理日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="CHQSYY_MC" XSMC="撤回起诉原因" COLS="1" TYPE="text"/>
+                <FieldItem BM="CHQSRQ" XSMC="撤回起诉日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="CHQSHCLJG_MC" XSMC="撤回起诉后处理结果" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+            <TabItem Title="羁押必要性审查">
+              <TableItem Name="TYYW_GS_XYRQK">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="AJLY_MC" XSMC="案件来源" COLS="1" TYPE="text"/>
+                <FieldItem BM="SCFSS_MCS" XSMC="审查方式名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="SCJL_MC" XSMC="审查结论" COLS="1" TYPE="text"/>
+                <FieldItem BM="TCJYRQ" XSMC="提出建议日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="CNRQ" XSMC="采纳日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="XKSBMFKJGRQ" XSMC="向控申部门反馈结果日期" COLS="1" TYPE="date"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+      </Card>
+      <Card>
+        <CardName>card3</CardName>
+        <TITLE>审查起诉出庭、判决情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CTJCPSCQK</OutTabName>
+          <TITLE>出庭及裁判审查情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="出庭裁判情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GS_SCQS.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+            </TableItem>
+            <TableItem Name="TYYW_GS_SCQS">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="CXTQHYRQ" XSMC="出席庭前会议日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="CTTZSSDRQ" XSMC="出庭通知书收到日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="CTRQ" XSMC="出庭日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="TSCX_MC" XSMC="庭审程序名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFJCJGJYSY" XSMC="是否检察机关建议适用" COLS="1" TYPE="text"/>
+              <FieldItem BM="JYCXZWPTCXRQ" XSMC="简易程序转为普通程序日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SFZCJGJYSYSCCX" XSMC="是否侦查机关建议适用速裁程序" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFWJCJGJYSYSCCX" XSMC="是否为检察机关建议适用速裁程序" COLS="1" TYPE="text"/>
+              <FieldItem BM="SCCXZWPTCXRQ" XSMC="速裁程序转为普通程序日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SCCXZWJYCXRQ" XSMC="速裁程序转为简易程序日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SFWJCJGJYSYXSSCCX" XSMC="是否为检察机关建议适用刑事速裁程序" COLS="1" TYPE="text"/>
+              <FieldItem BM="YQSLJYRQ" XSMC="延期审理建议日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="FYHFSLRQ" XSMC="法院恢复审理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="FYZZSCRQ" XSMC="法院中止审查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZZSLHHFSLRQ" XSMC="中止审理后恢复审理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="FYZZSLRQ" XSMC="法院终止审理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YQTGFTSPZJTZSRQ" XSMC="要求提供法庭审判证据通知书日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="CTRYZZLX_MCS" XSMC="出庭人员作证类型" COLS="1" TYPE="text"/>
+              <FieldItem BM="LXSWHRQ" XSMC="列席审委会日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSPJRQ" XSMC="一审判决日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSPJSDRQ" XSMC="一审判决收到日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSCPSWH" XSMC="一审裁判书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="CPGBQSQX_MCS" XSMC="裁判改变起诉情形" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZZAJCPJGBSJYTBSCRQ" XSMC="自侦案件裁判结果报上级院同步审查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZZAJCTQKBSJYRQ" XSMC="自侦案件出庭情况报上级院日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="SJYTBSCJG_MC" XSMC="上级院同步审查结果" COLS="1" TYPE="text"/>
+              <FieldItem BM="SJYTBSCJG_MC" XSMC="上级院同步审查结果" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSPJSXRQ" XSMC="一审判决生效日期" COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="提出抗诉情况">
+              <TableItem Name="TYYW_GS_SCQS">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="BHRQQKSRQ" XSMC="被害人请求抗诉日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="TCKSRQ" XSMC="提出抗诉日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="XSKSSWH" XSMC="刑事抗诉书文号" COLS="1" TYPE="text"/>
+                <FieldItem BM="TQKSLYY_MC" XSMC="提请抗诉来源" COLS="1" TYPE="text"/>
+                <FieldItem BM="TQKSLY_MC" XSMC="提请抗诉理由名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJJCYSCJG_MC" XSMC="上级检察院审查结果" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+            <TabItem Title="提请抗诉情况">
+              <TableItem Name="TYYW_GS_SCQS">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="BYTQKSRQ" XSMC="本院提请抗诉日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="TQKSBGSWH" XSMC="提请抗诉报告书文号" COLS="1" TYPE="text"/>
+                <FieldItem BM="TQKSLYY_MC" XSMC="提请抗诉来源" COLS="1" TYPE="text"/>
+                <FieldItem BM="TCKSLY_MC" XSMC="提出抗诉理由" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJJCYSCJG_MC" XSMC="上级检察院审查结果" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+        <OutTab>
+          <OutTabName>BGRCPQK</OutTabName>
+          <TITLE>被告人裁判情况</TITLE>
+          <TYPE>1</TYPE>
+          <TabItem Title="一审裁判情况">
+            <TableItem Name="TYYW_GG_XYRJBXX" GLLX="1"  GLTJ="  and TYYW_GG_XYRJBXX.BMSAH=TYYW_GS_XYRQK.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GS_XYRQK">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="FYJDZZSLRQ" XSMC="法院决定中止审理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="FYCDZZSLRQ" XSMC="法院裁定终止审理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZZSLHHFRQ" XSMC="中止审理后恢复审理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YYSPJRQ" XSMC="一审判决日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSPJSSDRQ" XSMC="一审判决书收到日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSPJSWH" XSMC="一审判决书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSPJZM_AYMC" XSMC="一审判决罪名" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSPJQTZM_AYMCS" XSMC="一审判决其他罪名" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSXGX_MC" XSMC="一审宣告刑（主刑）" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSXGXXQ" XSMC="一审宣告刑刑期" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSHXKYQ" XSMC="一审缓刑考验期" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSFJXQK_MCS" XSMC="一审附加刑情况" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSFJXJTQK" XSMC="一审附加刑具体情况" COLS="1" TYPE="text"/>
+              <FieldItem BM="XFZXZDJZXCSS_MC" XSMC="刑罚执行中的禁止性措施新名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="PJFDLXQJ_MCS" XSMC="法定量刑情节(判决)" COLS="1" TYPE="text"/>
+              <FieldItem BM="CPGBQSQX_MCS" XSMC="裁判改变起诉情形名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFFYCQLXJY" XSMC="是否法院采纳量刑建议" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFYXSHJTCCKCLJY" XSMC="是否因刑事和解提出从宽处罚建议" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFFYCNCKCFJY" XSMC="是否法院采纳从宽处罚建议" COLS="1" TYPE="text"/>
+              <FieldItem BM="SSRQ" XSMC="上诉日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="FYCDZXCHSSRQ" XSMC="法院裁定准许撤回上诉日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSPJRQ" XSMC="原审判决日期" COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="二审上诉不开庭裁判情况">
+              <TableItem Name="TYYW_GS_XYRQK">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESPJRQ" XSMC="二审判决日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="ESCPWSSDRQ" XSMC="二审裁判文书收到日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="ESCPJG_MC" XSMC="二审裁判结果" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESPJZM_AYMC" XSMC="二审判决罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESPJQTZM_AYMCS" XSMC="二审判决其他罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESXGX_MC" XSMC="二审宣告刑（主刑）" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESXGXXQ" XSMC="二审宣告刑刑期" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESHXKYQ" XSMC="二审缓刑考验期" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESFJXQK_MCS" XSMC="二审附加刑情况" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESFJXJTQK" XSMC="二审附加刑具体情况" COLS="1" TYPE="text"/>
+                <FieldItem BM="XFZXZDJZXCSS_MC" XSMC="刑罚执行中的禁止性措施新名称" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+      </Card>
+      <!--案卡项-->
+      <Card>
+        <CardName>card4</CardName>
+        <TITLE>侦查活动监督情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>ZCHDJDQK</OutTabName>
+          <TITLE>侦查活动监督情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="侦查活动监督情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GS_ZCHDJD.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GS_ZCHDJD">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZCJG_DWMC" XSMC="侦查机关名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZCHDWFQX_MCS" XSMC="侦查活动违法情形代码" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFSJFGYZJJFZ" XSMC="是否涉及非公有制经济发展" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFSJGAJGPCS" XSMC="是否涉及公安机关派出所" COLS="1" TYPE="text"/>
+              <FieldItem BM="SMTCJZRQ" XSMC="书面提出纠正日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JZWFTZSWH" XSMC="纠正违法通知书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="HFRQ" XSMC="回复日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JTWFDW" XSMC="具体违法单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="DCLSRQ" XSMC="督促落实日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JZRQ" XSMC="纠正日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSZJXSZRRQ" XSMC="移送追究刑事责任日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="XKSBMFKJGRQ" XSMC="向控申部门反馈结果日期" COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+      </Card>
+      <!--案卡项-->
+      <Card>
+        <CardName>card5</CardName>
+        <TITLE>审判活动监督情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>SPHDJDQK</OutTabName>
+          <TITLE>审判活动监督情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="审判活动监督情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GS_SPHDJD.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+            </TableItem>
+            <TableItem Name="TYYW_GS_SPHDJD">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SMTCJZRQ" XSMC="书面提出纠正日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JTWFDWMC" XSMC="具体违法单位名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="JZWFTZSWH" XSMC="纠正违法通知书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SPHDWFQX_MCS" XSMC="审判活动违法情形名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="JZRQ" XSMC="纠正日期" COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+      </Card>
+      <!--案卡项-->
+      <Card>
+        <CardName>card6</CardName>
+        <TITLE>检察建议及线索移交情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>JCJYJXSYJQK</OutTabName>
+          <TITLE>检察建议及线索移交情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="线索移交情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_XSYJQK.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GG_XSYJQK" >
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XH" XSMC="序号" COLS="1" TYPE="text"/>
+              <FieldItem BM="YJZWFZXSRQ" XSMC="移交职务犯罪线索日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="XSSXAY_AYMC" XSMC="线索涉嫌案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="XSSXQTAY_AYMCS" XSMC="线索涉嫌其他案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSHZZBM_DWMC" XSMC="移送何自侦部门名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZZBMXSCLRQ" XSMC="自侦部门线索处理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZZBMXSCLJG_MC" XSMC="自侦部门线索处理结果" COLS="1" TYPE="text"/>
+              <FieldItem BM="YLAFZXYRXM" XSMC="已立案犯罪嫌疑人姓名" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="检察建议情况">
+              <TableItem Name="TYYW_GG_JCJYQK">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="XH" XSMC="序号" COLS="1" TYPE="text"/>
+                <FieldItem BM="JCJYRQ" XSMC="检察建议日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="JCJYDXLB_MC" XSMC="检察建议对象类别" COLS="1" TYPE="text"/>
+                <FieldItem BM="JCJYDXMC" XSMC="检察建议对象名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="JCJYXZ_MC" XSMC="检察建议性质" COLS="1" TYPE="text"/>
+                <FieldItem BM="CNRQ" XSMC="采纳日期" COLS="1" TYPE="date"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+      </Card>
+      <Card>
+        <CardName>card7</CardName>
+        <TITLE>单位犯罪情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>DWFZQK</OutTabName>
+          <TITLE>单位犯罪情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="基本信息">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1" GLTJ=" and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_DWFZXX.BMSAH(+)">
+            </TableItem>
+            <TableItem Name="TYYW_GG_DWFZXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="DWBH" XSMC="单位编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="DWMC" XSMC="单位名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="DWXZ_MC" XSMC="单位性质" COLS="1" TYPE="text"/>
+              <FieldItem BM="DWSZDZ" XSMC="单位所在地址" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZZJGDM" XSMC="组织机构代码" COLS="1" TYPE="text"/>
+              <FieldItem BM="FDDBRXM" XSMC="法定代表人姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="FDDBRZW" XSMC="法定代表人职务" COLS="1" TYPE="text"/>
+              <FieldItem BM="SSDBRXM" XSMC="诉讼代表人姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="SSDBRXB_MC" XSMC="诉讼代表人性别" COLS="1" TYPE="text"/>
+              <FieldItem BM="SSDBRZW" XSMC="诉讼代表人职务" COLS="1" TYPE="text"/>
+              <FieldItem BM="SSDBRLXFS" XSMC="诉讼代表人联系方式" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="审结判决情况">
+              <TableItem Name="TYYW_GG_DWFZXX">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="DWBH" XSMC="单位编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="BQSSWH" XSMC="(不)起诉书文号" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJAY_AYMC" XSMC="审结案由" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJQTAY_AYMCS" XSMC="审结其他案由" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSPJZM_AYMC" XSMC="一审判决罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSPJQTZM_AYMCS" XSMC="一审判决其他罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSXGX_MC" XSMC="一审宣告刑" COLS="1" TYPE="text"/>
+                <FieldItem BM="PCFJ" XSMC="判处罚金（万元）" COLS="1" TYPE="text"/>
+                <FieldItem BM="SSRQ" XSMC="上诉日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="SJRQ" XSMC="审结日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="ESPJQK_MC" XSMC="二审判决情况" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESBKTCPRQ" XSMC="二审不开庭裁判日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="ESPJZM_AYMC" XSMC="二审判决罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESPJQTZM_AYMCS" XSMC="二审判决其他罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESXGX_MC" XSMC="二审宣告刑" COLS="1" TYPE="text"/>
+                <FieldItem BM="ESPCFJ" XSMC="二审判处罚金（万元）" COLS="1" TYPE="text"/>
+                <FieldItem BM="SJCLQK_MC" XSMC="审结处理情况" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+      </Card>
+    </AjlbItem>
+  </CaseInfo>
+</Root>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--李蛟龙-->
+  <!--案件信息关联配置-->
+  <CaseInfo>
+	 <AjlbItem>
+		<AJLBBM>1301</AJLBBM>
+		<AJLBMC>勘验检查</AJLBMC>
+	<!--案卡项-->
+      <!--案卡项目分隔符-->
+		<Card>
+			<CardName>Card01</CardName>
+			<TITLE>勘验检查业务</TITLE>
+			<type>0</type>
+			<OutTab>
+				 <OutTabName>CARDD1</OutTabName>
+				 <TITLE>勘验检查情况</TITLE>
+				 <TYPE>0</TYPE>
+				   <!--主Tab页-->
+				  <TabItem Title="勘验检查情况">
+					  <TableItem Name="TYYW_GG_AJJBXX">
+							 <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+							 <FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+							 <FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>							 
+							 <FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+							 <FieldItem BM="YSAY_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+							 <FieldItem BM="YSQTAY_AYMCS" XSMC="移送其他案由" COLS="1" TYPE="text"/>
+							 <FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+							<FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+							<FieldItem BM="FZ" XSMC="附注" COLS="3" TYPE="text"/>
+							<FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+					  </TableItem>
+					  <TableItem Name="TYYW_JS_KYJC" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_JS_KYJC.BMSAH(+) and TYYW_GG_AJJBXX.BMSAH=TYYW_JS_WTR.BMSAH(+)">
+							<FieldItem BM="SLSCJG_MC" XSMC="受理审查结果" COLS="1" TYPE="text"/>
+							<FieldItem BM="JSML_MC" XSMC="技术门类" COLS="1" TYPE="text"/>
+							<FieldItem BM="SFDJSML" XSMC="是否多技术门类" COLS="1" TYPE="text"/>
+							<FieldItem BM="YAJBMSAH" XSMC="原案件部门受案号" COLS="1" TYPE="text"/>
+							<FieldItem BM="KYDW" XSMC="勘检单位" COLS="1" TYPE="text"/>
+							<FieldItem BM="KYDX" XSMC="勘检对象" COLS="1" TYPE="text"/>
+							<FieldItem BM="KYDD" XSMC="勘检地点" COLS="1" TYPE="text"/>
+							<FieldItem BM="KYRQ" XSMC="勘检日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="JSRQ" XSMC="结束日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="TQWZFS" XSMC="提取物证份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="KYBLFS" XSMC="勘检笔录份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZCSYBLFS" XSMC="侦查实验笔录份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="QTWSCLFS" XSMC="其他文书材料份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="KYBLFS" XSMC="勘检笔录份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZCSYBLFS" XSMC="侦查实验笔录份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="QTWSCLFS" XSMC="其他文书材料份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="WZZXLXCS" XSMC="物证照相录像次数" COLS="1" TYPE="text"/>
+							<FieldItem BM="TGWZLXZLFS" XSMC="提供物证录像资料份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="TGWZZPZLFS" XSMC="提供物证照片资料份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="TGQTSTZLFS" XSMC="提供其他视听资料份数" COLS="1" TYPE="text"/>
+							<FieldItem BM="JCJSSLRQ" XSMC="检察技术受理日期" COLS="1" TYPE="date"/>
+					</TableItem>
+					<TableItem Name="TYYW_JS_WTR">
+							<FieldItem BM="WTDWLB_MC" XSMC="委托单位类别" COLS="1" TYPE="text"/>
+							<FieldItem BM="WTDW" XSMC="委托单位" COLS="1" TYPE="text"/>
+							<FieldItem BM="WTBM" XSMC="委托部门" COLS="1" TYPE="text"/>
+							<FieldItem BM="WTR" XSMC="委托人" COLS="1" TYPE="text"/>
+							<FieldItem BM="WTRQ" XSMC="委托日期" COLS="1" TYPE="date"/>
+							<FieldItem BM="WTRLXDH" XSMC="委托人联系电话" COLS="1" TYPE="text"/>
+							<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+							<FieldItem BM="WTYQ" XSMC="委托要求" COLS="3" TYPE="text"/>
+					</TableItem>
+				 </TabItem>
+				   <OtherTab>
+						<TabItem Title="侦查实验情况">
+							<TableItem Name="TYYW_JS_ZCSYQK">
+								<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+								<FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+								<FieldItem BM="SYBH" XSMC="实验编号" COLS="1" TYPE="text"/>
+								<FieldItem BM="ZCSYRQ" XSMC="侦查实验日期" COLS="1" TYPE="date"/>
+								<FieldItem BM="ZCSYDD" XSMC="侦查实验地点" COLS="1" TYPE="text"/>
+								<FieldItem BM="ZCSYNR" XSMC="侦查实验内容" COLS="3" TYPE="text"/>
+							</TableItem>
+						</TabItem>
+				   </OtherTab>
+			</OutTab>
+			<OutTab>
+				 <OutTabName>CARDD2</OutTabName>
+				 <TITLE>外聘期专家登记表</TITLE>
+				 <TYPE>1</TYPE>
+				   <!--主Tab页-->
+				  <TabItem Title="基本信息">
+					  <TableItem Name="TYYW_GG_XYRJBXX" GLLX="1"  GLTJ="   and TYYW_GG_XYRJBXX.BMSAH=TYYW_JS_WPZJ.BMSAH(+)">
+						  
+					   </TableItem>	
+						<TableItem Name="TYYW_JS_WPZJ">
+							<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+							<FieldItem BM="RYBH" XSMC="人员编号" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZJXM" XSMC="专家姓名" COLS="1" TYPE="text"/>
+							<FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+							<FieldItem BM="GZDW" XSMC="工作单位" COLS="1" TYPE="text"/>
+							<FieldItem BM="NL" XSMC="年龄" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZYLY" XSMC="专业领域" COLS="1" TYPE="text"/>
+							<FieldItem BM="MZ_MC" XSMC="民族" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZWZC" XSMC="职务职称" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZJLX_MC" XSMC="证件类型" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZJHM" XSMC="证件号码" COLS="1" TYPE="text"/>
+							<FieldItem BM="TXDZ" XSMC="通讯地址" COLS="1" TYPE="text"/>
+							<FieldItem BM="SJHM" XSMC="手机号码" COLS="1" TYPE="text"/>
+							<FieldItem BM="ZZDH" XSMC="住宅电话" COLS="1" TYPE="text"/>
+							<FieldItem BM="BGDH" XSMC="办公电话" COLS="1" TYPE="text"/>
+							<FieldItem BM="DZYX" XSMC="电子邮箱" COLS="1" TYPE="text"/>
+						</TableItem>
+				 </TabItem>
+				   <OtherTab>
+				   </OtherTab>
+			</OutTab>
+		</Card>
+	  </AjlbItem>
+  </CaseInfo>
+</Root>

@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--测试受案号:山东省人民检察院济南铁路运输分院站车交接[2015]37920000001号  杜权-->
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>1501</AJLBBM>
+      <AJLBMC>站车交接案件</AJLBMC>
+      <!--案卡项-->
+
+      <!--案卡项目分隔符-->
+      <Card>
+        <CardName>CARD0</CardName>
+        <TITLE>站车交接案件</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD0</OutTabName>
+          <TITLE>受理情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="受理情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSAY_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSQTAY_AYMCS" XSMC="移送其他案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBDW_MC" XSMC="承办单位" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_TJ_ZCJJ" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_TJ_ZCJJ.BMSAH(+)">
+              <FieldItem BM="YJDW_MC" XSMC="移交单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="YJR" XSMC="移交人" COLS="1" TYPE="text"/>
+              <FieldItem BM="JSR" XSMC="接收人" COLS="1" TYPE="text"/>
+              <FieldItem BM="JSSJ" XSMC="接收时间" COLS="1" TYPE="date"/>
+              <FieldItem BM="YWHZ" XSMC="有无回执" COLS="1" TYPE="text"/>
+              <FieldItem BM="YJCLQK_MC" XSMC="移交处理情况" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJLY_MC" XSMC="案件来源" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZCJJRQ" XSMC="站车交接日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="CC" XSMC="车次" COLS="1" TYPE="text"/>
+              <FieldItem BM="JSDW_MC" XSMC="接收单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="QJ" XSMC="区间" COLS="1" TYPE="text"/>
+              <FieldItem BM="SAJE" XSMC="涉案金额" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJSLJCMD" XSMC="案件受理警察名单" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJSLJCSZDW" XSMC="案件受理警察所在单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJCBJCMD" XSMC="案件承办警察名单" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJCBJCSZDW" XSMC="案件承办警察所在单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="FARQ" XSMC="发案日期" COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+          </OtherTab>
+        </OutTab>
+        <OutTab>
+          <OutTabName>BLQCARD0</OutTabName>
+          <TITLE>涉案人基本情况</TITLE>
+          <TYPE>1</TYPE>
+          <TabItem Title="涉案人基本情况">
+            <TableItem Name="TYYW_GG_XYRJBXX ">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC="嫌疑人编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+              <FieldItem BM="CYM" XSMC="曾用名" COLS="1" TYPE="text"/>
+              <FieldItem BM="MZ_MC" XSMC="民族" COLS="1" TYPE="text"/>
+              <FieldItem BM="GJ_MC" XSMC="国籍" COLS="1" TYPE="text"/>
+              <FieldItem BM="HJSZD_MC" XSMC="户籍所在地" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJLX_MC" XSMC="证件类型" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJHM" XSMC="证件号码" COLS="1" TYPE="text"/>
+              <FieldItem BM="NL" XSMC="年龄" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+        <OutTab>
+          <OutTabName>BLQCARD1</OutTabName>
+          <TITLE>受害人基本情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="受害人基本情况">
+            <TableItem Name="TYYW_GG_AJJBXX ">
+            </TableItem>
+            <TableItem Name="TYYW_GG_XFRQK" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_XFRQK.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="RYBH" XSMC="人员编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="XFRXM" XSMC="信访人姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJLX_MC" XSMC="证件类型" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJHM" XSMC="证件号码" COLS="1" TYPE="text"/>
+              <FieldItem BM="MZ_MC" XSMC="民族" COLS="1" TYPE="text"/>
+              <FieldItem BM="GJ_MC" XSMC="国籍" COLS="1" TYPE="text"/>
+              <FieldItem BM="HJSZD_MC" XSMC="户籍所在地" COLS="1" TYPE="text"/>
+              <FieldItem BM="DWMC" XSMC="单位名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="DWDZ" XSMC="单位地址" COLS="1" TYPE="text"/>
+              <FieldItem BM="LXFF" XSMC="联系方法" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+      </Card>
+    </AjlbItem>
+  </CaseInfo>
+</Root>

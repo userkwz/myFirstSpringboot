@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--山东省院组监受[2016]37000000003号 龚仕春-->
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>0102</AJLBBM>
+      <AJLBMC>组织人民监督员开展监督</AJLBMC>
+      <!--案卡项-->
+      <!--案卡项目分隔符-->
+      <Card>
+        <CardName>CARD0</CardName>
+        <TITLE>组织人民监督员开展监督</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD0</OutTabName>
+          <TITLE>受理情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="受理情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSAY_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSQTAY_AYMCS" XSMC="移送其他案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+              <FieldItem BM="FZ" XSMC="附注" COLS="3" TYPE="text"/>
+              <FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_JD_BQSJYQDRMJDYJD" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_JD_BQSJYQDRMJDYJD.BMSAH(+)">
+              <FieldItem BM="AJLY_MC" XSMC="案件来源" COLS="1" TYPE="text"/>
+              <FieldItem BM="LARQ" XSMC="立案日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="LABM_MC" XSMC="立案部门名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="NBQSRQ" XSMC="拟不起诉日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="NCARQ" XSMC="拟撤案日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YSDW" XSMC="移送单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSBM" XSMC="移送部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="JDQX_MC" XSMC="监督情形" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZFJCTCYJRQ" XSMC="执法检察中提出意见日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="RMJDYXM" XSMC="要求启动监督的人民监督员姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="SARXM" XSMC="涉案人姓名" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+          </OtherTab>
+        </OutTab>
+        <OutTab>
+          <OutTabName>CARDD0</OutTabName>
+          <TITLE>办理情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="办理情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+            </TableItem>
+            <TableItem Name="TYYW_JD_BQSJYQDRMJDYJD" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_JD_BQSJYQDRMJDYJD.BMSAH(+)">
+              <FieldItem BM="YSQTJCYRQ" XSMC="移送其他检察院日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="QTJCY_DWMC" XSMC="其他何检察院" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSBYXGBMRQ" XSMC="移送本院相关部门日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="BYXGBM_MC" XSMC="本院相关部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="SDNCLJDRQ" XSMC="收到拟处理决定（意见）日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="NCLJG" XSMC="拟处理结果" COLS="3" TYPE="text"/>
+              <FieldItem BM="RMJDYPYBJRQ" XSMC="人民监督员评议表决日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="RMJDYJDBYYJ_MC" XSMC="人民监督员监督表决意见" COLS="1" TYPE="text"/>
+              <FieldItem BM="CJJDRMJDYXM" XSMC="参加监督人民监督员姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="GZBYYJRQ" XSMC="告知表决意见日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="CDCLJDRQ" XSMC="收到处理决定日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="CLJD_MC" XSMC="处理决定" COLS="1" TYPE="text"/>
+              <FieldItem BM="XRMJDYFKJGRQ" XSMC="向人民监督员反馈结果日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZFJCTCJCJYRQ" XSMC="执法检查中提出建议日期" COLS="1" TYPE="date"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+      </Card>
+    </AjlbItem>
+  </CaseInfo>
+</Root>

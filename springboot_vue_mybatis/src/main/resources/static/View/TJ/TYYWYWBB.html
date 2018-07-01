@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>统一业务各业务案件状态统计</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../Script/View/TYYW/TYYWYWBB.js"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+</head>
+<body style="height: 100%; padding: 10px;">
+    <div class="blbb_home">
+        <div class="glbb_big">
+            <div class="blbb_title">
+                <div class="int">
+                    <span style="line-height: 34px;">单位：</span>
+                    <select id="cb_tyywywbb_dwbm" class="easyui-combotree Company" style="height: 100%;" panelwidth="320px"></select>
+                </div>
+                <div class="chek">
+                    <input id="radio_tyywywbb_sjtype" class="r-input" type="checkbox" name="calogin"
+                           checked="checked" />
+                    <label for="radio_tyywywbb_sjtype" style="cursor: pointer; font-weight: normal; color: #018ab7; font-size: 14px">
+                        包含下级院
+                    </label>
+                </div>
+                <div class="int">
+                    <span style="line-height: 34px;">案件类别：</span>
+                    <input id="cb_tyywywbb_ajlb" class="easyui-combotree Company" style="height: 100%;" />
+
+                </div>
+                <div class="int">
+                    <span style="line-height: 34px;">移送案由：</span>
+                    <input id="cb_tyywywbb_ysay" class="easyui-combotree Company" style="height: 100%;" />
+
+                </div>
+                <div class="time" style="margin-left: 20px;">
+                    <span>受理日期</span>
+                    <div class="kais">
+                        <input id="datebox_tyywywbb_start" class="easyui-datebox Company cc" name="dept" />
+                    </div>
+                    <span style="margin-left: 10px">至</span>
+                    <div class="kais">
+                        <input id="datebox_tyywywbb_end" class="easyui-datebox Company cc" name="dept" />
+                    </div>
+                </div>
+                <div id="btn_tyywywbb_Search" class="wbk" style="float: left;margin-left: 20px">
+                    <div class="cxan_ys"></div>
+                    <span style="padding: 0px 16px 0px 6px">查询</span>
+                </div>
+                <div id="btnExportExcel_tyywywbb" class="wbk">
+                    <span>导出Excel</span>
+                </div>
+            </div>
+            <div data-options="region:'center'" class="easy_tabel">
+                <table id="dg_tyywzs_ywbb" data-options="singleSelect:true"></table>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

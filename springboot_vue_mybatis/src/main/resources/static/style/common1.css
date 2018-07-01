@@ -1,0 +1,21 @@
+.panel-title
+{
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.panel-tool a
+{
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    margin: 0 0 0 2px;
+    vertical-align: top;
+}

@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>1402</AJLBBM>
+      <AJLBMC>案管流程监控</AJLBMC> 
+<Card>
+        <CardName>CARD0</CardName>
+        <TITLE>案管流程监控</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD0</OutTabName>
+          <TITLE>案管流程监控</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="流程监控基本信息表">
+            <TableItem Name="TYYW_GG_AJJBXX">
+<FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+<FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+<FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+<FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+<FieldItem BM="FZ" XSMC="附注" COLS="3" TYPE="text"/>
+<FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+<FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+            </TableItem>            
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+          </OtherTab>
+        </OutTab> 
+        <OutTab>
+          <OutTabName>CARDD1</OutTabName>
+          <TITLE>案管流程监控</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="原案件信息">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC="源部门受案件号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_AG_LCJKXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_AG_LCJKXX.BMSAH(+)">
+<FieldItem BM="YZCJG_DWMC" XSMC="源侦查机关" COLS="1" TYPE="text"/>
+<FieldItem BM="YAJLB_MC" XSMC="源案件类别" COLS="1" TYPE="text"/>
+<FieldItem BM="YYSWSWH" XSMC="源移送文书文号" COLS="1" TYPE="text"/>
+<FieldItem BM="YYSAY_AYMC" XSMC="源移送案由" COLS="1" TYPE="text"/>
+<FieldItem BM="YYSQTAY_AYMCS" XSMC="源移送其他案由" COLS="1" TYPE="text"/>
+<FieldItem BM="SFFXWGQX" XSMC="是否发现违规情形" COLS="1" TYPE="text"/>
+<FieldItem BM="JKWGQX_MCS" XSMC="监控违规情形" COLS="1" TYPE="text"/>
+<FieldItem BM="YAQZY" XSMC="源案情摘要" COLS="3" TYPE="text"/>
+<FieldItem BM="YCBBM_MC" XSMC="源承办部门" COLS="1" TYPE="text"/>
+<FieldItem BM="YCBR" XSMC="源承办人" COLS="1" TYPE="text"/>
+            </TableItem>
+            <!--其他Tab页-->
+            <OtherTab>
+            </OtherTab>
+          </TabItem>		 
+        </OutTab>   		
+      </Card> 
+       </AjlbItem>
+  </CaseInfo>
+</Root>
+

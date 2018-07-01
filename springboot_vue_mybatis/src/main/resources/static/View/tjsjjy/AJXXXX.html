@@ -1,0 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+	<link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/icon.css" />
+	<!--<link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.3/demo/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/questionAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/unitAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/validationReport.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/operationAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/AJXXXX.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/basechart.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/BMSAH.css"/>
+    <script src="../../Script/Ice/Ice-3.6.3.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Ice/Ice.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Ice/Glacier2.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Ice/IceGrid.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Script/View/tjsjjy/datavalidateanalyseservice.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Script/View/tjsjjy/pie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Script/View/tjsjjy/BMSAH.js" type="text/javascript" charset="utf-8"></script>
+<!--	<script src="../../Script/View/tjsjjy/AJXXXX.js" type="text/javascript" charset="utf-8"></script>-->
+</head>
+<body>
+        <script type="text/javascript">
+            BaseFunc.RefshHeadScriptTage("../../Script/View/tjsjjy/AJXXXX.js");
+        </script>
+    <div class="validationReport-xzfl">
+        <div class="validationReport-xzfl-left" style="float: left;width: 41%">
+            <span>业务类别：</span>
+            <select id="ajxxYWLB">
+
+            </select>
+            <span>选择规则：</span>
+            <select id="ajxxXZGZ">
+
+            </select>
+        <span>审核状态：</span>
+            <select id="ajxxSHZT">
+                <option value="">全部</option>
+                <option value="同意">同意</option>
+                <option value="拒绝">拒绝</option>
+                <option value="待审核">待审核</option>
+            </select>
+			<!--<div style="display: inline-block;color: #333;font-size: 14px;line-height: 31px;margin-top: 2px;">-->
+				<!--开始时间-->
+				<!--<input id="ajxxBeginTime" type="text" class="easyui-datebox" style="width: 150px" required="required">-->
+				<!--&#45;&#45;&#45;&#45;&#45;&#45;-->
+				<!--截止时间-->
+				<!--<input id="ajxxEndTime" type="text" class="easyui-datebox" style="width: 150px" required="required">-->
+			<!--</div>-->
+        </div>
+        <div class='time' style="float: left;color: #0082C5;" >
+            <span id="Span1">开始时间：</span>
+            <div class="kais" style="width: 105px">
+                <input id="ajxxBeginTime" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                       data-options="required:true" />
+            </div>
+            <span style="margin-left: 10px">截止时间：</span>
+            <div class="kais" style="width: 105px">
+                <input id="ajxxEndTime" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                       data-options="required:true" />
+            </div>
+        </div>
+        <div class="validationReport-xzfl-left">
+            <input id="BMSAH" type="text" placeholder="部门受案号">
+            <input id="AJMC" type="text" placeholder="案件名称">
+            <input id="CBR" type="text" placeholder="承办人">
+			<!--<button class="search cursor" onclick="ajxxSearch()">搜索</button>-->
+            <button class="cx" id="search2" style="cursor: pointer;margin-left: 20px;width: 101px;height: 32px;border:0;font-size: 14px;outline: none;color:#fff;border-radius:5px;" onclick="ajxxSearch()">搜索
+            </button>
+			<!--<button id="fanhui" onclick="backLastHtml()" class="search cursor">返回</button>-->
+            <input id="backType" type="text" placeholder="" style="display:none">
+        </div>
+    </div>
+    <div id="AJXXXX" style="padding:10px">
+        <table border="0" cellpadding="0" cellspacing="0" id="lsbgtr" style="table-layout: fixed">
+
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,283 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>统一业务助手</title>
+    <link href="../../Style/GlobalStyleDefine.css" rel="stylesheet" type="text/css" />
+    <link href="../../Style/common.css" rel="stylesheet" type="text/css" />
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Highcharts/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Highcharts/js/highcharts-3d.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/HighchartsExporting.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/common.js" type="text/javascript"></script>
+    <script src="../../Script/View/TJ/TYYWYWZL.js" type="text/javascript"></script>
+    <script src="../../Script/Extend.js" type="text/javascript"></script>
+    <style type="text/css">
+        .cont {
+            border-radius: 5px;
+            padding-top: 10px;
+            box-shadow: 1px 2px 1px #dad8d7;
+        }
+
+        .cont_bor {
+            background: #efebf0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-top: 35px;
+            border: 1px solid #bcd3e7;
+            box-sizing: border-box;
+        }
+        
+        .tit_name {
+            height: 35px;
+            width: 100%;
+            color: #094d77;
+            line-height: 35px;
+            background: #cadeef;
+            padding-left: 10px;
+            font-size: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        .datagrid-group {
+            height: 25px;
+            overflow: hidden;
+            font-weight: bold;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .con_cx {
+            float: left;
+            margin: 0px 0 0px 10px;
+        }
+    </style>
+</head>
+<body style="height: 100%;">
+    <div class="easyui-layout" style="width: 100%; min-width: 1200px; height: 100%; min-height: 650px;">
+        <div data-options="region:'north'" style="height: 50px; padding-left: 10px;">
+            <div class="tit_con" style="position: relative; padding-top: 45px;">
+                <ul class="date_fl ajsl_date">
+                    <li value="1" changeatrr="今日">日</li>
+                    <li value="2" changeatrr="本月">月</li>
+                    <li value="3" changeatrr="本季">季</li>
+                    <li style="border: 0;" class="date_fl_click" value="4" changeatrr="本年">年</li>
+                </ul>
+                <div class="ajsl_date1">
+                    &nbsp;&nbsp; <input id="txtStartDate" type="text" editable="false" class="easyui-datebox" style="width: 100px;"></input> 到
+                    <input id="txtEndDate" type="text" editable="false" class="easyui-datebox" style="width: 100px;" />
+                    <a id="btnSearch" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
+                    <a id="btnYWFX" class="easyui-linkbutton" data-options="iconCls:'icon-menu-tjfx'">业务分析</a>
+                </div>
+                <div class="ajsl_dwmc">
+                    <font size="4">
+                        <div>
+                            <span id="">单位：</span>
+                            <select id="cb_ajjbxx_dwbm" class="easyui-combotree" style="width: 150px;"></select>
+                            <label><input type="checkbox" id="ckbDWBM" checked="checked"/>包含下级院</label>
+
+                            <!--<a id="afirst" href="javascript:void();"></a>&nbsp;<input id="cbDw1">&nbsp;<input id="cbDw2">&nbsp;
+                            <select id="cbType" class="easyui-combobox" style="width:110px;">
+                                <option value="2">本院及下级院</option>
+                                <option value="1">本院</option>
+                            </select>-->
+                        </div>
+                    </font>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'west'" style="width: 30%; background: #efebf0; border: 0;">
+            <div class="cont dzjz_con" style="height: 40%; ">
+                <div class='cont_bor'>
+                    <div class="tit_name" style="cursor:pointer" ondblclick="getywajsl()">
+                        ▎各业务案件受理数（件）
+                    </div>
+                    <div class="tit_con">
+                        <div id="tyyw_pie4" style="min-width: 100%; height: 100%; max-width: 100%; margin: 0 auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont dzjz_con" style="height: 60%;">
+                <div class='cont_bor'>
+                    <div class="tit_name" style="cursor:pointer" ondblclick="getajsls()">
+                        ▎各院案件受理数（件）
+                    </div>
+                    <div class="tit_con">
+                        <div id="tyyw_pie3" style="min-width: 100%; height: 95%; max-width: 100%; margin: 0 auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'center'" style="padding: 0px 8px; background: #efebf0;
+            border: 0;padding:10px 10px 0 10px;">
+            <div class='cont_bor' style='padding:0;'>
+                <div class="easyui-layout" data-options="fit:true">
+                    <div data-options="region:'north'" style="height: 220px; border: 0;">
+                        <ul class="dzjz_zzaj" style="border-bottom: 1px solid #eae8e6;">
+                            <li>
+                                <p class="tit">
+                                    本年受理案件数
+                                </p>
+                                <div id="div_a1"></div>
+                                <p>
+                                </p>
+                                <span id="span_v1" class="openMessage">
+                                </span>
+                            </li>
+                            <li>
+                                <p class="tit">
+                                    往年未结案件数
+                                </p>
+                                <div id="div_a2"></div>
+                                <p>
+                                </p>
+                                <span id="span_v2" class="openMessage">
+                                </span>
+                            </li>
+                            <li>
+                                <p class="tit">
+                                    本年审结案件数
+                                </p>
+                                <div id="div_a3"></div>
+                                <p>
+                                </p>
+                                <span id="span_v3" class="openMessage">
+                                </span>
+                            </li>
+                            <li style="border-right: 0px;">
+                                <p class="tit">
+                                    本年未结案件数
+                                </p>
+                                <div id="div_a4"></div>
+                                <p>
+                                </p>
+                                <span id="span_v4" class="openMessage">
+                                </span>
+                            </li>
+                        </ul><ul class="dzjz_zzaj" style="border-bottom: 1px solid #eae8e6;">
+                            <li>
+                                <p class="tit">
+                                    同比/环比(%)
+                                </p>
+                                <div id="div_a1-1"></div>
+                                <p>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tit">
+                                    同比/环比(%)
+                                </p>
+                                <div id="div_a2-1"></div>
+                                <p>
+                                </p>
+                            </li>
+                            <li>
+                                <p class="tit">
+                                    同比/环比(%)
+                                </p>
+                                <div id="div_a3-1"></div>
+                                <p>
+                                </p>
+                            </li>
+                            <li style="border-right: 0px;">
+                                <p class="tit">
+                                    同比/环比(%)
+                                </p>
+                                <div id="div_a4-1"></div>
+                                <p>
+                                </p>
+                            </li>
+                        </ul>
+                    </div>
+                    <div data-options="region:'center'" style="padding: 5px; border: 0; box-shadow: 1px 2px 1px #dad8d7;">
+                        <iframe id="iframe_tyyw" name="iframe_tyyw" src=""
+                                frameborder="0" scrolling="auto" style="border:none;" width="99%" height="99%"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'east'" style="width: 25%; border: 0;background: #efebf0;">
+            <div class="cont dzjz_con" style="height: 50%;">
+
+                <div class='cont_bor'>
+                    <div class="tit_name" style="cursor:pointer" ondblclick="getlsajsls()">
+                        ▎历史案件受理线图（件）
+                    </div>
+                    <div class="tit_con">
+                        <div id="tyyw_pie2" style="min-width: 100%; height: 95%; max-width: 100%; margin: 0 auto"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont dzjz_con" style="height: 50%;">
+                <div class='cont_bor'>
+                    <div class="tit_name tit_pad" style="cursor:pointer;top:0" ondblclick="getajblhj()">
+                        ▎案件办理合计图（件）
+                    </div>
+                    <div class="tit_con">
+                        <div id="tyyw_pie1" style="min-width: 100%; height: 95%; max-width: 100%; margin: 0 auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="div_aj" class="easyui-window" title="案件列表" data-options="closed:true,collapsible:false,modal:true,maximizable:false,minimizable:false" style="width:750px;height:410px;padding:10px;">
+        <span><label class="tag2">部门受案号：</label><input id="txt_case_bmsah" type="text" class="easyui-textbox" style="width: 225px;" /></span>
+        <span><label class="tag2">案件名称：</label><input id="txt_case_ajmc" type="text" class="easyui-textbox" style="width: 185px;" /></span>
+        <a id="btnSearch_ajxx" href="javascript:void()" class="easyui-linkbutton" data-options="iconCls:'icon-search'" style="height: 23px;">查询</a>
+        <a id="btnSendEmail" href="javascript:void()" onclick="SendEmail()" class="easyui-linkbutton" data-options="iconCls:'icon-mail'" style="height: 23px; display: none; ">发送邮件</a>
+    <br />
+    <table id="dg_ybaj" border="0"></table>
+</div>
+    <input id="div_win_bmsah" style="display:none" />
+    <div id="tyywModal_zzs1" class="easyui-window" modal="true" shadow="true" width="950" height="80%" title="各业务案件受理数" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="panelTool_tjbb_ajjbxx" data-options="border:false" style="padding: 5px 0px 5px 8px;line-height: 35px;">
+                <div class='con_cx'>
+                    案件类别：<input id="cb_ajlb_ajlb" class="easyui-combobox" style="width: 150px; height: 22px" />
+                </div>
+                <div class='con_cx'>
+                    移送案由：<input id="cb_ajlb_ysay" class="easyui-combobox" style="width: 150px; height: 22px" />
+                </div>
+                <div class='con_cx'>
+                    受理日期从：<input id="dt_ajlb_begin" class="easyui-datebox" style="width: 120px; height: 22px"
+       data-options="required:true" />
+                    到
+                    <input id="dt_ajlb_end" class="easyui-datebox" style="width: 120px; height: 22px"
+                           data-options="required:true" />
+                </div>
+                <div class='con_cx'>
+                    <a id="btnSearch_ajlb" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
+                </div>
+            </div>
+            <div id="xiaoer_tyyw_zzs1" style="min-width: 100%; height: 90%; max-width: 100%;"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs2" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="各院案件受理数" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs2" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs3" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="历史案件受理线图" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs3" style="min-width: 90%; height: 85%;width:100%"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs4" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="案件办理合计图" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs4" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs5" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="各类别案件受理数（件）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs5" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+        </div>
+    </div>
+    <iframe id="iframe1" name="iframe2" src="" frameborder="0" scrolling="auto" style="border: none;display:none"
+            width="99%" height="100%"></iframe>
+    
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+﻿.ywcd_jdt
+{
+    background: -webkit-linear-gradient(left , #5dd6fd , #046ab8) !important;
+    height: 20px;
+    width: 50%;
+
+    margin-left: 14px;
+    float: left;
+}
+.ywcd_sz
+{
+    margin: 0 10px;
+}
+.ywcd_jd
+{
+    height: 100%;
+    font-size: 12px;
+    line-height: 25px;
+    color: #ffffff;
+    text-indent: 5px;
+    background: linear-gradient(left , rgb(226, 185, 15) 12% , rgb(226, 185, 15) 88%);
+    background: -o-linear-gradient(left , rgb(226, 185, 15) 12% , rgb(226, 185, 15) 88%);
+    background: -ms-linear-gradient(left , rgb(226, 185, 15) 12% , rgb(226, 185, 15) 88%);
+    background: -moz-linear-gradient(left , rgb(226, 185, 15) 12% , rgb(226, 185, 15) 88%);
+    background: -webkit-linear-gradient(left , rgb(226, 185, 15) 12% , rgb(226, 185, 15) 88%);
+}

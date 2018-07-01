@@ -1,0 +1,239 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通讯录</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/txl_home.css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <!--<link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.3/themes/default/easyui.css">
+        <link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.3/themes/icon.css">
+        <script type="text/javascript" src="jquery-easyui-1.4.3/jquery.min.js"></script>
+        <script type="text/javascript" src="jquery-easyui-1.4.3/jquery.easyui.min.js"></script>-->
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Script/View/TXL/index.js"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+    <style type="text/css">
+    </style>
+</head>
+<body>
+    <div class="txl_home">
+        <div class="txl_left">
+            <div class="tit"><p>部门</p></div>
+            <ul id="txl_dwbm" style="background:rgba(255,255,255,.3);height:calc(100% - 41px);overflow:auto">
+            </ul>
+        </div>
+        <div class="txl_right">
+            <div class="txl_right_title" style="background:rgba(255,255,255,.6)">
+                <div style="height: 100%; line-height: 41px; margin-left: 10px; color: #0a65b1;width:300px;float:left;">通讯录</div>
+                <div class="txl_right_fy">
+                    <!--  <ul>
+                                  <li class="txl_right_fy_bj">
+                                      <span>首页</span>
+                                  </li>
+                                  <li class="txl_right_fy_bj">
+                                      <span>上一页</span>
+                                  </li>
+                                  <li class="txl_right_fy_ys">
+                                      <span>1/7页</span>
+                                  </li>
+                                  <li class="txl_right_fy_bj">
+                                      <span>下一页</span>
+                                  </li>
+                                  <li class="txl_right_fy_bj">
+                                      <span>未页</span>
+                                  </li>
+                              </ul>-->
+                </div>
+                <div class="txl_wbk" onclick="showAddTxl()" style="padding: 0px 22px 0px 22px;font-size: 14px;margin-right:20px">
+                    <span>添加</span>
+                </div>
+                <div class="txl_wbk" onclick="getTxl()" style="padding: 0px 22px 0px 22px; font-size: 14px; margin-right: 20px;">
+                    <span>查找</span>
+                </div>
+                <div class="txl_cx">
+                    <input class="txl_xx_ip" id="txl_mc">
+                    <div class="txl_xx_tb">
+                    </div>
+                </div>
+            </div>
+         <div class="txl_right_cent">
+                <div class="tp_auto" id="txl_rylb">
+                    <!--<div class="grxx_one">
+                            <div class="grxx_one_lf">
+                                <div class="tx_one"></div>
+                                <div class="tx_xxx">某某某</div>
+                                <div class="tx_nq">（内勤）</div>
+                            </div>
+                            <div class="grxx_one_rg">
+                                <div class="grxx_dh">
+                                    手机号
+                                    <span class="fhkw">|</span>
+                                    155555555555
+                                </div>
+                                <div class="grxx_dh bgdh">
+                                    办公电话
+                                    <span class="fhkw">|</span>
+                                    155555555555
+                                </div>
+                                <div class="grxx_dh yx">
+                                    电子邮箱
+                                    <span class="fhkw">|</span>
+                                    155555555555
+                                </div>
+                            </div>
+                            <div class="txl_xx_gb">
+                            </div>
+                        </div>
+                        <div class="grxx_tow">
+                            <div class="grxx_tow_lf">
+                                <div class="tx_tow"></div>
+                                <div class="tx_xxx_tow">某某某</div>
+                                <div class="tx_nq_tow">（内勤）</div>
+                            </div>
+                            <div class="grxx_tow_rg">
+                                <div class="grxx_dh_tow">
+                                    手机号
+                                    <span class="fhkw">|</span>
+                                    155555555555
+                                </div>
+                                <div class="grxx_dh_tow bgdh">
+                                    办公电话
+                                    <span class="fhkw">|</span>
+                                    155555555555
+                                </div>
+                                <div class="grxx_dh_tow yx">
+                                    电子邮箱
+                                    <span class="fhkw">|</span>
+                                    155555555555
+                                </div>
+                            </div>
+                            <div class="txl_xx_gb_tow">
+                            </div>
+                        </div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="txl_lxfs" class="easyui-window" title="通讯录-联系方式" style="width: 760px; height: 300px;"
+        data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <div id="txl_panel" class="easyui-panel" data-options="fit:true,border:false">
+            <!--<div class="int" style="margin: 0px 20px 10px 0px">-->
+                <!--<span id="Span1" style="color: #018ab7">单位： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_dwbm" class="easyui-combotree Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">单位： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_dwbm" class="easyui-combotree Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">岗位： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_gw" class="easyui-combotree Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">序号： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_xh" class="easyui-textbox Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">工号： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_gh" class="easyui-textbox Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">名称： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_mc" class="easyui-textbox Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">手机号码： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_sjhm" class="easyui-textbox Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">办公电话： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_bgdh" class="easyui-textbox Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">电子邮箱： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_dzyx" class="easyui-textbox Company cc" name="dept"  />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 10px">
+                <span  style="color: #018ab7;font-size: 14px;width: 72px">性别： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="txl_panel_xb" class="easyui-combotree Company cc" name="dept"  />
+                </div>
+            </div>
+            <!--<div class="time" style="margin: 0px 20px 10px 0px">-->
+                <!--<span id="" style="color: #018ab7">岗位： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_gw" class="easyui-combotree Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="time" style="margin: 0px 20px 10px 0px;display: none">-->
+                <!--<span id="Span7" style="color: #018ab7">序号： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_xh" class="easyui-textbox Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="time" style="margin: 0px 20px 10px 0px;display: none">-->
+                <!--<span id="Span8" style="color: #018ab7">工号： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_gh" class="easyui-textbox Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="time" style="margin: 0px 20px 10px 0px">-->
+                <!--<span id="Span2" style="color: #018ab7">名称： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_mc" class="easyui-textbox Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="time" style="margin: 0px 20px 10px 0px">-->
+                <!--<span id="Span3" style="color: #018ab7">手机号码： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_sjhm" class="easyui-textbox Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="time" style="margin: 0px 20px 10px 0px">-->
+                <!--<span id="Span4" style="color: #018ab7">办公电话： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_bgdh" class="easyui-textbox Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="time" style="margin: 0px 20px 10px 0px">-->
+                <!--<span id="Span5" style="color: #018ab7">电子邮箱： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_dzyx" class="easyui-textbox Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<div class="time" style="margin: 0px 20px 10px 0px">-->
+                <!--<span id="Span6" style="color: #018ab7">性别： </span>-->
+                <!--<div class="kais" style="width: 160px">-->
+                    <!--<input id="txl_panel_xb" class="easyui-combotree Company cc" name="dept" />-->
+                <!--</div>-->
+            <!--</div>-->
+            <div style="width: 100%;float: left;padding-right: 23px;margin-top: 20px">
+                <div id="txl_but_add" class="txl_wbk cx" onclick="addTxl()" style="display: none;padding: 0 22px 0px 22px;font-size: 14px">
+                    <span>添加</span>
+                </div>
+                <div id="txl_but_update" class="txl_wbk cx" onclick="updateTxl()" style="display: none;padding: 0px 22px 0px 22px;font-size: 14px">
+                    <span>修改</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

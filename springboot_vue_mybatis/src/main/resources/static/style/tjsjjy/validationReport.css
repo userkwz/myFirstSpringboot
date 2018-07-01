@@ -1,0 +1,222 @@
+.validationReport
+{
+    width: 100%;
+    height: 100%;
+    padding: 14px 0;
+}
+.validationReport-header
+{
+    background-color: rgba(255,255,255,0.5);
+    border: 1px solid rgba(137,159,253,0.5);
+}
+.validationReport-header ul
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    padding-left: 15px;
+    line-height: 40px;
+    height: 43px;
+}
+.validationReport-header ul li
+{
+    float: left;
+    text-align: center;
+    color: #666;
+    font-size: 16px;
+    border-bottom: 3px solid #8bbce5;
+    cursor: pointer;
+    padding-right: 20px;
+    padding-left:20px;
+}
+.validationReport-header ul li.reportavtive
+{
+    border-bottom: 3px solid #0b64b6;
+    color:#0a65b3;
+}
+.validationReport-xzfl
+{
+    width: 100%;
+    overflow: hidden;
+    margin: 10px 0 15px 0;
+    
+}
+.validationReport-xzfl-left1 {
+    width: 100%;
+    float: left;
+    margin-right: 20px;
+    line-height: 40px;
+    height: 40px;
+    font-size:14px;
+}
+.validationReport-xzfl-left1 > div
+{
+    float: left;
+    margin-left: 2%;
+}
+.validationReport-xzfl-left1 span
+{
+}
+.validationReport-xzfl-left1 select
+{
+    width: 200px;
+    margin-left: 5px;
+    margin-top: 7px;
+    height: 25px;
+    color: #0082c5;
+    font-size: 14px;
+    border: 1px solid #999;
+}
+
+.validationReport-xzfl > .validationReport-xzfl-left1 > input
+{
+    width: 200px;
+    background: url('../../images/tjsjjy/sousuo.png') no-repeat right;
+    height: 25px;
+    margin-top: 7px;
+    border: 1px solid #999;
+    margin-left: 2%;
+    padding-left: 5px;
+    color: #0082c5;
+}
+.validationReport-yw
+{
+    min-height: 40px;
+    line-height: 38px;
+    color: #0082c5;
+    font-size: 18px;
+    border: 1px solid #eaeaea;
+    background: #fff no-repeat 20px 9px;
+    background-image: url(../../images/tjsjjy/sjcdjk.png);
+    margin-bottom: 20px;
+}
+.validationReport-yw .more-icon
+{
+    width: 21px;
+    height: 21px;
+    float: right;
+    display: inline-block;
+    background: url("../../images/tjsjjy/gengduo1.png");
+    margin: 9px;
+    cursor: pointer;
+}
+.validationReport-yw .down-icon
+{
+    width: 14px;
+    height: 14px;
+    float: right;
+    display: inline-block;
+    background: url("../../images/tjsjjy/daochu.png");
+    margin: 12px 0 12px 0;
+    cursor: pointer;
+}
+.validationReport-yw-table
+{
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    display: none;
+}
+.validationReport-yw .validationReport-yw-tableblock
+{
+    display: block;
+}
+.validationReport-yw-table table, #lsbg table
+{
+    width: 100%;
+    text-align: center;
+}
+.validationReport-yw-table table thead tr, #lsbg table thead tr
+{
+    background: #8BCAF0;
+    height: 35px;
+    color: #23547d;
+    font-size: 14px;
+    line-height:35px;
+}
+.validationReport-yw-table table thead tr, #lsbg table thead tr
+{
+}
+.validationReport-yw-table table thead tr td, #lsbg table thead tr td
+{
+}
+.validationReport-yw-table table tbody tr, #lsbg table tbody tr
+{
+    height: 35px;
+}
+.validationReport-yw-table table tbody tr:hover
+{
+}
+#lsbg table tbody tr:hover
+{
+}
+.validationReport-yw-table table tbody tr td, #lsbg table tbody tr td
+{
+    height: 35px;
+    color: #000;
+    font-size: 14px;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.validationReport-yw-table table tbody tr.redTd td, #lsbg table tbody tr.redTd td
+{
+    color: red;
+}
+.validationReport-yw-table table tbody tr.greenTd td, #lsbg table tbody tr.greenTd td
+{
+    color: green;
+}
+.validationReport-yw-table table tbody tr td:last-child, #lsbg table tbody tr td:last-child
+{
+    border-right: 0;
+}
+.validationReport-yw-table table tbody tr:nth-of-type(odd)
+{
+    background: #E9F4F9;
+}
+.validationReport-yw-table table tbody tr:nth-of-type(even)
+{
+    background: #CAE7F8;
+}
+#lsbg table tbody tr:nth-of-type(odd)
+{
+    background: #E9F4F9;
+}
+#lsbg table tbody tr:nth-of-type(even)
+{
+    background: #CAE7F8;
+}
+.validationReport-xzfl .search
+{
+    line-height: 30px;
+    padding: 0 15px;
+    border: 1px solid #eaeaea;
+    background: #98B2FF;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+#search2:hover
+{
+}
+#search:hover
+{
+
+}
+#search1:hover
+{
+
+}
+#sendEmail:hover
+{
+
+}
+.validationReport-xzfl-left1 div span
+{
+    font-size: 16px;
+    line-height: 40px;   
+}

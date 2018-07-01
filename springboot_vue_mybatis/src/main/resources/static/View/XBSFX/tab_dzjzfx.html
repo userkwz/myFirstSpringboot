@@ -1,0 +1,178 @@
+﻿<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>电子卷宗分析助手</title>
+		<!--<link rel="stylesheet" type="text/css" href="css/common.css" />-->
+        
+	    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+		<link rel="stylesheet" type="text/css" href="../../Style/tab_tytwzs.css" />
+		<link rel="stylesheet" type="text/css" href="../../Style/tab_ajgkfx.css" />
+	    <link rel="stylesheet" type="text/css" href="../../Style/tab_dzjzfx.css"/>
+	    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"
+	            charset="utf-8"></script>
+        <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+        <script type="text/javascript" src="../../Script/View/DZJZ/dzjz.js"></script>
+        
+    </head>
+
+    <body>
+        <style>
+            @media screen and (min-width: 1400px) and (max-width:1450px) {
+                .ajcxxx_hover {
+                    top: 52px;
+                }
+            }
+        </style>
+        <div class="tab_tyywzs">
+            <div class="blbb_title">
+                <!--<p style="color: white">dssadasdasdasdsadasdasdas</p>-->
+                <div class="int">
+                    <span style="line-height: 34px;">单位:</span>
+                    <select id="cboDWBM" class="easyui-combotree Company" panelwidth="320px" style="height: 100%;"></select>
+                </div>
+                <div class="chek">
+                    <input id="ckbDWBM" class="r-input" type="checkbox" name="calogin" on-click={this.loginSwich(2)} checked="true">
+                    <label for="ckbDWBM" style="cursor: pointer;font-weight: normal;color: #018ab7;font-size: 14px">包含下级院</label>
+                </div>
+                <div class="wbk cx" id="btn_dzjzfx_Search">
+                    <!--<img src="img/chax_06.png" alt="">-->
+                    <div id="" class="cxan_ys"></div>
+                    <span style="padding: 0px 16px 0px 6px">查询</span>
+                </div>
+                <div class="time">
+                    <span id="">受理日期： </span>
+                    <div class="kais">
+                        <input id="cmbYearS" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                    </div>
+                    <div class="kais">
+                        <input id="cmbMonthS" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'"/>
+                    </div>
+                    <span style="margin-left: 10px">至</span>
+                    <div class="kais">
+                        <input id="cmbYearE" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                    </div>
+                    <div class="kais">
+                        <input id="cmbMonthE" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tyywzs_map">
+                <div class="map_top">
+                    <div>
+                        <ul>
+                            <li class="div_ajs" style="position: relative;">
+                                <p>应制作案件（件）</p>
+                                <span class="div_yzzajs" id="div_yzzajs"></span>
+                                <p>
+                                </p>
+                                <span id="span_yzz" class="openMessage ajcxxx_hover">
+                                </span>
+                            </li>
+                            <li class="div_ajs" style="position: relative;">
+                                <p>已制作案件（件）</p>
+                                <span  class="div_yzzajs" id="div_yzzaj"></span>
+                                <p>
+                                </p>
+                                <span id="span_v1" class="openMessage ajcxxx_hover">
+                                </span>
+                            </li>
+                            <li class="div_ajs" style="position: relative;">
+                                <p>未制作案件（件）</p>
+                                <span class="div_yzzajs" id="div_wzzs"></span>
+                                <p>
+                                </p>
+                                <span id="span_wzz" class="openMessage ajcxxx_hover">
+                                </span>
+                            </li>
+                            <li class="div_ajs" style="position: relative;" title="（已制作/应制作）×100%">
+                                <p>制作率（%）</p>
+                                <span class="div_yzzajs" id="div_zzl"></span>
+                                <p>
+                                </p>
+                               
+                            </li>
+                            <li class="div_ajs" style="position: relative;">
+                                <p>自决定案件（件）</p>
+                                <span class="div_yzzajs" id="div_lsyddcajs"></span>
+                                <p>
+                                </p>
+
+                                <span class="openMessage1 ajcxxx_hover" id="span_v2" style="overflow:auto">
+                                    
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="map_con">
+                    <iframe id="iframe1" name="iframe1" src="" 
+                            frameborder="0" scrolling="auto" style="border:none;margin-top: 30px;" width="99%" height="99%"></iframe>
+                </div>
+            </div>
+            <div class="tyywzs_rig">
+                <div class="tyywzs_rig_top">
+                    <p id="p_zzs" class="tit" style="cursor: pointer" ondblclick="dzjzzzs()">
+                        <span id="div_tit1" class="tit_bag tab_1" style="top: 20px;" ondblclick="dzjzzzs()">电子卷宗制作数</span><span>▎</span>
+                        <span id="div_tit2" class="tab_2" style="top: 20px;"  ondblclick="dzjzzzl()">电子卷宗制作（%）</span>
+                    </p>
+                    <div class="chart_con" id="dzjz_chart_con">
+                        <div id="xiaoer_dzjz_zzs" style="display: block">
+                        </div>
+                        <div id="xiaoer_dzjz_zzl" style="display: none">
+                        </div>
+                    </div>
+                </div>
+                <div class="tyywzs_rig_bot">
+                    <p id="div_tit3" style="cursor: pointer"  ondblclick="btajlbzzs()" class="tit tit_bag1 tit_bag"> ▎不同案件类别制作数（件）</p>
+                    <div class="chart_con" id="dzjz_chart_con_bottom" style="overflow-y: auto;overflow-x: hidden">
+                        <div id='xiaoer_dzjz_zzllb' style="height: 400px"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="dzjzModal_zzs1" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="电子卷宗制作数" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true">
+            <div class="tit_con">
+                <div id="xiaoer_dzjz_zzs1" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+            </div>
+        </div>
+        <div id="dzjzModal_zzs2" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="电子卷宗制作率" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true">
+            <div class="tit_con">
+                <div id="xiaoer_dzjz_zzl1" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+            </div>
+        </div>
+        <div id ="dzjzModal_zzs3" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="不同案件类别制作数" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+            <div class="tit_con">
+                <div id="xiaoer_dzjz_zzllb1" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+            </div>
+        </div>
+        <!--<script type="text/javascript" src="jquery-easyui-1.4.3/jquery.min.js"></script>
+            <script type="text/javascript" src="jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+            <script src="jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+            <script src="js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+            <script src="js/charts.js" type="text/javascript" charset="utf-8"></script>-->
+
+<!--        <script type="text/javascript">
+            $('#p_zzs>.tab_1').click(function () {
+                $('#p_zzs>.tit_bag').removeClass('tit_bag');
+                $(".chart_con>div").attr("id", "xiaoer_dzjz_zzs");
+                click_dzjz_zzs(2);
+                $(this).addClass('tit_bag');
+            });
+            $('#p_zzs>tab_2').click(function () {
+                $('#p_zzs>.tit_bag').removeClass('tit_bag');
+                $(".chart_con>div").attr("id", "xiaoer_dzjz_zzl");
+                click_dzjz_zzs(2);
+                $(this).addClass('tit_bag');
+            });
+            $('.chart_con p>span').click(function() {
+                $('.col_cilck').removeClass('col_cilck');
+                $(this).addClass('col_cilck');
+            });
+        </script>-->
+    </body>
+
+</html>

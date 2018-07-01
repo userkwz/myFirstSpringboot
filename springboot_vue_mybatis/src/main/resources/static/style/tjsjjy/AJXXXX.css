@@ -1,0 +1,114 @@
+
+#AJXXXX table
+{
+    width: 100%;
+    text-align: center;
+}
+#AJXXXX table thead tr
+{
+    
+    height: 35px;
+    color: #0a64b2;
+    font-size: 14px;
+    background: #e4f5ff;
+    line-height: 35px;
+    border-bottom:1px dashed #9fc4de;
+}
+#AJXXXX table thead tr td
+{
+    
+    color: #333;
+}
+#AJXXXX table tbody tr
+{
+    height: 35px;
+}
+#AJXXXX table tbody tr td
+{
+    height: 35px;
+    color: #333;
+    font-size: 14px;
+    line-height:35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    border-bottom: 1px dashed #a0c5df;
+}
+#AJXXXX table tbody tr:hover
+{
+    background: #7bc3f5;
+}
+#AJXXXX table tbody tr td:last-child
+{
+    border-right: 0;
+}
+
+#AJXXXX .search
+{
+    float: left;
+    line-height: 30px;
+    padding: 0 15px;
+    border: 1px solid #eaeaea;
+    background: #98B2FF;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #fff;
+}
+.validationReport-xzfl
+{
+       width: 100%;
+    overflow: hidden;
+    margin: 10px 0 15px 0;
+    background-color: rgba(255,255,255,0.6);
+    border: 1px solid rgba(137,159,253,0.3);
+    color: #507798;
+}
+.validationReport-xzfl-left
+{
+    width: 100%;
+    float: left;
+    margin-right: 20px;
+    color: #626262;
+    margin-left: 5px;
+    font-size: 14px;
+   
+    height: 40px;
+}
+.validationReport-xzfl-left span {
+     line-height: 40px;
+    }
+.validationReport-xzfl-left select
+{
+    width: 154px;
+    height: 30px;
+    margin-left: 5px;
+    color: #000;
+    font-size: 14px;
+    /* border: 1px solid #999; */
+    border: 1px solid #a0cffd;
+    border-radius: 4px;
+
+}
+.time {
+    margin-top: 3px !important;
+}
+    .time span {
+      color: #626262 !important;
+    }
+.validationReport-xzfl-left:last-child input
+{
+    width: 154px;
+    border-radius:5px;
+    border:1px solid #a0cffd;
+    height: 30px;
+    margin-top: 7px;
+
+    margin-left: 2%;
+    padding-left: 5px;
+    color: #000;
+    margin-bottom: 5px;
+}
+input::-webkit-input-placeholder
+{
+    color: #333;
+}

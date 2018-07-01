@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>案件公开分析助手</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/common.css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/icon.css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/tab_tytwzs.css" />
+    <style type="text/css">
+        .tyywzs_map
+        {
+            width: 824px;
+            background: url(../../images/kuang_03.png) no-repeat;
+            background-size: 100% 100%;
+        }
+        .map_top > div
+        {
+            height: 90px;
+            position: relative;
+            top: 50%;
+            margin-top: -45px;
+        }
+        .tyywzs_rig {
+            background:none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="tab_tyywzs">
+        <div class="blbb_title">
+            <!--<p style="color: white">dssadasdasdasdsadasdasdas</p>-->
+            <div class="int">
+                <span style="line-height: 34px;">单位:</span>
+                <input class="easyui-combotree Company" value="122" style="height: 100%;">
+            </div>
+            <div class="chek">
+                <input id="radio" class="r-input" type="checkbox" name="calogin" on-click="{this.loginSwich(2)}"
+                    checked="true">
+                <label for="radio" style="cursor: pointer; font-weight: normal; color: #018ab7; font-size: 14px">
+                    包含下级院</label>
+            </div>
+            <div class="wbk ywfx">
+                <div class="icon_ywfx">
+                </div>
+                <span style="padding-left: 6px;">业务分析</span>
+            </div>
+            <div class="wbk cx">
+                <!--<img src="../../img/chax_06.png" alt="">-->
+                <div class="cxan_ys">
+                </div>
+                <span style="padding: 0px 16px 0px 6px">查询</span>
+            </div>
+            <div class="time">
+                <div class="kais">
+                    <input class="easyui-datebox Company cc" name="dept" data-options="valueField:'id',textField:'text',url:'get_data.php'" />
+                </div>
+                <span style="margin-left: 10px">至</span>
+                <div class="kais">
+                    <input class="easyui-datebox Company cc" name="dept" data-options="valueField:'id',textField:'text',url:'get_data.php'" />
+                </div>
+            </div>
+            <div class="date_but">
+                <div class="year">
+                    年</div>
+                <div class="quarter">
+                    季</div>
+                <div class="month">
+                    月</div>
+                <div class="day">
+                    日</div>
+            </div>
+        </div>
+        <div class="tyywzs_map">
+            <div class="map_top">
+                <div>
+                    <ul>
+                        <li>
+                            <p>
+                                本年受理案件数量</p>
+                            <span>188 </span></li>
+                        <li>
+                            <p>
+                                本年受理案件数量</p>
+                            <span>188 </span></li>
+                        <li>
+                            <p>
+                                本年受理案件数量</p>
+                            <span>188 </span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="map_con">
+            </div>
+        </div>
+        <div class="tyywzs_rig">
+            <div class="tyywzs_rig_top">
+                <p class="tit">
+                    历史案件受理图（件）</p>
+                <div class="chart_con" id='ajslt'>
+                </div>
+            </div>
+            <div class="tyywzs_rig_bot">
+                <p class="tit">
+                    各院案件受理数（件）</p>
+                <div class="chart_con" id='gyajsls'>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.min.js"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../../Script/Highcharts/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Highcharts/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript">
+        //			location=location
+        //			  location.reload()
+        //			$(function() {
+        setTimeout(function () {
+            //					alert(11)
+            var lineData1 = [
+				        {
+				            name: '1800 年',
+				            data: [107, 31, 635, 203, 2]
+				        }
+				    ];
+            var lineData2 = [
+				        {
+				            name: '1800 年',
+				            data: [107, 31, 635, 203, 2]
+				        }, {
+				            name: '1900 年',
+				            data: [133, 156, 947, 408, 6]
+				        }
+				    ];
+            bar('#ajsls', lineData1);
+            line('#ajslt');
+            column('#ajblhjt');
+            bar('#gyajsls', lineData2);
+            $('.date_but div').click(function () {
+                $('.date_but_click').removeClass('date_but_click');
+                $(this).addClass('date_but_click');
+            });
+        }, 500)
+
+        //			});
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html> 
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>电子卷宗制作情况统计表</title>
+    
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/icon.css" />
+    <!--    <link rel="stylesheet" type="text/css" href="../../Style/common.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../Style/dzjz.css" />
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../../Script/View/DZJZ/dzjz1.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+        
+      
+            margin: 0;
+        }   
+    </style>
+
+</head>
+<body style="height: 100%; padding: 10px;">
+    <div class="easyui-layout" style="width: 100%; min-width: 1200px; height: 100%; min-height: 630px;">
+        <div data-options="region:'north',title:'查询',split:true" style="height: 80px; padding-left: 10px;">
+            <div class="cx_input">
+                <span id="">单位：</span>
+                <select id="cboDWBM" class="easyui-combotree" style="width: 200px;">
+                </select>
+            </div>
+            <div class="cx_input">
+                <span id="">受理日期： </span>
+                <select class="easyui-combobox" id="cmbYearS" style="width: 100px;">
+                    <option value="2016">2016年</option>
+                    <option value="2017">2017年</option>
+                </select>
+                <select class="easyui-combobox" id="cmbMonthS" style="width: 100px;">
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                </select>
+                 至 
+                <select class="easyui-combobox" id="cmbYearE" style="width: 100px;">
+                    <option value="2016">2016年</option>
+                    <option value="2017">2017年</option>
+                </select>
+                <select class="easyui-combobox" id="cmbMonthE" style="width: 100px;">
+                    <option value="1">1月</option>
+                    <option value="2">2月</option>
+                    <option value="3">3月</option>
+                    <option value="4">4月</option>
+                    <option value="5">5月</option>
+                    <option value="6">6月</option>
+                    <option value="7">7月</option>
+                    <option value="8">8月</option>
+                    <option value="9">9月</option>
+                    <option value="10">10月</option>
+                    <option value="11">11月</option>
+                    <option value="12">12月</option>
+                </select>
+            </div>
+            <div class="cx_input" style="float: left;">
+                <a id="btnSearch_dzjz"  class="easyui-linkbutton" data-options="iconCls:'icon-search'"
+                    style="height: 23px;">查询</a>
+                <a id="btnExport_dzjz1"  class="easyui-linkbutton" data-options="iconCls:'icon-excel'"
+                    style="height: 23px;">导出Excel</a>
+                    <a id="btnExport_dzjz2"  class="easyui-linkbutton" data-options="iconCls:'icon-word'"
+                    style="height: 23px;">导出WORD文档</a>
+            </div>
+        </div>
+        <div data-options="region:'center'">
+	        <table id="dg_dzjz1" class="easyui-datagrid" title="电子卷宗制作情况统计表" 
+			        data-options="singleSelect:true">
+		        <thead>
+			        <tr>
+                        <th data-options="field:'a',width:250,align:'left'" rowspan="2">地区</th>
+				        <th colspan="4">已制作案件</th>
+                        <th data-options="field:'d',width:150,align:'center'" rowspan="2">应制作案件数（件）</th>
+                        <!--<th data-options="field:'ee',width:150,align:'center',formatter: function (value,row) { if(row.d &gt; 0) return  &quot;&lt;a href=&apos;javascript:void(0)&apos; onclick=&apos;click_aj(&quot; + row.b + &quot;)&apos;&gt;&quot; + row.d + &quot;&lt;/a&gt;&quot;; else return 0;}" rowspan="2">应制作案件数（件）</th>-->
+				        <th data-options="field:'f',width:150,align:'center'" rowspan="2">制作率（%）</th>
+                        <th data-options="field:'h',width:150,align:'center'" rowspan="2">律师阅卷导出案件数（件）</th>
+			        </tr>
+			        <tr>
+				        <!--<th data-options="field:'e',width:150,align:'center'">制作数量（件）</th>-->
+                        <th data-options="field:'ee',width:150,align:'center',formatter: function (value,row) { if(row.d &gt; 0) return  &quot;&lt;a href=&apos;javascript:void(0)&apos; onclick=&apos;click_aj(&quot; + row.b + &quot; &#44;&quot; + row.e + &quot;)&apos;&gt;&quot; + row.e + &quot;&lt;/a&gt;&quot;; else return 0;}">制作数量（件）</th>
+				        <th data-options="field:'g',width:150,align:'center'">卷（数）</th>
+				        <th data-options="field:'x',width:150,align:'center'">文件页数（页）</th>
+				        <th data-options="field:'y',width:150,align:'center'">存储大小（GB）</th>
+			        </tr>
+		        </thead>
+	        </table>
+        </div>
+    </div>
+
+</body>
+</html>

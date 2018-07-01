@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "微软雅黑";
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+ul{
+   margin: 0;
+}
+li{
+    list-style: none;
+}
+.clearfix::after,
+.clearfix::before {
+    display: table;
+    content: '';
+}
+.clearfix::after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1;
+}
+.fl {
+    float: left;
+    cursor: pointer;
+}
+.fr {
+    float: right;
+}
+/*---鼠标点击滚动条显示样式--*/
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #2e6f97;
+    height: 50px;
+    -webkit-border-radius: 4px;
+}
+
+/*---滚动条大小--*/
+*::-webkit-scrollbar {
+    width: 5px;
+    height: 16px;
+
+}
+
+*::-webkit-scrollbar-track-piece {
+    background-color: #97c9e7;
+    -webkit-border-radius: 4px;
+}
+*::-webkit-scrollbar-thumb{
+    background-color: #6ea8d0;
+    height: 50px;
+    -webkit-border-radius: 4px;
+}
+@media screen and (min-width: 1880px) and (max-width:1930px) {
+    .li_center {
+        margin-left: 130px !important;
+    }
+}
+
+@media screen and (min-width: 1550px) and (max-width:1610px) {
+    body {
+        zoom: 0.83;
+    }
+
+    .chart_con{
+        zoom: 1.2;
+        height: calc(100%);
+    }
+    #container,#questionAnalyse{
+         zoom: 1.2;
+    }
+    .num p {
+        font-size: 20px;
+    }
+
+    .li_center {
+        margin-left: 140px !important;
+    }
+}
+
+@media screen and (min-width: 1400px) and (max-width:1450px) {
+    body {
+        zoom: 0.7;
+    }
+
+    .chart_con {
+        zoom: 1.41;
+        height: calc(100%);
+    }
+    #container,#questionAnalyse{
+        zoom: 1.41;
+    }
+    .num p {
+        font-size: 20px;
+    }
+
+    .li_center {
+        margin-left: 190px !important;
+    }
+    .tyywzs_map {
+        height: calc(100% - 86px)!important;
+    }
+    .chart_con {
+        height: calc(100% - 21px)!important;
+    }
+}
+
+@media screen and (min-width: 1300px) and (max-width:1370px) {
+    body {
+        zoom: 0.7;
+    }
+    .questionAnalyse_right .questionAnalyse_right_fxtb {
+        zoom:1.41;
+    }
+    .chart_con {
+        zoom: 1.41;
+        height: calc(100%);
+    }
+    #container{
+      zoom: 1.41;
+    }
+    .num p {
+        font-size: 20px;
+    }
+
+    .li_center {
+        margin-left: 140px !important;
+    }
+    .tyywzs_map {
+        height: calc(100% - 86px)  !important;
+    }
+    .tyywzs_home_big_right_fot {
+        height: 41%  !important;
+    }
+    .tyywzs_map {
+        height: calc(100% - 80px)  !important;
+    }
+    .tyywzs_rig_bot {
+        height: 46%  !important;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 15px ;
+
+}
+
+
+
+.tabs-header {
+    background: #08143c !important;
+}
+
+.panel-body {
+    background:rgba(0,0,0,0) !important;
+}
+
+.menu {
+    background: #050a30 !important;
+    border-width: 0px !important;
+}
+
+    .menu li {
+        height: 30px !important;
+        border-bottom: 1px solid #06294f;
+        line-height: 30px;
+        font-size: 14px;
+        cursor: pointer;
+    }
+
+.tabs li a.tabs-inner {
+    border-radius: 0 !important;
+    background: #08143c !important;
+    color: #0395d0 !important;
+}
+
+.tabs-title {
+    font-size: 16px !important;
+}
+
+.tabs li.tabs-selected a.tabs-inner {
+    background: #050a30 !important;
+    border-bottom: 1px solid #050A30 !important;
+}
+
+.tabs-panels .panel-body {
+    background: #050a30 !important;
+}
+
+.tabs-panels .tabs-wrap {
+    background: #050a30 !important;
+}
+
+.tabs-container .panel-body-noborder .panel table tr {
+    height: 34px !important;
+}
+
+    .tabs-container .panel-body-noborder .panel table tr td {
+        border-width: 0 1px 1px 0;
+        border-style: dashed;
+        border-color: #062950;
+        padding-left: 5px;
+    }
+
+.tabs-container .panel-body-noborder .panel table {
+    font-size: 14px !important;
+}
+
+.tabs-header-left .tabs li.tabs-selected a.tabs-inner {
+    border-bottom: 1px solid #95B8E7 !important;
+}
+
+.easyui-pagination table tr td {
+    border: 0 !important;
+}
+
+#gaxx_card_tt .panel-body li {
+    color: #0395d0;
+}
+
+#gaxx_aj_tt .panel-body tr {
+    color: #0395d0;
+}
+
+#gaxx_card_tt .panel-body li:hover {
+    color: #0FF;
+}
+
+#gaxx_aj_tt .panel-body li span:hover {
+    color: #0FF;
+}

@@ -1,0 +1,230 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/tab_tytwzs.css" />
+    <!--<link rel="stylesheet" type="text/css" href="../../Style/tab_ajgkfx.css" />-->
+    <!--<link rel="stylesheet" type="text/css" href="../../Style/tab_dzjzfx.css"/>-->
+<!--    <script src="../../Script/Highcharts/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Highcharts/charts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Highcharts/js/highcharts-3d.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.min.js"></script>-->
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+    <script src="../../Script/View/TYYW/SLFX.js" type="text/javascript"></script>
+    <style>
+        /*@media screen and (min-width: 1550px) and (max-width:1600px) {
+            #ajslt, #ajsls, #ajblhjt, #gyajsls, #xiaoer_tyyw_zzs1, #xiaoer_tyyw_zzs2, #xiaoer_tyyw_zzs3, #xiaoer_tyyw_zzs4, #xiaoer_tyyw_zzs5 {
+                zoom: 1.41;
+            }
+        }
+        @media screen and (min-width: 1400px) and (max-width:1440px) {
+            #ajslt, #ajsls, #ajblhjt, #gyajsls, #xiaoer_tyyw_zzs1, #xiaoer_tyyw_zzs2, #xiaoer_tyyw_zzs3, #xiaoer_tyyw_zzs4, #xiaoer_tyyw_zzs5 {
+                zoom: 1.41;
+            }
+        }
+        @media screen and (min-width: 1300px) and (max-width:1370px) {
+            #ajslt, #ajsls, #ajblhjt, #gyajsls, #xiaoer_tyyw_zzs1, #xiaoer_tyyw_zzs2, #xiaoer_tyyw_zzs3, #xiaoer_tyyw_zzs4, #xiaoer_tyyw_zzs5 {
+                zoom: 1.41;
+            }
+        }*/
+
+
+    </style>
+</head>
+<body>
+    <div class="tab_tyywzs">
+        <div class="blbb_title">
+            <!--<p style="color: white">dssadasdasdasdsadasdasdas</p>-->
+            <div class="int">
+                <span style="line-height: 34px;">单位:</span>
+                <select id="cb_tyywzs_dwbm" class="easyui-combotree Company" panelwidth="320px" style="height: 100%;"></select>
+            </div>
+            <div class="chek">
+                <input id="radio_tyywzs_sjtype" class="r-input" type="checkbox" name="calogin" 
+                       checked="checked">
+                <label for="radio_tyywzs_sjtype" style="cursor: pointer; font-weight: normal; color: #018ab7; font-size: 14px">
+                    包含下级院</label>
+            </div>
+            <!-- <div class="wbk ywfx">
+                     <div class="icon_ywfx">
+                     </div>
+                     <span style="padding-left: 6px;">业务分析</span>
+                 </div>-->
+            <div class="wbk cx" id="btn_tyywzs_Search">
+                <!--<img src="img/chax_06.png" alt="">-->
+                <div class="cxan_ys">
+                </div>
+                <span style="padding: 0px 16px 0px 6px">查询</span>
+            </div>
+            <div class="time">
+                <div class="kais">
+                    <input id="dateStart_tyywzs" class="easyui-datebox Company cc" name="dept"/>
+                </div>
+                <span style="margin-left: 10px">至</span>
+                <div class="kais">
+                    <input id="dateEnd_tyywzs" class="easyui-datebox Company cc" name="dept"/>
+                </div>
+            </div>
+            <div class="date_but" style="cursor: pointer">
+                <!-- <div class="day" value="1" changeatrr="今日">
+                         日</div>
+                    <div class="month" value="2" changeatrr="本月" style="border-right: 1px solid #003f70">
+                        月</div>-->
+                <div class="day" value="2" changeatrr="本月" style="border-right: 1px solid #9ad0fd; border-left: 1px solid #9ad0fd; ">
+                    月</div>
+                <div class="quarter" value="3" changeatrr="本季">
+                    季</div>
+                <div class="year date_but_click" value="4" changeatrr="本年">
+                    年</div>
+            </div>
+        </div>
+        <div class="tyywzs_left">
+            <div class="tyywzs_left_top">
+                <p class="tit" ondblclick="getywajsl()"style="cursor: pointer" >
+                    各业务案件受理数（件）</p>
+                <div class="chart_con" id='ajsls'>
+                </div>
+            </div>
+            <div class="tyywzs_left_bot">
+                <p class="tit" ondblclick="getajblhj()"style="cursor: pointer" >
+                    案件办理合计图（件）</p>
+                <div class="chart_con" id='ajblhjt'>
+                </div>
+            </div>
+        </div>
+        <div class="tyywzs_map">
+            <!--<div>
+                <p class="tit" ondblclick="getajblhj()" style="cursor: pointer;">
+                    案件办理合计图（件）
+                </p>
+            </div>-->
+            <div class="map_top">
+                <div>
+                    <ul>
+                        <li class="div_ajs" style="position: relative;width: 25%">
+                            <p>本年受理案件数</p>
+                            <span id="div_a1"></span>
+                            <p>
+                            </p>
+                            <div id="span_a1" class="openMessage ajcxxx_hover">
+                            </div>
+                        </li>
+                        <li class="div_ajs" style="position: relative;width: 25%">
+                            <p>往年未结案件数</p>
+                            <span id="div_a2"></span>
+                            <p>
+                            </p>
+                            <div id="span_a2" class="openMessage ajcxxx_hover">
+                            </div>
+                        </li>
+                        <li class="div_ajs" style="position: relative;width: 25%">
+                            <p>本年审结案件数</p>
+                            <span id="div_a3"></span>
+                            <p>
+                            </p>
+                            <div id="span_a3" class="openMessage ajcxxx_hover">
+                            </div>
+                        </li>
+                        <li class="div_ajs" style="position: relative;width: 25%">
+                            <p>本年未结案件数</p>
+                            <span id="div_a4"></span>
+                            <p>
+                            </p>
+                            <div id="span_a4" class="openMessage ajcxxx_hover">
+                            </div>
+                        </li>
+                    </ul>
+                    <div>
+                        <div>
+                            <p>
+                                同比/环比(%)</p>
+                            <span id="div_a1-1"></span>
+                        </div>
+                        <div>
+                            <p>
+                                同比/环比(%)</p>
+                            <span id="div_a3-1"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="map_con">
+                <iframe id="iframe_tyyw" name="iframe_tyyw" src=""
+                        frameborder="0" scrolling="auto" style="border:none;margin: auto;"width="100%" height="100%" ></iframe>
+            </div>
+        </div>
+        <div class="tyywzs_rig">
+            <div class="tyywzs_rig_top">
+                <p class="tit" ondblclick="getlsajsls()"style="cursor: pointer" >
+                    历史案件受理图（件）</p>
+                <div class="chart_con" id='ajslt' >
+                </div>
+            </div>
+            <div class="tyywzs_rig_bot">
+                <p class="tit" ondblclick="getajsls()"style="cursor: pointer" >
+                    各院案件受理、审结数（件）</p>
+                <div class="chart_con" style="overflow-y: auto;overflow-x:hidden">
+                    <div id="gyajsls" ></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs1" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="各业务案件受理数" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs1" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs2" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="各院案件受理数" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs2" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs3" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="历史案件受理线图" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs3" class="chart_con" style="min-width: 90%; height: 85%; width:99%"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs4" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="案件办理合计图" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs4" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+        </div>
+    </div>
+    <div id="tyywModal_zzs5" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="各类别案件受理数（件）" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div class="tit_con">
+            <div id="xiaoer_tyyw_zzs5" class="chart_con" style="min-width: 90%; height: 85%; max-width: 90%;"></div>
+        </div>
+    </div>
+    <script type="text/javascript">
+//        $.parser.parse();
+//        setTimeout(function () {
+//            var lineData1 = [
+//			        {
+//			            name: '1800 年',
+//			            data: [107, 31, 635, 203, 2]
+//			        }
+//			    ];
+//            var lineData2 = [
+//			        {
+//			            name: '1800 年',
+//			            data: [107, 31, 635, 203, 2]
+//			        }, {
+//			            name: '1900 年',
+//			            data: [133, 156, 947, 408, 6]
+//			        }
+//			    ];
+//            bar('#ajsls', lineData1);
+//            line('#ajslt');
+//            column('#ajblhjt');
+//            bar('#gyajsls', lineData2);
+//            $('.date_but div').click(function () {
+//                $('.date_but_click').removeClass('date_but_click');
+//                $(this).addClass('date_but_click');
+//            });
+//        }, 500);
+        //			});
+    </script>
+</body>
+</html>

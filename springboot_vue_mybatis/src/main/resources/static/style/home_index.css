@@ -1,0 +1,159 @@
+*{
+    font-family: 微软雅黑;
+    font-size: 14px;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+body,html{
+    height: 100%;
+}
+li{
+    list-style: none;
+}
+ul{
+    padding: 0;
+}
+/*设置整体背景颜色或者图片*/
+#body{
+    width: 100%;
+    height: 100%;
+    background: url("../images/index/login.jpg") center;
+    background-size: 100% 100%;
+}
+/*设置左侧导航栏背景颜色*/
+#home_left{
+    width: 305px;
+    height: 100%;
+    background: url(../images/index/cbl_02.png);
+    position: relative;
+    float: left;
+}
+/*左侧头部logo*/
+#home_logo{
+    background: url("../images/index/logo.png") no-repeat center;
+    width: 100%;
+    height: 183px;
+    margin-top: 15%;
+    display: inline-block;
+
+}
+/*左侧用户操作*/
+.user{
+    width: 100%;
+    height: 106px;
+    margin-top:15%;
+}
+/*用户登录信息*/
+.user_info{
+    width: 234px;
+    height: 55px;
+    border-radius: 46px;
+    background: #0a67b2;
+    border: 1px solid #187cc7;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+.user_img{
+    background: url(../images/index/tx.png);
+    width: 60px;
+    height: 60px;
+    float: left;
+    margin-left: -18px;
+    margin-top: -2px;
+}
+/*左侧帮助、注销、登录的整体位置*/
+.user_operating{
+    width: 217px;
+    height:25px;
+    margin-top: 23px;
+    margin-left: 50%;
+    transform:  translateX(-50%);
+}
+.user_operating_button{
+    float: left;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    margin-right: 40px;
+    cursor: pointer;
+}
+.notification{
+    padding: 0 6px;
+    background: #e7620a;
+    color: #ffffff;
+    position: absolute;
+    z-index: 22;
+    top: -10px;
+    right: -11px;
+    border-radius: 50px;
+}
+/*导航菜单存放位置*/
+#home_accordion{
+    width: 100%;
+    height: calc(100% - 450px);
+    position: absolute;
+    bottom: 0;
+    overflow: auto;
+}
+/*一级菜单样式*/
+.li_yjcd{
+    background-position: 10% 50%;
+    background-repeat: no-repeat;
+    text-indent: 20%;
+    color: #ffffff;
+    font-size: 16px;
+    height: 48px;
+    line-height: 48px;
+    background-color: #1075c3;
+    cursor: pointer;
+    margin-top: 1px;
+}
+/*二级菜单背景和大小设置*/
+.ul_two{
+    background-color: #0967af;
+    margin-top: 1px;
+    display: none;
+    width: 100%;
+    /* height: 210px; */
+    overflow: hidden;
+}
+/*二级菜单样式*/
+.ul_two_li{
+
+    line-height: 35px;
+    color: #88d1ff;
+    text-indent: 18%;
+    cursor: pointer;
+    position: relative;
+}
+/*二级菜单鼠标移入样式*/
+.ul_two_li_text:hover{
+    background-color: #045294;
+}
+/*显示是否有三级菜单的下拉菜单图标*/
+.slideUpDown{
+    width: 24px;
+    height: 20px;
+    float: right;
+    margin-top: 6px;
+    margin-right: 5px;
+    background-image: url("../images/index/slideUp.png");
+    background-repeat: no-repeat;
+    background-position: center;
+}
+/*三级菜单样式以及鼠标移入样式*/
+.sjcd_ul{
+    display: none;
+}
+.sjcd_ul_li{
+    padding-left: 28px;
+    font-size:16px;
+}
+.sjcd_ul_li:hover{
+    background: #045294;
+}
+.ul_two_li_text {
+    font-size:16px;
+}

@@ -1,0 +1,331 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>案件详细</title>
+    <meta id="viewport" name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <link href="../../Style/Login/Images/jcy.ico" rel="icon" type="image/x-icon" />
+    <link href="../../Style/GlobalStyleDefine.css" rel="stylesheet" type="text/css" />
+    <link href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../Script/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" type="text/css" />
+    <script src="../../Script/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+    <link href="../../Style/main.css" rel="stylesheet" type="text/css" />
+    <link href="../../Style/win.css" rel="stylesheet" type="text/css" />
+    <script src="../../Script/pdfobject.js" type="text/javascript"></script>
+    <script src="../../Script/View/AJXX/AJJBXX.js" type="text/javascript"></script>
+</head>
+<body>
+    <div id="tt" class="easyui-tabs" fit="true">
+        <div title="案件基本信息">
+            <div class="easyui-layout" fit="true">
+                <div style="width: 750px; padding: 10px 0 0 0;" data-options="region:'west'">
+                    <form id="form1" method="post" novalidate>
+                    <table width="96%" border="0" cellpadding="0" cellspacing="0" align="center">
+                        <tr>
+                            <td class="tip_bar" colspan="10">
+                                案件基本信息
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="height: 10px;">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="13%" class="td_item" align="right">
+                                部门受案号：
+                            </td>
+                            <td width="30%" class="td_item_text">
+                                <input name="bmsah" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                统一受案号：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="tysah" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                案件名称：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="ajmc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                案件类别：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="ajlb_mc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                侦查机关：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="zcjg_dwmc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                移送单位：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="ysdw_dwmc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                承办单位：
+                            </td>
+                            <td width="34%" class="td_item_text">
+                                <input name="cbdw_mc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                承办部门：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="cbbm_mc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                承办人：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="cbr" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                受理日期：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="slrq" class="easyui-datebox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                移送文书文号：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="yswswh" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                移送案由：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="ysay_aymc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                移送其他案由：
+                            </td>
+                            <td colspan="3" class="td_item_text">
+                                <input name="ysqtay_aymcs" class="easyui-textbox" style="width: 595px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                案情摘要：
+                            </td>
+                            <td colspan="3" class="td_item_text">
+                                <input name="aqzy" class="easyui-textbox" style="width: 595px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="15%" class="td_item" align="right">
+                                办理开始日期：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="blksrq" class="easyui-datebox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                完成日期：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="wcrq" class="easyui-datebox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                办理天数：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="blts" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                到期日期：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="dqrq" class="easyui-datebox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                办结日期：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="bjrq" class="easyui-datebox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                风险等级：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="fxdj" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                是否涉外案件：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input id="sfswaj" name="sfswaj" type="checkbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                是否督办案件：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input id="sfdbaj" name="sfdbaj" type="checkbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="15%" class="td_item" align="right">
+                                附注：
+                            </td>
+                            <td colspan="3" class="td_item_text">
+                                <input name="fz" class="easyui-textbox" style="width: 595px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                专项活动：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="zxhd_mc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="10%" class="td_item" align="right">
+                                是否关注案件：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input id="sfgzaj" name="sfgzaj" type="checkbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                移送意见：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="ysyj_mc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                是否交办案件：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input id="sfjbaj" name="sfjbaj" type="checkbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                当前预警阶段：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="dqyjjd" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                原案所处诉讼阶段：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="yascssjd_mc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                移送人及电话：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="ysrjdh" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                案件来源名称：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="ajly_mc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="10%" class="td_item" align="right">
+                                是否专项活动：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input id="sfzxhd" name="sfzxhd" type="checkbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="15%" class="td_item" align="right">
+                                专项活动名称：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="zxhdmc" class="easyui-textbox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="15%" class="td_item" align="right">
+                                创建时间：
+                            </td>
+                            <td width="36%" class="td_item_text">
+                                <input name="cjsj" class="easyui-datebox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                            <td width="10%" class="td_item" align="right">
+                                最后修改时间：
+                            </td>
+                            <td width="35%" class="td_item_text">
+                                <input name="zhxgsj" class="easyui-datebox" style="width: 230px;" disabled="disabled" />
+                            </td>
+                        </tr>
+                    </table>
+                    </form>
+                </div>
+                <div style="padding: 2px; background: #eee;" data-options="region:'center'">
+                    <div id="lcjd"></div>
+                </div>
+            </div>
+        </div>
+        <div title="案件卷宗信息">
+            <div class="easyui-layout" fit="true">
+                <div style="width: 300px; padding: 10px 0 0 0;" data-options="region:'west'">
+                    <ul id="dgSALBJZList">
+                    </ul>
+                </div>
+                <div style="padding: 5px; background: #eee;" data-options="region:'center'">
+                    <div id="showPdf" style="height: 100%;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        load();
+        //添加Script元素
+        function AddScript(type, src) {
+            var add = true;
+            var oHead = document.getElementsByTagName('head').item(0);
+            for (var i = 0; i < oHead.childNodes.length; i++) {
+                if (oHead.childNodes[i].src && oHead.childNodes[i].src.indexOf(src.replace(/\.\.\//g, '')) != -1) {
+                    var oScirpt = document.createElement("script");
+                    oScirpt.type = type;
+                    oScirpt.src = src;
+
+                    oHead.replaceChild(oScirpt, oHead.childNodes[i]);
+                    add = false;
+                    break;
+                }
+            }
+            if (add) {
+                var scirpt = document.createElement("script");
+                scirpt.type = type;
+                scirpt.src = src;
+                oHead.appendChild(scirpt);
+            }
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,206 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>案件信息公开</title>
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/bootstrap/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/icon.css" />
+    <!--    <link rel="stylesheet" type="text/css" href="../../Style/common.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../Style/dzjz.css" />
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../../Script/View/AJXXGK/ajxxgk.js" type="text/javascript" charset="utf-8"></script>
+    <style type="text/css">
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+            font-family: verdana,helvetica,arial,sans-serif;
+            font-size: 12px;
+            margin: 0;
+        }
+        .cont
+        {
+            border-radius: 5px;
+            padding-top: 10px;
+            box-shadow: 1px 2px 1px #dad8d7;
+        }
+        .cont_bor
+        {
+            background: #efebf0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-top: 35px;
+            border: 1px solid #bcd3e7;
+            box-sizing: border-box;
+        }
+        .tit_name
+        {
+            height: 35px;
+            width: 100%;
+            color: #094d77;
+            line-height: 35px;
+            background: #cadeef;
+            padding-left: 10px;
+            font-size: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="height: 100%;">
+    <div class="easyui-layout" style="width: 100%; min-width: 1200px; height: 100%; min-height: 650px;">
+        <div data-options="region:'north',title:'查询',split:true" style="height: 80px; padding-left: 10px;">
+            <div class="cx_input">
+                <span id="">单位：</span>
+                <select id="cboDWBM" class="easyui-combotree" style="width: 200px;">
+                </select>
+                <input type="checkbox" id="ckbDWBM" checked="checked" />
+                <span id="Span1">包含下级院</span>
+            </div>
+            <div class="cx_input">
+                <span id="">起始日期： </span>
+                <input type="text" id="dateStart_tjzlzb" class="Wdate" onclick="WdatePicker({isShowClear:true,dateFmt:'yyyy-MM-dd',maxDate:'#F{$dp.$D(\'dateEnd_tjzlzb\');}'})"
+                    style="cursor: pointer; border-color: #95B8E7;" />
+                ~
+                <input type="text" id="dateEnd_tjzlzb" class="Wdate" onclick="WdatePicker({isShowClear:true,dateFmt:'yyyy-MM-dd',minDate:'#F{$dp.$D(\'dateStart_tjzlzb\');}',maxDate:'%y-%M-%d'})"
+                    style="cursor: pointer; border-color: #95B8E7" />
+            </div>
+            <div class="cx_input" style="float: left;">
+                <a id="btnSearch_ajxxgk" class="easyui-linkbutton" data-options="iconCls:'icon-search'"
+                    style="height: 23px;">查询</a>
+            </div>
+        </div>
+        <div data-options="region:'west'" style="width: 45%; background: #efebf0; border: 0;" class="ajxxgk">
+            <div class="easyui-layout" data-options="fit:true">
+                <div data-options="region:'north'" style="height: 142px;overflow: initial">
+                    <ul class="dzjz_zzaj1">
+                        <li style="width: 33%">
+                            <p class="tit">
+                                案件程序性信息(件)
+                            </p>
+                            <div id="div_ajcxxxx">
+                            </div>
+                            <p>
+                            </p>
+                            <span id="span_v1" class="openMessage">
+                            </span>
+                        </li>
+                        <li style="width: 33%">
+                            <p class="tit">
+                                辩护与代理预约(件)
+                            </p>
+                            <div id="div_bhydlyy">
+                            </div>
+                            <p>
+                            </p>
+                        </li>
+                        <li style="border-right: 0px; width: 33%">
+                            <p class="tit">
+                                法律文书(件)
+                            </p>
+                            <div id="div_flws">
+                            </div>
+                            <p>
+                            </p>
+                        </li>
+                        <!--<li style="border-right: 0px;">
+                            <p class="tit">
+                                重要案件公开(件)
+                            </p>
+                            <div id="div_zyajgk">
+                            </div>
+                            <p>
+                            </p>
+                        </li>-->
+                    </ul>
+                </div>
+                <div data-options="region:'center'" style="padding: 5px;">
+                    <iframe id="iframe2" name="iframe2" src="" frameborder="0" scrolling="auto" style="border: none;"
+                        width="99%" height="99%"></iframe>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'center'" style="padding: 0px 10px; background: #efebf0;">
+            <div class="cont dzjz_con" style="height: 40%;">
+                <div class='cont_bor'>
+                    <div id="div_tit1" class="tit_name tit_pad" ondblclick="ajwsgkqk()">
+                        ▎法律文书公开情况(件)
+                    </div>
+                    <div class="tit_con">
+                        <div id="tabs" class="easyui-tabs" data-options="tabHeight:33" style="width: 100%;
+                            height: 100%;">
+                            <div title="起诉书公开">
+                                <div id="ajxxgk_0" style="min-width: 100%; height: 150px; max-width: 100%; margin: 0 auto">
+                                </div>
+                            </div>
+                            <div title="刑事抗诉书公开">
+                                <div id="ajxxgk_1" style="min-width: 100%; height: 150px; max-width: 100%; margin: 0 auto">
+                                </div>
+                            </div>
+                            <div title="不起诉决定书公开">
+                                <div id="ajxxgk_2" style="min-width: 100%; height: 150px; max-width: 100%; margin: 0 auto">
+                                </div>
+                            </div>
+                            <div title="刑事申诉复查决定书公开">
+                                <div id="ajxxgk_3" style="min-width: 100%; height: 150px; max-width: 100%; margin: 0 auto">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont dzjz_con" style="height: 30%;">
+                <div class='cont_bor'>
+                    <div id="div_tit2" class="tit_name" ondblclick="ajwsgkbl()">
+                        ▎法律文书公开比例(%)
+                    </div>
+                    <div class="tit_con">
+                        <div id="ajxxgk_bl" style="min-width: 100%; height: 100%; max-width: 100%; margin: 0 auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont dzjz_con" style="height: 30%;">
+                <div class='cont_bor'>
+                    <div id="div_tit3" class="tit_name tit_bag1" ondblclick="jdxx()">
+                        ▎案管辩护人、诉讼代理人接待信息(次)
+                    </div>
+                    <div class="tit_con">
+                        <div id="ajxxgk_jdxx" style="min-width: 100%; height: 100%; max-width: 100%; margin: 0 auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="ajxxgkModal_qk" class="easyui-window" modal="true" shadow="true" width="97%"
+        height="97%" title="法律文书公开情况">
+        <div class="tit_con">
+            <div id="ajxxgk" style="min-width: 90%; height: 85%; max-width: 90%;">
+            </div>
+        </div>
+    </div>
+    <div id="ajxxgkModal_bl" class="easyui-window" modal="true" shadow="true" width="97%"
+        height="97%" title="法律文书公开比例">
+        <div class="tit_con">
+            <div id="ajxxgk_bl1" style="min-width: 90%; height: 85%; max-width: 90%;">
+            </div>
+        </div>
+    </div>
+    <div id="ajxxgkModal_jdxx" class="easyui-window" modal="true" shadow="true" width="97%"
+         height="97%" title="案管辩护人、诉讼代理人接待信息">
+        <div class="tit_con">
+            <div id="ajxxgk_jdxx1" style="min-width: 90%; height: 85%; max-width: 90%;">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+	<link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/icon.css" />
+	<!--<link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.3/demo/demo.css" />-->   
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/questionAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/unitAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/validationReport.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/operationAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/AJXXXX.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/basechart.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/BMSAH.css"/>
+	<script src="../../Script/View/tjsjjy/datavalidateanalyseservice.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Script/View/tjsjjy/pie.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Script/View/tjsjjy/BMSAH.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../Script/View/tjsjjy/validationReport.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+    <style>
+        .wbk {
+            float:none;
+            margin-top:5px;
+        }
+            .wbk:hover {
+                color:fff;
+            }
+    </style>
+    <div class="validationReport">
+        <div class="validationReport-header">
+
+            <ul>
+                <li id="new" onclick="change(0)" class="reportavtive">条线督导</li>
+                <li id="old" onclick="change(1)" >对下督导</li>
+            </ul>
+        </div>
+        <div class="validationReport-xzfl">
+            <div class="validationReport-xzfl-left1">
+                <!--<div style="margin-top: 5px">-->
+                    <!--<span class="validationDW" >选择单位：</span>-->
+                    <!--&lt;!&ndash;<select id="validationDW" class="easyui-combotree" style="width: 100px;height: 25px;"panelWidth="320px"></select>&ndash;&gt;-->
+                    <!--<input type="checkbox" title="选择查看当前院及下级院" style="width: 17px;height: 17px;float: right;margin-top: 3px;margin-left: 5px" id="seachAll">-->
+                <!--</div>-->
+                <!--<div class='int' style="width: 15%">-->
+                    <!--<span style="line-height: 34px;">承办单位：</span>-->
+                    <!--<input id="validationDW" class="easyui-combotree Company" value="" style="height: 100%;"/>-->
+                    <!--<input type="checkbox" title="选择查看当前院及下级院" style="width: 17px;height: 17px;float: right;margin-top: 3px;margin-left: 5px" id="seachAll">-->
+                <!--</div>-->
+                <div class="time" style="margin: 3px 0 3px 15px;float: left;">
+                    <span id="" style="color: #018ab7">承办单位： </span>
+                    <div class="kais" style="width: 200px">
+                        <input id="validationDW" class="easyui-combobox Company cc" name="dept"/>
+                        <input type="checkbox" title="选择查看当前院及下级院" style="width: 17px;height: 17px;float: right;margin-top: 3px;margin-left: 5px; display: none;" id="seachAll"/>
+                    </div>
+                </div>
+
+                <!--<div class="int" style="">
+                    <span style="line-height: 34px;color: #018ab7;">部门：</span>
+                    <select id="DDBMBM" class="easyui-combotree Company" style="height:34px; margin-top: 3px;background: url(../../images/riqi_03.png)  no-repeat center !important;    background-size: 100% 100%;border:0px" panelwidth="320px">
+                    </select>
+                </div>-->
+                <div>
+                    <span class="YWLB">业务类别：</span>
+                    <select id="YWLB" style="width: 113px; height: 34px; color: #048AB7; border: 1px solid #9acefd;border-radius:5px;color:#666"></select>
+                </div>
+
+                <div>
+                    <span class="XZGZ">选择规则：</span>
+                    <select id="XZGZ" style="width: 113px; height: 34px; color: #048AB7; border: 1px solid #9acefd; border-radius: 5px; color: #666; "></select>
+                </div>
+
+                <div>
+                    <span class="SHZT">审核状态：</span>
+                    <select id="SHZT" style="width: 113px; height: 34px; border: 0; color: #048AB7; border: 1px solid #9acefd; border-radius: 5px; color: #666; ">
+                        <option value="">全部</option>
+                        <option value="同意">同意</option>
+                        <option value="拒绝">拒绝</option>
+                        <option value="待审核">待审核</option>
+                    </select>
+                </div>
+                <!--<div style="float:left;color: #333;font-size: 14px;line-height: 31px;">-->
+                    <!--开始时间-->
+                    <!--<input id="validationBeginTime" type="text" class="easyui-datebox" style="width: 100px" required="required">-->
+                    <!--截止时间-->
+                    <!--<input id="validationEndTime" type="text" class="easyui-datebox" style="width: 100px" required="required">-->
+                <!--</div>-->
+                 <div class='time'>
+                    <span id="Span1">监控日期从：</span>
+                    <div class="kais" style="width: 105px">
+                        <input id="validationBeginTime" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                               data-options="required:true" />
+                    </div>
+                    <span style="margin-left: 10px">到</span>
+                    <div class="kais" style="width: 105px">
+                        <input id="validationEndTime" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                               data-options="required:true" />
+                    </div>
+                     </div>
+
+
+                </div>
+            <div class="validationReport-xzfl-left">
+                <input id="BMSAH" type="text" placeholder="部门受案号">
+                <input id="AJMC" type="text" placeholder="案件名称">
+                <input id="CBR" type="text" placeholder="承办人">
+                <!--<button class="search" onclick="search()" style="cursor:pointer">搜索</button>-->
+                <button class="cx " id="search2" style="cursor: pointer;margin-left: 20px;width: 101px;height: 32px;border: 0;color: #fff;font-size: 14px;outline: none;border-radius:5px" onclick="search()">搜索
+                </button>
+
+                <!--<button class="search" id="search" onclick="exportTableExcel()" style="display: none;cursor:pointer">输出Excel报告</button>-->
+                <button class="wbk" id="search" style="display: none; cursor: pointer; margin-left: 20px; width: 121px; height: 32px;  font-size: 14px; outline: none" onclick="exportTableExcel()">
+                    输出Excel报告
+                </button>
+                <!--<button class="search" id="search1" onclick="exportTableWord()" style="display: none;cursor:pointer">输出Word报告</button>-->
+                <button class="wbk" id="search1" style="display: none; cursor: pointer; margin-left: 20px; width: 121px; height: 32px;  font-size: 14px; outline: none" onclick="exportTableWord()">
+                    输出Word报告
+                </button>
+                <button class="wbk" id="sendEmail" style="display: none; cursor: pointer; margin-left: 20px; width: 121px; height: 32px; font-size: 14px; outline: none" onclick="showemail()">
+                    发送邮件
+                </button>
+            </div>
+        </div>
+        <div id="ywdiv" style="width: 100%; display: block; background: rgba(255,255,255,.3); height: calc(100% - 136px); overflow: auto;">
+
+        </div>
+        <div id="xsgd" onclick="ShowMore()" style="float: right;color: #0774CC;display: none;font-size: 14px;cursor: pointer;margin-bottom: 10px;">显示更多>></div>
+        <div id="luz" style="width: 100%; overflow: auto; background: rgba(255,255,255,.3); height: calc(100% - 166px); overflow: auto; display: none;">
+            <div id="lsbg" style="width: 100%;display: none;height: 561px;overflow: hidden">
+                <table border="0" cellpadding="0" cellspacing="0" id="tablelsbg" style="table-layout:fixed">
+                    <thead>
+                    <tr>
+                        <td>业务名称</td><td>部门受案号</td><td>案件名称</td><td>嫌疑人姓名</td><td>承办部门</td><td>承办人</td><td>规则名称</td><td>规则内容</td><td>审核状态</td>
+                    </tr>
+                    </thead>
+                    <tbody id="lsbgtr">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+<div id="modal" class="easyui-window" modal="true" closed="true" shadow="true" width="95%" height="95%" title="个案查看" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,"></div>
+</body>
+</html>

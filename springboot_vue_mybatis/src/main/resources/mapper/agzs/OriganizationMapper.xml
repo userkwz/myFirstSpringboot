@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swx.dao.OriganizationMapper">
+    <select id="loginDwbmTree" parameterType="map" statementType="CALLABLE">
+        <![CDATA[
+            CALL pkg_zzjg_manage.proc_get_alldwbydwbm(
+                                                      #{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                                      #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=dwbmMap,javaType=java.sql.ResultSet},
+                                                      #{p_errmsg,mode=OUT,jdbcType=VARCHAR}
+            )
+        ]]>
+    </select>
+    <resultMap id="dwbmMap" type="java.util.HashMap">
+
+    </resultMap>
+    <select id="getUserFunction" parameterType="map" statementType="CALLABLE">
+        <![CDATA[
+          CALL pkg_zzjg_manage.proc_get_userfuncation(
+                                                    #{p_dwbm,mode=IN,jdbcType=VARCHAR},
+                                                    #{p_rygh,mode=IN,jdbcType=VARCHAR},
+                                                    #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=rygnMap,javaType=java.sql.ResultSet},
+                                                    #{p_errmsg,mode=OUT,jdbcType=VARCHAR}
+          )
+        ]]>
+    </select>
+    <resultMap id="rygnMap" type="com.swx.domain.UserFunction">
+        <result property="FBM" column="FBM"></result>
+        <result property="XH" column="XH"></result>
+        <result property="PROGRAMTYPE" column="PROGRAMTYPE"></result>
+        <result property="CT" column="CT"></result>
+        <result property="CXJ" column="CXJ"></result>
+        <result property="MC" column="MC"></result>
+        <result property="BM" column="BM"></result>
+        <result property="CSCS" column="CSCS"></result>
+    </resultMap>
+</mapper>

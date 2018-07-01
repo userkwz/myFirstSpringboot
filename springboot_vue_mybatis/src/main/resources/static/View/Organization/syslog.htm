@@ -1,0 +1,124 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>系统日志</title>
+</head>
+<body>
+    <!--页面JS加载，放在头部不能正确加载-->
+    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("/Script/Organization/syslog.js");
+    </script>
+    <div class="easyui-panel" data-options="fit:'true'" style="border-top: 0px; border-left: 0px">
+        <!--查询条件-->
+        <div style="margin-top: 5px; margin-left: 10px; margin-bottom: 5px;">
+            <table cellpadding="6" style="margin-top: 0px; margin-left: 0px;">
+                <tr>
+                    <td style="text-align: right;">
+                        单位
+                    </td>
+                    <td>
+                        <input id="tree_syslog_dwandson" class="easyui-combotree" style="width: 148px; height: 22px" />
+                    </td>
+                    <td style="text-align: right;">
+                        日志等级
+                    </td>
+                    <td>
+                        <input id="txt_syslog_rzdj" class="easyui-combobox" style="width: 148px; height: 22px" />
+                    </td>
+                    <td style="text-align: right;">
+                        记录人
+                    </td>
+                    <td>
+                        <input id="txt_syslog_jlr" class="easyui-combobox" style="width: 148px; height: 22px" />
+                    </td>
+                    <td style="text-align: right;">
+                        开始时间
+                    </td>
+                    <td>
+                        <input id="txt_syslog_kssj" class="easyui-datebox" editable="false" style="width: 148px;
+                            height: 22px" />
+                    </td>
+                    <td style="text-align: right;">
+                        结束时间
+                    </td>
+                    <td>
+                        <input id="txt_syslog_jssj" class="easyui-datebox" editable="false" style="width: 148px;
+                            height: 22px" />
+                    </td>
+                    <td>
+                        <a id="btn_syslog_search" class="easyui-linkbutton" style="margin-left: 18px; width: 80px;
+                            height: 25px;" data-options="iconCls:'icon-search'">查询</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <!--日志列表-->
+        <div id="pnl_syslog_list" class="easyui-panel" title="日志列表" data-options="fit:true"
+            style="border-bottom: 0px; border-right: 0px">
+            <table id="dg_syslog_list" border="0" />
+        </div>
+    </div>
+    <!--弹出窗：日志详细信息显示-->
+    <div id="win_syslog_view" class="easyui-window" style="width: 700px; height: 445px;"
+        data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <table cellpadding="5" style="margin-top: 10px; margin-left: 25px;">
+            <tr>
+                <td style="text-align: right;">
+                    日志等级
+                </td>
+                <td>
+                    <input id="txt_syslog_view_rzdj" class="easyui-textbox" readonly="true" style="width: 150px;
+                        height: 22px" />
+                </td>
+                <td style="text-align: right;">
+                    记录时间
+                </td>
+                <td>
+                    <input id="txt_syslog_view_jlsj" class="easyui-textbox" readonly="true" style="width: 147px;
+                        height: 22px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">
+                    记录人
+                </td>
+                <td>
+                    <input id="txt_syslog_view_jlr" class="easyui-textbox" readonly="true" style="width: 270px;
+                        height: 22px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">
+                    运行信息
+                </td>
+                <td colspan="3">
+                    <input id="txt_syslog_view_yxxx" class="easyui-textbox" multiline="true" readonly="true"
+                        style="width: 515px; height: 60px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">
+                    异常信息
+                </td>
+                <td colspan="3">
+                    <input id="txt_syslog_view_xx" class="easyui-textbox" multiline="true" readonly="true"
+                        style="width: 515px; height: 110px" />
+                </td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">
+                    错误信息
+                </td>
+                <td colspan="3">
+                    <input id="txt_syslog_view_cw" class="easyui-textbox" multiline="true" readonly="true"
+                        style="width: 515px; height: 60px" />
+                </td>
+            </tr>
+        </table>
+        <div style="text-align: center; padding: 5px; margin-top: 10px;">
+            <a id="btn_syslog_confirm" class="easyui-linkbutton" style="width: 80px; height: 25px;"
+                data-options="iconCls:'icon-cancel'">关闭</a>
+        </div>
+    </div>
+</body>
+</html>

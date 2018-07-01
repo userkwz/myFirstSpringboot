@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>不同案件类别电子卷宗制作情况统计表</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css"/>
+    <script src="../../Script/View/DZJZ/dzjz2.js" type="text/javascript" charset="utf-8"></script>
+        <style type="text/css">
+        *
+        {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        body
+        {
+
+
+            margin: 0;
+        }
+            .chek .r-input[type='checkbox']:checked + label {
+                background: url('../images/yixuan.png') 3px 2px no-repeat;
+            }   
+    </style>
+</head>
+    <body style="height: 100%; padding: 10px;">
+        <div class="blbb_home">
+            <div class="glbb_big">
+                <div class="blbb_title">
+                    <div class="int" style=" width: 243px; margin-left: 15px;">
+                        <span style="line-height: 34px;">单位:</span>
+                        <input id="cboDWBM" class="easyui-combotree Company" style="height: 100%;">
+                    
+                    </div>
+                    <div class="chek">
+                        <input id="ckbDWBM" class="r-input" type="checkbox" name="calogin" on-click={this.loginSwich(2)} checked="true">
+                        <label for="ckbDWBM" style="cursor: pointer;font-weight: normal;color: #018ab7;font-size: 14px">包含下级院</label>
+                    </div>
+                    <div class="time">
+                        <span id="">受理日期： </span>
+                        <div class="kais">
+                            <input id="cmbYearS" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                        </div>
+                        <div class="kais">
+                            <input id="cmbMonthS" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'"/>
+                        </div>
+                        <span style="margin-left: 10px">至</span>
+                        <div class="kais">
+                            <input id="cmbYearE" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                        </div>
+                        <div class="kais">
+                            <input id="cmbMonthE" class="easyui-combobox Company cc" name="dept" data-options="valueField:'id',textField:'text'" />
+                        </div>
+                    </div>
+                    <div id="btn_dzjzlbtj_Search" class="wbk cx" style="float: left;margin-left: 20px">
+                        <div class="cxan_ys"></div>
+                        <span style="padding: 0px 16px 0px 6px">查询</span>
+                    </div>
+                    <div id="btn_dzjzlbtj_Export_word" class="wbk">
+                        <span>导出Word文档</span>
+                    </div>
+                    <div id="btn_dzjzlbtj_Export_excel" class="wbk" style="margin-right: 15px">
+                        <span>导出Excel</span>
+                    </div>
+                </div>
+                <div data-options="region:'center'" class="easy_tabel">
+                    <table id="dg_dzjz2" data-options="singleSelect:true">
+                        
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

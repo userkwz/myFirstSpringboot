@@ -1,0 +1,103 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>办案部门</title>
+    <!--        <link href="../../Style/GlobalStyleDefine.css" rel="stylesheet" type="text/css"/>-->
+    <link href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet"
+        type="text/css" />
+    <link href="../../Script/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css"/>
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="../../Script/kindeditor-4.1.9/kindeditor.js" type="text/javascript"></script>
+    <script type="text/javascript" src="../../Script/View/Organization/index_bm.js"></script>
+    
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <style id="datagrid-group-style" type="text/css">
+    </style>
+    <style type="text/css">
+        body
+        {
+            font-family: 微软雅黑;
+            font-size: .9em;
+            background-color: #EAF4FD;
+            margin: 0px;
+            padding: 0px;
+            letter-spacing: 1px;
+        }
+        a {
+            text-decoration:none
+        }
+
+        .datagrid-group
+        {
+            height: 34px;
+            overflow: hidden;
+            font-weight: bold;
+            border-bottom: 1px dashed #062950;
+            line-height: 34px;
+            color: #00f6ff;
+            font-size: 16px;
+        }
+        #photo_dj > div
+        {
+            border: 1px solid #3399FF;
+            background-color: #F3F3F3;
+            margin: 5px 5px 5px 45px;
+            padding: 2px;
+            text-align: center;
+        }
+        #photo_dj > div > input
+        {
+            margin: 3px;
+        }
+        #zzjgMainLayWest{
+            background: transparent !important;
+            color: #027eaa;
+        }
+        #zzjgBMTool{
+            background: #08143c !important;
+        }
+         #ZzjgDwqxInfo>.panel 
+        {
+            width:1557px !important;
+            height:907px !important;
+         }
+        select {
+            background: none;
+            color: #00A5FF;
+            border: 1px solid #00A5FF;
+            border-radius:4px
+        }
+        .validatebox-text {
+            width: 100% !important;
+            height: 100% !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="divBABM" title="办案部门" style="width: 100%;height: 100%;">
+        <div id='toolBabm' data-options='border:false' style='height: 52px'>
+            <div class="int" style="width: 300px; ">
+                <span style="line-height: 34px;">单位：</span>
+                <select id="bm_dwbm_zzjg" class="easyui-combotree Company" style="height: 100%;" panelwidth="320px"></select>
+            </div>
+            <div class="int" style="margin-left: 0px; width: 300px; ">
+                <span style="line-height: 34px;">部门：</span>
+                <input id="bm_tbbmmc" class="easyui-textbox Company" style="height: 100%;" />
+            </div>
+            <label style="margin-left: 10px">
+            </label>
+            <!--占位标签-->
+            <div id="lbBabmSearch" class="wbk" style="margin-left: 20px" onclick="searchBabm();">
+                <div class="cxan_ys"></div>
+                <span style="padding: 0px 16px 0px 6px">查询</span>
+            </div>
+            <div id="btn_update_babm" class="wbk" style="margin-right: 2px" onclick="GetUpdateCBBMmcList();">
+                <span>保存更新</span>
+            </div>
+        </div> 
+		<table id="dg_babm" style="overflow:auto" ></table>
+	</div> 
+</body>
+</html>

@@ -1,0 +1,369 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>0201</AJLBBM>
+      <AJLBMC>审查逮捕</AJLBMC>
+      <!--案卡项-->
+
+      <!--案卡项目分隔符-->
+      <Card>
+        <CardName>CARD0</CardName>
+        <TITLE>审查逮捕受理情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD0</OutTabName>
+          <TITLE>受理情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="基本信息">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC ="部门受案号"  TYPE="text"/>
+              <FieldItem BM="TYSAH" XSMC ="统一受案号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC ="受理日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="AJLB_MC" XSMC ="案件类别"  COLS="1" TYPE="text"/>
+              <FieldItem BM="AJMC" XSMC ="案件名称"  COLS="1" TYPE="text"/>
+              <FieldItem BM="YSDW_DWMC" XSMC ="移送单位"  COLS="1" TYPE="text"/>
+              <FieldItem BM="YSWSWH" XSMC ="移送文书文号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="YSAY_AYMC" XSMC ="移送案由"  COLS="1" TYPE="text"/>
+              <FieldItem BM="YSQTAY_AYMCS" XSMC ="移送其他案由"  COLS="3" TYPE="text"/>
+              <FieldItem BM="ZXHD_MC" XSMC ="专项活动"  COLS="3" TYPE="text"/>
+              <FieldItem BM="SFDBAJ" XSMC ="是否督办案件"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SFGZAJ" XSMC ="是否关注案件"  COLS="1" TYPE="text"/>
+              <FieldItem BM="AQZY" XSMC ="案情摘要"  COLS="3" TYPE="text"/>
+              <FieldItem BM="FZ" XSMC ="附注"  COLS="3" TYPE="text"/>
+              <FieldItem BM="YSRJDH" XSMC ="移送人及电话"  COLS="3" TYPE="text"/>
+              <FieldItem BM="CBDW_MC" XSMC ="承办部门"  COLS="1" TYPE="text"/>
+              <FieldItem BM="CBR" XSMC ="承办人"  COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_ZJ_SCDB" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_ZJ_SCDB.BMSAH(+)">
+              <FieldItem BM="SFBCCB" XSMC ="是否补查重报"  COLS="1" TYPE="text"/>
+              <FieldItem BM="BHRSFST" XSMC ="被害人是否涉台"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SFLAJDAJ" XSMC ="是否立案监督案件"  COLS="3"  TYPE="text"/>
+              <FieldItem BM="SFJDXZZFJGYSAJ" XSMC ="是否监督行政执法机关移送案件"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="YSAJXZZFJGLB_MC" XSMC ="移送案件行政执法机关类别"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="GTFZXZ_MC" XSMC ="共同犯罪性质"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="GTFZRS" XSMC ="共同犯罪人数"  COLS="1"  TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+          </OtherTab>
+        </OutTab>
+        <OutTab>
+          <OutTabName>XYRCARD0</OutTabName>
+          <TITLE>犯罪嫌疑人情况</TITLE>
+          <TYPE>1</TYPE>
+          <TabItem Title="基本信息">
+            <TableItem Name="TYYW_GG_XYRJBXX">
+              <FieldItem BM="BMSAH" XSMC ="部门受案号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC ="嫌疑人编号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC ="姓名"  COLS="1" TYPE="text"/>
+              <FieldItem BM="CYM" XSMC ="曾用名"  COLS="1" TYPE="text"/>
+              <FieldItem BM="CH" XSMC ="绰号"  COLS="3" TYPE="text"/>
+              <FieldItem BM="ZJLX_MC" XSMC ="证件类型"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJHM" XSMC ="证件号码"  COLS="1" TYPE="text"/>
+              <FieldItem BM="XB_MC" XSMC ="性别"  COLS="1" TYPE="text"/>
+              <FieldItem BM="MZ_MC" XSMC ="民族"  COLS="1" TYPE="text"/>
+              <FieldItem BM="CSRQ" XSMC ="出生日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="ZASNL" XSMC ="作案时年龄"  COLS="1" TYPE="text"/>
+              <FieldItem BM="GJ_MC" XSMC ="国籍"  COLS="1" TYPE="text"/>
+              <FieldItem BM="HJSZD_MC" XSMC ="户籍所在地"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZSD_MC" XSMC ="住所地"  COLS="3" TYPE="text"/>
+              <FieldItem BM="ZSDXXDZ" XSMC ="住所地详细地址"  COLS="3" TYPE="text"/>
+              <FieldItem BM="GZDW" XSMC ="工作单位"  COLS="1" TYPE="text"/>
+              <FieldItem BM="GZDWSZD_MC" XSMC ="工作单位所在地"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZJ_MC" XSMC ="职级"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZW" XSMC ="职务"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZY_MC" XSMC ="职业"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SF_MC" XSMC ="身份"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SFDWLD" XSMC ="是否单位领导"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SFDRSZ" XSMC ="是否担任实职"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SJYZK_MC" XSMC ="受教育状况"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZZMM_MC" XSMC ="政治面貌"  COLS="1" TYPE="text"/>
+              <FieldItem BM="RDDB_MC" XSMC ="人大代表"  COLS="1" TYPE="text"/>
+              <FieldItem BM="ZXWY_MC" XSMC ="政协委员"  COLS="1" TYPE="text"/>
+              <FieldItem BM="SFNCJCZZRY" XSMC ="是否农村基层组织人员"  COLS="1" TYPE="text"/>
+              <FieldItem BM="WCNFZXYRDJHRQK_MC" XSMC ="未成年犯罪嫌疑人的监护人情况"  COLS="1" TYPE="text"/>
+              <FieldItem BM="FDDLR" XSMC ="法定代理人"  COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="涉案情况">
+              <TableItem Name="TYYW_ZJ_FZXYR">
+                <FieldItem BM="SXAY_AYMC" XSMC ="涉案案由"  COLS="3"  TYPE="text"/>
+                <FieldItem BM="SXQTAY_AYMCS" XSMC ="涉嫌其他案由"  COLS="3"  TYPE="text"/>
+                <FieldItem BM="ZYZAD_MC" XSMC ="主要作案地"  COLS="3"  TYPE="text"/>
+                <FieldItem BM="QK_MC" XSMC ="前科"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SFWJYTQDBDFZXYR" XSMC ="是否追捕的犯罪嫌疑人"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SFZT" XSMC ="是否在逃"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SFYTJ" XSMC ="是否通缉"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SFLAJDDX" XSMC ="是否立案监督对象"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SFJDXZZFJGYSAJDX" XSMC ="是否监督行政执法机关移送案件"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="YSAJXZZFJGLB_MC" XSMC ="移送案件的行政执法机关类别"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="ZWFZLARQ" XSMC ="职务犯罪立案日期"  COLS="1"  TYPE="date"/>
+              </TableItem>
+            </TabItem>
+            <TabItem Title="强制措施情况" SFFY="TRUE">
+              <TableItem Name="TYYW_GG_QZCSQK" >
+                <FieldItem BM="XYRBH" XSMC ="嫌疑人编号"  COLS="3"  TYPE="text"/>
+                <FieldItem BM="QZCS_MC" XSMC ="强制措施名称"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="QZCSCQRQ" XSMC ="强制措施采取日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="ZXHZRQ" XSMC ="执行回执日期"  COLS="3"  TYPE="date"/>
+                <FieldItem BM="QZCSDD" XSMC ="强制措施地点"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="ZXJG" XSMC ="执行机关"  COLS="1"  TYPE="text"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+      </Card>
+
+      <!--案卡项目分隔符-->
+
+      <Card>
+        <CardName>CARD1</CardName>
+        <TITLE>审查逮捕办理情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD1</OutTabName>
+          <TITLE>审查逮捕办理情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="办理情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC ="部门受案号"  TYPE="text"/>
+			  <FieldItem BM="TYSAH" XSMC ="统一受案号"  TYPE="text"/>
+			  <FieldItem BM="AJMC" XSMC ="案件名称"  TYPE="text"/>
+			  
+            </TableItem>
+            <TableItem Name="TYYW_ZJ_SCDB" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_ZJ_SCDB.BMSAH(+)">
+              <FieldItem BM="YQBZJSRQ" XSMC ="要求补正解释日期"  COLS="1" TYPE="date"/>
+			  <FieldItem BM="SFXWBHR" XSMC ="是否询问被害人"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SJRQ" XSMC ="审结日期"  COLS="1"  TYPE="date"/>
+              <FieldItem BM="SJCLJG_MC" XSMC ="审结处理结果"  COLS="1"  TYPE="text"/>
+			  <FieldItem BM="AJSJJE" XSMC ="案件设计金额（万元）"  COLS="1"  TYPE="text"/>
+			  <FieldItem BM="AJZCSWQK_MC" XSMC ="案件造成伤亡情况"  COLS="1"  TYPE="text"/>
+			  <FieldItem BM="SDAY_AYMC" XSMC ="审定案由"  COLS="1"  TYPE="text"/>
+			  <FieldItem BM="SDQTAY_AYMCS" XSMC ="审定其他案由"  COLS="1"  TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+			<TabItem Title="案件其他有关情况">
+              <TableItem Name="TYYW_GS_SCQS">
+                <FieldItem BM="SFYBHR" XSMC="是否有被害人/单位" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFYWCNBHR" XSMC="是否有不满18周岁未成年被害人" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFYWCNBHR1" XSMC="是否有不满14周岁以下未成年被害人" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFYLNBHR" XSMC="是否有老年被害人" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFYLSETBHR" XSMC="是否有留守儿童被害人" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFYNMBHR" XSMC="是否有进城务工农民被害人" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFYCJBHR" XSMC="是否有残疾被害人" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFYXFGYZAJ" XSMC="是否影响非公有制经济发展案件" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFSWFZAJ" XSMC="是否涉外犯罪案件" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFSTFZAJ" XSMC="是否涉台犯罪案件" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFSGATFZAJ" XSMC="是否涉港澳犯罪案件" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFSQFZAJ" XSMC="是否涉侨犯罪案件" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFSYFZAJ" XSMC="是否涉医犯罪案件" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFWLFZ" XSMC="是否利用网络实施犯罪" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFDXFZ" XSMC="是否利用电信实施犯罪" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFSJXYBL" XSMC="犯罪案件是否涉及校园暴力" COLS="1" TYPE="text"/>
+				<FieldItem BM="SFSJJTBL" XSMC="犯罪案件是否涉及家庭暴力" COLS="1" TYPE="text"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+        <OutTab>
+          <OutTabName>XYRCARD1</OutTabName>
+          <TITLE>嫌疑人审结及变更情况</TITLE>
+          <TYPE>1</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="审结情况">
+            <TableItem Name="TYYW_GG_XYRJBXX">
+              <FieldItem BM="BMSAH" XSMC ="部门受案号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="XYRBH" XSMC ="嫌疑人编号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC ="姓名"  COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+            <TabItem Title="犯罪嫌疑人审结情况">
+              <TableItem Name="TYYW_ZJ_FZXYR">
+                <FieldItem BM="SFXWFZXYR" XSMC ="是否讯问犯罪嫌疑人"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="ZDTQBHRDYJRQ" XSMC ="听取辩护人意见日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="FLYZBLRQ" XSMC ="法律援助办理日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="SCDB_JSBJDKSRQ" XSMC ="精神病鉴定开始日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="SCDB_JSBJDJZRQ" XSMC ="精神病鉴定截止日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="SCDB_JSJBJDYJ_MC" XSMC ="精神病鉴定意见"  COLS="3"  TYPE="text"/>
+                <FieldItem BM="KZSHDCRQ" XSMC ="开展社会调查日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="SJRQ" XSMC ="审结日期"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SJCLJG_MC" XSMC ="审结处理结果"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SFFTJDB" XSMC ="是否附条件逮捕"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SDAY_AYMC" XSMC ="审结案由"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SDQTAY_AYMCS" XSMC ="审结其它案由"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="DBSWH" XSMC ="(不)逮捕书文号"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="YDDBQX_MCS" XSMC ="应当逮捕情形"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="BBQX_MC" XSMC ="不捕情形"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SCDB_SDRQ" XSMC ="送达日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="SCDB_ZXRQ" XSMC ="执行日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="SCDB_SDZXHZRQ" XSMC ="收到执行回执日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="SCDB_ZXQK_MC" XSMC ="执行情况"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="PBXYRZTZHHZXRQ" XSMC ="在逃抓捕后执行逮捕日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="ZTD_MC" XSMC ="重特大"  COLS="1"  TYPE="text"/>
+                <FieldItem BM="SCDB_FTJDBHFRQ" XSMC ="附条件逮捕回复日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="BHCARQ" XSMC ="捕后撤案日期"  COLS="1"  TYPE="date"/>
+                <FieldItem BM="BHCAYY_MC" XSMC ="捕后撤案原因"  COLS="1"  TYPE="text"/>
+              </TableItem>
+            </TabItem>
+              <TabItem Title="审结变更情况">
+                <TableItem Name="TYYW_ZJ_FZXYR">
+                  <FieldItem BM="SCDBJDBGRQ" XSMC ="审查逮捕决定变更日期"  COLS="1"  TYPE="date"/>
+                  <FieldItem BM="SCDBJDBGJG_MC" XSMC ="审查逮捕决定变更结果"  COLS="1"  TYPE="text"/>
+                  <FieldItem BM="SCDBJDBGYY_MC" XSMC ="审查逮捕决定变更原因"  COLS="1"  TYPE="text"/>
+                  <FieldItem BM="SCDB_BGHZXRQ" XSMC ="变更后执行日期"  COLS="1"  TYPE="date"/>
+                  <FieldItem BM="SCDB_BGHZXQK_MC" XSMC ="变更后执行情况"  COLS="1"  TYPE="text"/>
+                  <FieldItem BM="SCDB_SFBGFTJDB" XSMC ="是否附条件逮捕"  COLS="1"  TYPE="text"/>
+                </TableItem>
+              </TabItem>            
+          </OtherTab>
+        </OutTab>
+      </Card>
+
+
+      <!--案卡项目分隔符-->
+
+
+      <Card>
+        <CardName>CARD2</CardName>
+        <TITLE>侵犯知识产权情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD2</OutTabName>
+          <TITLE>侵犯知识产权情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="侵犯知识产权情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="TYSAH" XSMC ="统一受案号"  COLS="1" TYPE="text"/>
+              <FieldItem BM="BMSAH" XSMC ="部门受案号"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="CBBM_MC" XSMC ="承办部门"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="CBR" XSMC ="承办人"  COLS="1"  TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GG_ZSCQQK" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_ZSCQQK.BMSAH(+)">
+              <FieldItem BM="TZZSFHQFZSCQXW" XSMC ="非侵犯知识产权罪中是否含侵犯知识产权行为"  COLS="3" TYPE="text"/>
+              <FieldItem BM="ZSCQAJSAQYLX_MC" XSMC ="受侵犯企业类型"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="ZSCQAJSAWZLYD_MCS" XSMC ="受侵犯企业外资来源地"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="ZSCQAJSAGBDQ_MCS" XSMC ="受侵犯企业所属国别地"  COLS="3"  TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+          </OtherTab>
+        </OutTab>
+      </Card>
+
+
+      <!--案卡项目分隔符-->
+
+
+      <Card>
+        <CardName>CARD3</CardName>
+        <TITLE>单位犯罪情况</TITLE>
+        <TYPE>1</TYPE>
+        <OutTab>
+          <OutTabName>CARDD3</OutTabName>
+          <TITLE>单位犯罪情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="单位犯罪情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+            </TableItem>
+            <TableItem Name="TYYW_GG_DWFZXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_DWFZXX.BMSAH(+)">
+              <FieldItem BM="DWMC" XSMC ="单位名称"  COLS="3" TYPE="date"/>
+              <FieldItem BM="DWXZ_MC" XSMC ="单位性质"  COLS="3"  TYPE="text"/>
+              <FieldItem BM="DWSZDZ" XSMC ="单位所在地"  COLS="3"  TYPE="text"/>
+              <FieldItem BM="ZZJGDM" XSMC ="组织机构代码"  COLS="3"  TYPE="text"/>
+              <FieldItem BM="FDDBRXM" XSMC ="法定代表人姓名"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="FDDBRZW" XSMC ="法定代表人职务"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="SSDBRGZDW" XSMC ="诉讼代表人工作单位"  COLS="3"  TYPE="text"/>
+              <FieldItem BM="SSDBRZW" XSMC ="诉讼代表人职务"  COLS="3"  TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+          </OtherTab>
+        </OutTab>
+      </Card>
+
+
+
+      <!--案卡项目分隔符-->
+
+
+      <Card>
+        <CardName>CARD4</CardName>
+        <TITLE>检察建议</TITLE>
+        <TYPE>1</TYPE>
+        <OutTab>
+          <OutTabName>CARDD5</OutTabName>
+          <TITLE>检察建议</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="检察建议情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+            </TableItem>
+            <TableItem Name="TYYW_GG_JCJYQK" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_JCJYQK.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC ="部门受案号"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="XH" XSMC ="序号"  COLS="1"  TYPE="text"/>
+			  <FieldItem BM="JCJYXZ_MC" XSMC ="检察建议性质"  COLS="1" TYPE="text"/>
+              <FieldItem BM="JCJYRQ" XSMC ="发出检察建议日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="JCJYDXMC" XSMC ="检察建议对象名称"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="JCJYDXLB_MC" XSMC ="检察建议对象性质"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="CNRQ" XSMC ="采纳日期"  COLS="1"  TYPE="date"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+          </OtherTab>
+        </OutTab>
+      </Card>
+
+      <!--案卡项目分隔符-->
+
+
+      <Card>
+        <CardName>CARD5</CardName>
+        <TITLE>线索移交</TITLE>
+        <TYPE>1</TYPE>
+        <OutTab>
+          <OutTabName>CARDD5</OutTabName>
+          <TITLE>线索移交情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="线索移交情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="CBBM_MC" XSMC ="移送部门"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="CBR" XSMC ="移送人"  COLS="1"  TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GG_XSYJQK" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_XSYJQK.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC ="部门受案号"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="XH" XSMC ="序号"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="YJZWFZXSRQ" XSMC ="职务犯罪线索移送日期"  COLS="1" TYPE="date"/>
+              <FieldItem BM="XSSXAY_AYMC" XSMC ="线索涉嫌案由"  COLS="1"  TYPE="text"/>
+              <FieldItem BM="YSHZZBM_DWMC" XSMC ="移送何自侦部门"  COLS="3"  TYPE="text"/>
+              <FieldItem BM="ZZBMXSCLRQ" XSMC ="自侦部门线索处理日期"  COLS="1"  TYPE="date"/>
+              <FieldItem BM="ZZBMXSCLJG_MC" XSMC ="自侦部门线索处理结果"  COLS="1"  TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <!--其他Tab页-->
+          <OtherTab>
+          </OtherTab>
+        </OutTab>
+      </Card>
+
+
+    </AjlbItem>
+  </CaseInfo>
+</Root>

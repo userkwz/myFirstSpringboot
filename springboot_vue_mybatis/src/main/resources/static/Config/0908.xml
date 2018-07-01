@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>0908</AJLBBM>
+      <AJLBMC>国家司法救助案件</AJLBMC>
+      <!--案卡项-->
+
+      <!--案卡项目分隔符-->
+      <Card>
+        <CardName>CARD0</CardName>
+        <TITLE>国家司法救助案件</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD0</OutTabName>
+          <TITLE>国家司法救助案件基本情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="国家司法救助案件基本情况">	
+            <TableItem Name="TYYW_GG_AJJBXX">
+<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+<FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+<FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+<FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+<FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+<FieldItem BM="YSAY_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+<FieldItem BM="FZ" XSMC="附注" COLS="3" TYPE="text"/>
+<FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+<FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+<FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_SS_XSBHRJZ" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_SS_XSBHRJZ.BMSAH(+)">
+<FieldItem BM="YABLHJ_MC" XSMC="原案办理环节名称" COLS="1" TYPE="text"/>
+<FieldItem BM="AJLY_MC" XSMC="案件来源" COLS="1" TYPE="text"/>
+<FieldItem BM="SFSFSSXF" XSMC="是否涉法涉诉信访" COLS="1" TYPE="text"/>
+<FieldItem BM="XSBHRXM" XSMC="刑事被害人姓名" COLS="1" TYPE="text"/>
+<FieldItem BM="DSRLB_MC" XSMC="当事人类别名称" COLS="1" TYPE="text"/>
+<FieldItem BM="TQZJZT_MC" XSMC="提起救助主体" COLS="1" TYPE="text"/>
+<FieldItem BM="TQJZRQ" XSMC="提起救助日期" COLS="1" TYPE="date"/>
+<FieldItem BM="TCJZYJRQ" XSMC="提出救助意见日期" COLS="1" TYPE="date"/>
+<FieldItem BM="JZYJ_MC" XSMC="救助意见" COLS="1" TYPE="text"/>
+<FieldItem BM="NJZRS" XSMC="拟救助人数" COLS="1" TYPE="text"/>
+<FieldItem BM="NJZJE" XSMC="拟救助金额（万元）" COLS="1" TYPE="text"/>
+<FieldItem BM="ZFWSPRQ" XSMC="政法委审批日期" COLS="1" TYPE="date"/>
+<FieldItem BM="ZFWSPQK_MC" XSMC="政法委审批情况" COLS="1" TYPE="text"/>
+<FieldItem BM="SPJZRS" XSMC="审批救助人数" COLS="1" TYPE="text"/>
+<FieldItem BM="SPJE" XSMC="审批金额（万元）" COLS="1" TYPE="text"/>
+<FieldItem BM="CZHBRQ" XSMC="财政核拨日期" COLS="1" TYPE="date"/>
+<FieldItem BM="CZHBYJ_MC" XSMC="财政核拨意见" COLS="1" TYPE="text"/>
+<FieldItem BM="HBJZRS" XSMC="核拨救助人数" COLS="1" TYPE="text"/>
+<FieldItem BM="BFJE" XSMC="拨付金额（万元）" COLS="1" TYPE="text"/>
+<FieldItem BM="JZJEFFRQ" XSMC="救助金额发放日期" COLS="1" TYPE="date"/>
+<FieldItem BM="JZJFFRS" XSMC="救助金发放人数" COLS="1" TYPE="text"/>
+<FieldItem BM="FFJE" XSMC="发放金额（万元）" COLS="1" TYPE="text"/>
+<FieldItem BM="QTJZFRQ" XSMC="其他方式救助日期" COLS="1" TYPE="date"/>
+<FieldItem BM="QTJZFSMC_MCS" XSMC="其他救助方式名称" COLS="1" TYPE="text"/>
+<FieldItem BM="QTJZFSRS" XSMC="其他救助方式人数" COLS="1" TYPE="text"/>
+<FieldItem BM="ZHJZJRQ" XSMC="追回救助金日期" COLS="1" TYPE="date"/>
+<FieldItem BM="ZHJE" XSMC="追回金额（万元）" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+		         </OutTab>
+        <OutTab>
+          <OutTabName>XYRCARD0</OutTabName>
+          <TITLE>救助申请人情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="赔偿监督请求人">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_SS_SSR" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_SS_SSR.BMSAH(+)">
+<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+<FieldItem BM="SSRBH" XSMC="申诉编号" COLS="1" TYPE="text"/>
+<FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+<FieldItem BM="CYM" XSMC="曾用名" COLS="1" TYPE="text"/>
+<FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+<FieldItem BM="MZ_MC" XSMC="民族" COLS="1" TYPE="text"/>
+<FieldItem BM="GJ_MC" XSMC="国籍" COLS="1" TYPE="text"/>
+<FieldItem BM="JG_MC" XSMC="籍贯" COLS="1" TYPE="text"/>
+<FieldItem BM="ZZMM_MC" XSMC="政治面貌名称" COLS="1" TYPE="text"/>
+<FieldItem BM="WHCD_MC" XSMC="文化程度名称" COLS="1" TYPE="text"/>
+<FieldItem BM="ZJLX_MC" XSMC="证件类型" COLS="1" TYPE="text"/>
+<FieldItem BM="ZJHM" XSMC="证件号码" COLS="1" TYPE="text"/>
+<FieldItem BM="CSRQ" XSMC="出生日期" COLS="1" TYPE="date"/>
+<FieldItem BM="ZY_MC" XSMC="职业" COLS="1" TYPE="text"/>
+<FieldItem BM="ZW" XSMC="职务" COLS="1" TYPE="text"/>
+<FieldItem BM="RDDB_MC" XSMC="人大代表名称" COLS="1" TYPE="text"/>
+<FieldItem BM="ZXWY_MC" XSMC="政协委员名称" COLS="1" TYPE="text"/>
+<FieldItem BM="SF_MC" XSMC="身份名称" COLS="1" TYPE="text"/>
+<FieldItem BM="LXFS" XSMC="联系方式" COLS="1" TYPE="text"/>
+<FieldItem BM="GZDW" XSMC="工作单位" COLS="1" TYPE="text"/>
+<FieldItem BM="ZZ" XSMC="住址" COLS="1" TYPE="text"/>
+<FieldItem BM="YYAGX" XSMC="与案关系" COLS="1" TYPE="text"/>
+<FieldItem BM="DLRXM" XSMC="代理人姓名" COLS="1" TYPE="text"/>
+<FieldItem BM="DLRLXFS" XSMC="代理人联系方式" COLS="1" TYPE="text"/>
+<FieldItem BM="DLRZJHM" XSMC="代理人证件号码" COLS="1" TYPE="text"/>
+<FieldItem BM="DLRZJLX_MC" XSMC="代理人证件类型" COLS="1" TYPE="text"/>
+<FieldItem BM="DLRGZDW" XSMC="代理人工作单位" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>         
+        </OutTab>		
+      </Card>    
+     </AjlbItem>
+  </CaseInfo>
+</Root>

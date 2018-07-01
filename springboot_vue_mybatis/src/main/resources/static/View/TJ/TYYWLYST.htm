@@ -1,0 +1,182 @@
+﻿<!DOCTYPE html>
+<html style="height: 100%;">
+<head>
+    <meta charset="UTF-8">
+    <title>领域视图</title>
+    <link href="../../Style/GlobalStyleDefine.css" rel="stylesheet" type="text/css" />
+    <link href="../../Style/common.css" rel="stylesheet" type="text/css" />
+    <link href="../../Style/main.css" rel="stylesheet" type="text/css" />
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.min.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../../Script/Highcharts/js/highcharts.js" type="text/javascript" charset="utf-8"></script>
+    <script src="../../Script/Highcharts/js/highcharts-3d.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../../Script/common.js" type="text/javascript"></script>
+    <script src="../../Script/View/TJ/TYYWLYST.js" type="text/javascript"></script>
+    <script src="../../Script/Extend.js" type="text/javascript"></script>
+    <style type="text/css">
+        .tabe_tr1
+        {
+            background: #8bc9f0 !important;
+        }
+        .even
+        {
+            background: #d7e9f7;
+        }
+        .odd
+        {
+            background: #f1f5f8;
+        }
+        .ajsl_date
+        {
+            margin-left: -180px;
+        }
+        .cont
+        {
+            border-radius: 5px;
+            padding-top: 10px;
+            box-shadow: 1px 2px 1px #dad8d7;
+        }
+        .cont_bor
+        {
+            background: #efebf0;
+            position: relative;
+            width: 100%;
+            height: 100%;
+            padding-top: 35px;
+            border: 1px solid #bcd3e7;
+            box-sizing: border-box;
+        }
+        .tit_name
+        {
+            height: 35px;
+            width: 100%;
+            color: #094d77;
+            line-height: 35px;
+            background: #cadeef;
+            padding-left: 10px;
+            font-size: 16px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+        .tabs-container
+        {
+            overflow: hidden;
+            overflow-y: auto;
+        }
+        .index_fanhui
+        {
+            position: fixed;
+            top: 50px;
+            right: 15px;
+            background-color: #2b9bd8;
+            color: #fff;
+            border: 0;
+            height: 34px;
+            padding: 6px 20px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body style="height: 100%;">
+    <div class="easyui-layout" style="width: 100%; min-width: 1200px; height: 100%; min-height: 650px;">
+        <div data-options="region:'north',title:'',split:true" style="min-height: 90px; padding-left: 10px;">
+            <div class="tit_con" id="dwDiv">
+                <ul class="dw">
+              <!--      <li class="dw_click" value="14">湖北检察院</li>
+                    <li value="14">湖北检察院</li>
+                    <li value="14">湖北检察院</li>-->
+                </ul>
+            </div>
+        </div>
+        <div data-options="region:'west'" style="width: 220px; background: #efebf0; border: 0;">
+            <div class="cont dzjz_con" style="height: 870px; padding-top: 0px;">
+                <div class='cont_bor'>
+                    <div class="tit_name">
+                        ▎业务分类
+                    </div>
+                    <div class="tit_con" id="ywDiv">
+                        <ul class="ywfl">
+                            <li class="ywfl_click" value="14">案管业务</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'center'" style="padding: 0px 8px; background: #efebf0;
+            border: 0;">
+            <div class="cont dzjz_con" style="height: 60%; padding-top: 0px;">
+                <div class='cont_bor'>
+                    <div class="tit_name">
+                        ▎案件受理（件）
+                    </div>
+                    <div class="tit_con" style="position: relative; padding-top: 45px;">
+                        <ul class="date_fl ajsl_date">
+                            <li value="1" changeatrr="今日">日</li>
+                            <li value="2" changeatrr="本月">月</li>
+                            <li value="3" changeatrr="本季">季</li>
+                            <li style="border: 0;" class="date_fl_click" value="4" changeatrr="本年">年</li>
+                        </ul>
+                        <div class="ajsl_date2">
+                            &nbsp;&nbsp;
+                            <input id="txtStartDate" type="text" editable="false" class="easyui-datebox" style="width: 100px;"></input>
+                            到
+                            <input id="txtEndDate" type="text" editable="false" class="easyui-datebox" style="width: 100px;" />
+                            <a id="btnSearch" class="easyui-linkbutton" data-options="iconCls:'icon-search'">查询</a>
+                        </div>
+                        <div class="ajsl_con">
+                            <div id="tyyw_pie1" style="min-width: 100%; height: 95%; max-width: 100%; margin: 0 auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont dzjz_con" style="height: 40%;">
+                <div class='cont_bor'>
+                    <div class="tit_name tit_pad">
+                        ▎案件分配数（件）
+                    </div>
+                    <div class="tit_con" style="position: relative;">
+                        <div class="easyui-tabs tabwidth" id="tt" data-options="tabHeight:33" style="width: 100%;
+                            height: 100%;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div data-options="region:'east'" style="width: 320px; border: 0;">
+            <div class="cont dzjz_con" style="height: 60%; padding-top: 0px;">
+                <div class='cont_bor'>
+                    <div class="tit_name">
+                        ▎案件类别受理趋势（件）
+                    </div>
+                    <div class="tit_con">
+                        <div id="tyyw_pie2" style="min-width: 100%; height: 95%; max-width: 100%; margin: 0 auto">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cont dzjz_con" style="height: 40%;">
+                <div class='cont_bor'>
+                    <div class="tit_name tit_pad">
+                        ▎送案送卷分析（件）
+                    </div>
+                    <div class="tit_con" style="position: relative; padding-top: 45px;">
+                        <div class="ajsl_con">
+                            <div id="tyyw_pie3" style="min-width: 100%; height: 95%; max-width: 100%; margin: 0 auto">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div><button id="fanhui" onclick="javascript: history.back(-1);" class="index_fanhui">返回</button></div>
+</body>
+</html>

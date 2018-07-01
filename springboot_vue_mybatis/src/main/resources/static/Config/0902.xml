@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<!--测试受案号:山东省院刑申复受[2015]37000000001号 龚仕春-->
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>0902</AJLBBM>
+      <AJLBMC>刑事申诉案件备案审查</AJLBMC>
+      <!--案卡项-->
+
+      <!--案卡项目分隔符-->
+    <Card>
+        <CardName>CARD0</CardName>
+        <TITLE>刑事申诉案件备案审查案件</TITLE>
+        <TYPE>0</TYPE>
+		 <OutTab>
+			<OutTabName>CARDD0</OutTabName>
+			<TITLE>刑事申诉备案办理情况</TITLE>
+			<TYPE>0</TYPE>
+          <!--主Tab页-->
+			<TabItem Title="刑事申诉备案办理情况">
+				<TableItem Name="TYYW_GG_AJJBXX">
+					<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+					<FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+					<FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+					<FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+					<FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+					<FieldItem BM="YSDW_DWMC" XSMC="移送单位" COLS="1" TYPE="text"/>
+					<FieldItem BM="YSAY_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+					<FieldItem BM="YSQTAY_AYMCS" XSMC="移送其他案由" COLS="1" TYPE="text"/>
+					<FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+					<FieldItem BM="FZ" XSMC="附注" COLS="3" TYPE="text"/>
+					<FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+					<FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+				</TableItem>
+				<TableItem Name="TYYW_SS_XSSSBASC" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_SS_XSSSBASC.BMSAH(+)">
+					<FieldItem BM="AJLY_MC" XSMC="案件来源" COLS="1" TYPE="text"/>
+					<FieldItem BM="SSRXM" XSMC="申诉人姓名" COLS="1" TYPE="text"/>
+					<FieldItem BM="YACLJG" XSMC="原案处理结果" COLS="1" TYPE="text"/>
+					<FieldItem BM="SSFS_MC" XSMC="申诉方式" COLS="1" TYPE="text"/>
+					<FieldItem BM="SSLB_MC" XSMC="申诉类别" COLS="1" TYPE="text"/>
+					<FieldItem BM="SSNR" XSMC="申诉内容" COLS="3" TYPE="text"/>
+					<FieldItem BM="LAFCJG_DM" XSMC="立案复查结果代码" COLS="1" TYPE="text"/>
+					<FieldItem BM="LAFCJARQ" XSMC="立案复查结案日期" COLS="1" TYPE="date"/>
+					<FieldItem BM="BASCRQ" XSMC="备案审查日期" COLS="1" TYPE="date"/>
+					<FieldItem BM="BLQK" XSMC="办理情况" COLS="3" TYPE="text"/>
+			    </TableItem>
+			</TabItem>
+		   <!--其他Tab页-->
+        </OutTab>
+    </Card>
+ </AjlbItem>
+  </CaseInfo>
+</Root>

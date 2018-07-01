@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>通用的权限编辑器</title>
+</head>
+<body>
+    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("/Script/ZJYWSJFX/RIGHT/COMMON/CommonRightEdit.js");
+    </script>
+    <table>
+        <tr>
+            <td align="right">承办单位</td>
+            <td><select id="CommonRightEdit_cbdwcondition" class="easyui-combotree" data-options="animate:true,checkbox:true" multiple name="dept" style="width:150px;"></select></td>
+        </tr>
+        <tr style="margin-top:20px;">
+            <td align="right">承办部门</td>
+            <td><select id="CommonRightEdit_cbbmcondition" class="easyui-combotree" data-options="animate:true,checkbox:true" multiple name="dept" style="width:150px;"></select></td>
+        </tr>
+        <tr style="margin-top:20px;">
+            <td align="right">承办人</td>
+            <td><select id="CommonRightEdit_cbr" class="easyui-combotree" name="dept" data-options="animate:true,checkbox:true" multiple style="width:150px;"></select></td>
+        </tr>
+    </table>
+
+    <!---->
+    <div>
+        <a href="#" onclick="CommonRightEdit_save()" class="easyui-linkbutton">保存</a>
+    </div>
+</body>
+</html>

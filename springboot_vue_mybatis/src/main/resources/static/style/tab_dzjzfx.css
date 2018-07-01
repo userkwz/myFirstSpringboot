@@ -1,0 +1,9 @@
+.map_top>div {
+	padding: 0 20px;
+}
+
+.map_top>div ul li {
+	width: 20%;
+	height: 100%;
+	float: left;
+}

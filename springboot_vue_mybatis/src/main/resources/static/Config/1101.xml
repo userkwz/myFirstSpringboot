@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>1101</AJLBBM>
+      <AJLBMC>会议情况</AJLBMC>
+      <!--案卡项-->
+
+      <!--案卡项目分隔符-->
+      <Card>
+        <CardName>CARD0</CardName>
+        <TITLE>会议情况 </TITLE>
+        <TYPE>1</TYPE>
+        <OutTab>
+          <OutTabName>CARDD0</OutTabName>
+          <TITLE>会议情况</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="会议人员情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_GG_XFRQK" GLLX="1" GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_GG_XFRQK.BMSAH(+)">
+<FieldItem BM="RYBH" XSMC="人员编号" COLS="1" TYPE="text"/>
+<FieldItem BM="XFRXM" XSMC="信访人姓名" COLS="1" TYPE="text"/>
+<FieldItem BM="ZJLX_MC" XSMC="证件类型" COLS="1" TYPE="text"/>
+<FieldItem BM="ZJHM" XSMC="证件号码" COLS="1" TYPE="text"/>
+<FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+<FieldItem BM="GJ_MC" XSMC="国籍" COLS="1" TYPE="text"/>
+<FieldItem BM="HJSZD_MC" XSMC="户籍所在地" COLS="1" TYPE="text"/>
+<FieldItem BM="DWDZ" XSMC="单位地址" COLS="1" TYPE="text"/>
+<FieldItem BM="LXFF" XSMC="联系方法" COLS="1" TYPE="text"/>
+<FieldItem BM="SF_MC" XSMC="身份" COLS="1" TYPE="text"/>
+            </TableItem>
+             <TableItem Name="TYYW_JWB_HYQK" GLLX="1" GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_JWB_HYQK.BMSAH(+)">
+<FieldItem BM="JXRQ" XSMC="举行日期" COLS="1" TYPE="date"/>
+<FieldItem BM="JXDD" XSMC="举行地点" COLS="1" TYPE="text"/>
+<FieldItem BM="ZCR" XSMC="主持人" COLS="1" TYPE="text"/>
+<FieldItem BM="CXWY" XSMC="出席委员" COLS="3" TYPE="text"/>
+<FieldItem BM="QXWY" XSMC="缺席委员" COLS="3" TYPE="text"/>
+<FieldItem BM="LXRY" XSMC="列席人员" COLS="3" TYPE="text"/>
+<FieldItem BM="JLRY" XSMC="记录人员" COLS="3" TYPE="text"/>
+            </TableItem>              
+          </TabItem>
+<OtherTab>
+		   <TabItem Title="案件会前处理情况">
+              <TableItem Name="TYYW_JWB_HYQK">
+<FieldItem BM="HQ_BSRS" XSMC="不诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_QSRS" XSMC="起诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_BBRS" XSMC="不捕人数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_" XSMC="撤销案件数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_LAJS" XSMC="立案件数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_KSRS" XSMC="抗诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_CSRS" XSMC="撤诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_PCRS" XSMC="赔偿人数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_GBYJDRS" XSMC="改变原决定人数" COLS="1" TYPE="text"/>
+                        </TableItem>
+            </TabItem>
+			<TabItem Title="案件会后处理情况">
+              <TableItem Name="TYYW_JWB_HYQK">
+<FieldItem BM="HQ_BSRS" XSMC="不诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="HQ_QSRS" XSMC="起诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="WCYBLAJDRS" XSMC="维持原不立案决定人数" COLS="1" TYPE="text"/>
+<FieldItem BM="JDLARS" XSMC="决定立案人数" COLS="1" TYPE="text"/>
+<FieldItem BM="WCBBJDRS" XSMC="维持不捕决定人数" COLS="1" TYPE="text"/>
+<FieldItem BM="CXBBJDRS" XSMC="撤消不捕决定人数" COLS="1" TYPE="text"/>
+<FieldItem BM="KSRS" XSMC="抗诉（或支持抗诉）人数" COLS="1" TYPE="text"/>
+<FieldItem BM="BTCKSRS" XSMC="不提出（建议）抗诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="CSRS" XSMC="撤诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="BCSRS" XSMC="不撤诉人数" COLS="1" TYPE="text"/>
+<FieldItem BM="PCRS" XSMC="赔偿人数" COLS="1" TYPE="text"/>
+<FieldItem BM="BPCRS" XSMC="不赔偿人数" COLS="1" TYPE="text"/>
+<FieldItem BM="WCYJDRS" XSMC="维持原决定人数" COLS="1" TYPE="text"/>
+<FieldItem BM="GBYJDRS" XSMC="改变原决定人数" COLS="1" TYPE="text"/>
+<FieldItem BM="FCJCJYFS" XSMC="发出检察建议份数" COLS="1" TYPE="text"/>
+<FieldItem BM="FCJCYJFS" XSMC="发出检察意见份数" COLS="1" TYPE="text"/>
+<FieldItem BM="FCJZWFTZFS" XSMC="发出纠正违法通知份数" COLS="1" TYPE="text"/>
+                        </TableItem>
+            </TabItem>
+			</OtherTab>				  
+        </OutTab>
+        <OutTab>
+          <OutTabName>HYCARD0</OutTabName>
+          <TITLE>附表会议议题</TITLE>
+          <TYPE>1</TYPE>
+          <TabItem Title="基本情况">
+            <TableItem Name="TYYW_GG_XYRJBXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_JWB_HYML"  GLLX="1"  GLTJ="   and TYYW_GG_XYRJBXX.BMSAH=TYYW_JWB_HYML.BMSAH(+)">
+<FieldItem BM="YTBH" XSMC="议题编号" COLS="1" TYPE="text"/>
+<FieldItem BM="YTSX_MC" XSMC="议题属性" COLS="1" TYPE="text"/>
+<FieldItem BM="SHAJBMSAH" XSMC="上会案件部门受案号" COLS="1" TYPE="text"/>
+<FieldItem BM="SHAJCBR" XSMC="上会案件承办人" COLS="1" TYPE="text"/>
+<FieldItem BM="JWBAJBMSAH" XSMC="检委办案件部门受案号" COLS="1" TYPE="text"/>
+<FieldItem BM="JWBAJCBR" XSMC="检委办案件承办人" COLS="1" TYPE="text"/>
+<FieldItem BM="SHYTSLQK" XSMC="上会议题受理情况" COLS="3" TYPE="text"/>
+            </TableItem>			
+          </TabItem> 
+<OtherTab>
+		   <TabItem Title="决定及执行情况">
+              <TableItem Name="TYYW_JWB_HYML">
+<FieldItem BM="YTBH" XSMC="议题编号" COLS="1" TYPE="text"/>
+<FieldItem BM="JWHJDNR" XSMC="检委会决定内容" COLS="3" TYPE="text"/>
+<FieldItem BM="JWHSFCNJWBYJ" XSMC="检委会是否采纳检委办意见" COLS="1" TYPE="text"/>
+<FieldItem BM="JWHJDLX_MC" XSMC="检委会决定类型名称" COLS="1" TYPE="text"/>
+<FieldItem BM="SFCNZZWYYJ" XSMC="检委会是否采纳专职委员意见" COLS="1" TYPE="text"/>
+<FieldItem BM="JDSDRQ" XSMC="决定送达日期" COLS="1" TYPE="date"/>
+<FieldItem BM="ZXQKFKRQ" XSMC="执行情况反馈日期" COLS="1" TYPE="date"/>
+<FieldItem BM="FKZXQKWSMC" XSMC="反馈执行情况的文书名称" COLS="3" TYPE="text"/>
+                        </TableItem>
+            </TabItem>
+			</OtherTab>			  
+        </OutTab>
+      </Card>
+	   
+     </AjlbItem>
+  </CaseInfo>
+</Root>

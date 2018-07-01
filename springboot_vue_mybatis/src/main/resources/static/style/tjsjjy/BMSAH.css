@@ -1,0 +1,41 @@
+#BMSAHul{
+    background: #fff;
+    border: 1px solid #eaeaea;
+    height: calc(100% - 32px);
+    overflow: auto;
+    /*margin: 10px 15px 10px 0;*/
+}
+#BMSAHulDiv span.l-btn-text{
+    margin: 0 1px;
+}
+#BMSAHulDiv div.pagination-info{
+    margin: 0;
+}
+#BMSAHul li{
+    padding: 5px;
+    width: 100%;
+    border-bottom:1px solid #eaeaea;
+    cursor: pointer;
+}
+#BMSAHul li:hover{
+    background: #0099CC;
+    color: #fff;
+}
+#BMSAHul li.activeli{
+    background: #0099CC;
+    color: #fff;
+}
+#BMSAHul li:last-child{
+    border-bottom: 0;
+}
+
+.close_icon{
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../../images/tjsjjy/close1.png) 0 24px;
+    float: right;
+    margin-top: 3px;
+    margin-right: 10px;
+    cursor: pointer;
+}

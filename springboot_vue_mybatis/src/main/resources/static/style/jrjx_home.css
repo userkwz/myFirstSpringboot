@@ -1,0 +1,108 @@
+.data_home{
+    width: 100%;
+    height: 100%;
+}
+.data_home_con {
+    height: calc(100%);
+    background: url(../images/data_03.png) no-repeat;
+    background-size: 100% 100%;
+    padding: 40px 65px;
+    padding-top: 47px;
+}
+
+.data_home_con ul {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    /*background: red;*/
+}
+
+
+.data_home_con ul li {
+    width: 455px;
+    height: calc(100%/4 - 20px);
+    margin: 41px 30px 25px 30px;
+    padding-left: 10px;
+    cursor: pointer;
+    background: url(../images/shouy_07.png) no-repeat;
+    background-size: 100% 100%;
+    float: left;
+}
+.data_home_con ul li:hover {
+    background: url(../images/3_03.png) no-repeat;
+    background-size: 100% 100%;
+}
+
+.data_home_con ul li:nth-child(3n) {
+    float: right;
+}
+
+.icon_tab {
+    width: 120px;
+    height: 100%;
+    background: red;
+    float: left;
+}
+
+.data_home_con ul li:nth-child(1) .icon_tab {
+    background: url(../images/sye_12.png) no-repeat 50%, url(../images/sye_06.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(2) .icon_tab {
+    background: url(../images/sye_15.png) no-repeat 50%, url(../images/sye_09.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(3) .icon_tab {
+    background: url(../images/icon-s_03.png) no-repeat 50%, url(../images/sye_23.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(4) .icon_tab {
+    background: url(../images/sye_26.png) no-repeat 50%, url(../images/sye_06.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(5) .icon_tab {
+    background: url(../images/cc_12.png) no-repeat 50%, url(../images/sye_36.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(6) .icon_tab {
+    background: url(../images/sye_38.png) no-repeat 50%, url(../images/sye_36.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(7) .icon_tab {
+    background: url(../images/sye_52.png) no-repeat 50%, url(../images/sye_46.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(8) .icon_tab {
+    background: url(../images/cc_07.png) no-repeat 50%, url(../images/sye_06.png) no-repeat 100% 50%;
+}
+
+.data_home_con ul li:nth-child(9) .icon_tab {
+    background: url(../images/cc_03.png) no-repeat 50%, url(../images/11_03.png) no-repeat 100% 50%;
+}
+
+
+.num {
+    width: calc(100% - 120px);
+    height: 100px;
+    padding: 0 20px;
+    padding-top: 5px;
+    position: relative;
+    top: 50%;
+    margin-top: -50px;
+    /*background: red;*/
+    float: right;
+}
+
+.num p {
+    font-size: 16px;
+    line-height: 20px;
+    color: #00ace6;
+}
+
+.num span {
+    display: inline-block;
+    font-size: 70px;
+    line-height: 75px;
+    font-family: 'Arial';
+    color: #00ffff;
+}

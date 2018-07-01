@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>电子卷宗制作情况统计</title>
+        <link href="../../Style/GlobalStyleDefine.css" rel="stylesheet" type="text/css"/>
+    <link href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" rel="stylesheet" type="text/css"/>
+    <link href="../../Script/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" type="text/css"/>
+    <script src="../../Script/jquery-1.11.3.min.js" type="text/javascript"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/datagrid-groupview.js" type="text/javascript"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/datagrid-detailview.js" type="text/javascript"></script>
+    <script src="../../Script/easyui-tree-extension.js" type="text/javascript"></script>
+    <script src="../../Script/jquery.timer.js" type="text/javascript"></script>
+    <script src="../../Script/jquery.json-2.3.js" type="text/javascript"></script>
+    <script src="../../Script/Extend.js" type="text/javascript"></script>
+    <script src="../../Script/kindeditor-4.1.9/kindeditor.js" type="text/javascript"></script>
+    <script src="../../Script/Highcharts/js/highcharts.js" type="text/javascript"></script>
+    <script src="../../Script/Highcharts/js/highcharts-3d.js" type="text/javascript"></script>
+    <link href="../../Script/uploadify/uploadify.css" rel="stylesheet" type="text/css"/>
+    <script src="../../Script/uploadify/jquery.uploadify.min.js" type="text/javascript"></script>
+    <link href="../../Style/GlobalStyle/mainpage.css" rel="stylesheet" type="text/css"/>
+    <link href="../../Style/main.css" rel="stylesheet" type="text/css"/>
+    <style id="datagrid-group-style" type="text/css">.datagrid-group{height:25px;overflow:hidden;font-weight:bold;border-bottom:1px solid #ccc;}</style>
+	<script type="text/javascript" src="../../Script/common.js"></script>
+    <script type="text/javascript" src="../../Script/View/TJ/DZJZZZ.js"></script>
+</head>
+<body>
+    <!--页面JS加载，放在头部不能正确加载-->
+<!--    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("/Script/AJXX/ajjbxx.js");
+    </script>-->
+    <div id="panel_tj_dzjzzz" class="easyui-panel" data-options="fit:true,border:false">
+        <div id="panelTool_tj_dzjzzz" data-options="border:false" style="padding: 5px 0px 5px 8px">
+            <label style="margin-left: 13px"></label>
+            承办单位：<input id="ct_dzjzzz_dwbm" class="easyui-combotree" style="width: 150px; height: 22px" data-options="required:true" />
+            <label style="margin-left: 12px"></label>
+            受理日期从：<input id="dt_dzjzzz_begin" class="easyui-datebox" style="width: 180px; height: 22px" data-options="required:true" />
+            到 <input id="dt_dzjzzz_end" class="easyui-datebox" style="width: 180px; height: 22px" data-options="required:true" />
+            <label style="margin-left: 12px"></label>
+            <!--占位标签-->
+            <a id="btnSearch_tj_dzjzzz" class="easyui-linkbutton">查询</a> 
+        </div>
+        <table id="dg_tj_dzjzzz" border="0">
+        </table>
+    </div>
+</body>
+</html>

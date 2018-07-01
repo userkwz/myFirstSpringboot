@@ -1,0 +1,254 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.cx_input {
+    width: auto;
+    height: 25px;
+    margin-top: 12px;
+    float: left;
+    margin-right: 30px;
+}
+
+.dzjz_zzaj {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 25px 0 30px;
+}
+
+    .dzjz_zzaj li {
+        width: 20%;
+        height: 100%;
+        float: left;
+        border-right: 1px solid #e4e0df;
+        text-align: center;
+    }
+
+.dzjz_zzaj1 {
+    width: 100%;
+    height: 100%;
+    list-style: none;
+    padding: 25px 0 30px;
+}
+
+    .dzjz_zzaj1 li {
+        width: 25%;
+        height: 100%;
+        float: left;
+        border-right: 1px solid #e4e0df;
+        text-align: center;
+    }
+
+        .dzjz_zzaj1 li > span.openMessage {
+            width: 80%;
+            height: 0;
+            border: 0 solid #ccc;
+            position: absolute;
+            top: 100%;
+            left: 10%;
+            background: #fff;
+            text-align: center;
+            line-height: 20px;
+            overflow: hidden;
+            transition: all .1s linear;
+            z-index: 9999999999;
+        }
+
+        .dzjz_zzaj1 li:hover > span.openMessage {
+            height: 75px;
+            border-width: 1px;
+        }
+
+.tit {
+    color: #666666;
+    font-size: 12px;
+    line-height: 35px;
+}
+
+.quantity {
+    color: #333333;
+    font-size: 32px;
+    /*font-weight: bold;*/
+}
+
+.cont {
+    position: relative;
+    background: #efebf0;
+    border-radius: 5px;
+    padding-top: 45px;
+    box-shadow: 1px 2px 1px #dad8d7;
+}
+
+.tit_name {
+    height: 35px;
+    width: 100%;
+    color: #091d77;
+    line-height: 35px;
+    background: #e4e2e1;
+    padding-left: 10px;
+    font-size: 14px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.tit_pad {
+    top: 10px;
+}
+
+.tit_con {
+    height: 100%;
+    background: #FFFFFF;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+
+.quantity1 {
+    color: #333333;
+    /*font-size: 18px;*/ /*font-weight: bold;*/
+}
+
+
+.window {
+    overflow: hidden;
+    padding: 0px;
+    border-width: 1px;
+    border-style: solid;
+    position: absolute;
+    border-radius: 7px;
+}
+
+    .window .window-header {
+        /*background: transparent;*/
+        padding: 0px 0px 6px 0px;
+        height: 40px;
+        background: #1169b1;
+        color: #fff;
+    }
+
+.window-shadow {
+    background: #ccc;
+    -moz-box-shadow: 0px 0px 0px #cccccc;
+    -webkit-box-shadow: 0px 0px 0px #cccccc;
+    box-shadow: 0px 0px 0px #cccccc;
+    filter: progid: DXImageTransform.Microsoft.Blur(pixelRadius=2, MakeShadow=false, ShadowOpacity=0);
+}
+
+.window .window-header .panel-tool {
+    right: 15px;
+}
+
+.window .panel-title {
+    font-size: 12px;
+    font-weight: 100;
+    color: #fff;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 10px;
+    font-size: 14px;
+}
+
+.panel-tool a {
+    display: inline-block;
+    width: 20px;
+    height: 16px;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    margin: 0 0 0 2px;
+    vertical-align: top;
+}
+
+.panel-tool-close {
+    background: url('../../Script/jquery-easyui-1.4.3/themes/default/images/gb.png') no-repeat 0px 50%;
+}
+
+.dzjz_zzaj li,.dzjz_zzaj1 li{
+    position: relative;
+}
+.dzjz_zzaj li>div.openMessage{
+    width: 200%;
+    height: 0;
+    border: 0 solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background: #fff;
+    text-align: center;
+    line-height: 20px;
+    overflow: hidden;
+    transition: all .1s linear;
+}
+.dzjz_zzaj li:hover>div.openMessage{
+    height: 200px;
+    border-width: 1px;
+}
+
+.dzjz_zzaj li>div.openMessage1{
+    width: 200%;
+    height: 200px;
+    border: 0 solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: -100%;
+    background: #fff;
+    text-align: center;
+    line-height: 20px;
+    overflow: auto;
+    transition: all .1s linear;
+    display: none;
+}
+.dzjz_zzaj li:hover>div.openMessage1
+{
+    display: block;
+    border-width: 1px;
+}
+
+.dzjz_zzaj li>div.openMessage2{
+    width: 200%;
+    height: 200px;
+    border: 0 solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background: #fff;
+    text-align: center;
+    line-height: 20px;
+    overflow: hidden;
+    transition: all .1s linear;
+    display: none;
+}
+.dzjz_zzaj li:hover>div.openMessage2
+{
+    display: block;
+    border-width: 1px;
+}
+
+.dzjz_zzaj li>div.openMessage3{
+    width: 150%;
+    height: 20px;
+    border: 0 solid #ccc;
+    position: absolute;
+    top: 100%;
+    left: -25%;
+    background: #fff;
+    text-align: center;
+    line-height: 20px;
+    overflow: hidden;
+    transition: all .1s linear;
+    display: none;
+}
+.dzjz_zzaj li:hover>div.openMessage3
+{
+    display: block;
+    border-width: 1px;
+}
+
+.Overinherit>div{
+    overflow: initial !important;
+}
+.ajxxgk>div>div {
+    overflow: initial !important;
+}

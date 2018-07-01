@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <title>检察官办案统计-按部门</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+</head>
+<body>
+    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("../../Script/View/LDGBBA/jcgbbUnit.js");
+    </script>
+
+    <div class="blbb_home">
+        <div class="glbb_big">
+            <div class="blbb_title">
+                <div class="int">
+                    <span style="line-height: 34px;">单位：</span>
+                    <select id="cboDWBM" class="easyui-combotree Company" style="height: 100%;" panelwidth="320px">
+                    </select></div>
+                <div class="int">
+                    <span style="line-height: 34px;">部门：</span>
+                    <select id="cboBMBM" class="easyui-combotree Company" style="height: 100%;" panelwidth="320px">
+                    </select></div>
+                <div class="time">
+                    <span>起始日期： </span>
+                    <div class="kais">
+                        <input id="dateStart_jcgbbUnit" class="easyui-datebox Company cc" name="dept" />
+                    </div>
+                    <span style="margin-left: 10px">至</span>
+                    <div class="kais">
+                        <input id="dateEnd_jcgbbUnit" class="easyui-datebox Company cc" name="dept" />
+                    </div>
+                </div>
+                <div id="btn_Search_jcgbbUnit" class="wbk" style="float: left;margin-left: 20px">
+                    <div class="cxan_ys"></div>
+                    <span style="padding: 0px 16px 0px 6px">查询</span>
+                </div>
+                <div id="btnExport_excel_jcgbbUnit" class="wbk">
+                    <span>导出Excel</span>
+                </div>
+                <div id="btnExport_chart_jcgbbUnit" class="wbk" style="margin-right: 15px">
+                    <span>图表分析</span>
+                </div>
+            </div>
+            <div data-options="region:'center'" class="easy_tabel">
+                <table id="dg_jcgbbUnit" data-options="singleSelect:true"></table>
+            </div>
+        </div>
+        <div id="jcgbbModal" class="easyui-window" modal="true" shadow="true" width="97%" height="97%" title="图表分析" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+            <div id="panelTool_ajjbxx" data-options="border:false" style="padding: 5px 0px 5px 8px;line-height: 35px;">
+                <div>
+                    <div id="blbb_title" style="width: 100%;height: 10%">
+                        <div class="int" style="width: 350px">
+                            <span style="line-height: 34px;">部门：</span>
+                            <input id="cb_bmbm" class="easyui-combotree Company" />
+                        </div>
+                        <div class="int" style="width: 350px">
+                            <span style="line-height: 34px;">选项：</span>
+                            <input id="cb_sjlx" class="easyui-combotree Company" />
+                        </div>
+                        <div id="btnAnalyze" class="wbk" style="float: left;margin-left: 20px">
+                            <div class="cxan_ys"></div>
+                            <span style="padding: 0px 16px 0px 6px">分析</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="JCGBBByUnit_Chart" class="chart_con" style="min-width: 100%; height: 92%; max-width: 100%;"></div>
+        </div>
+        <!--<div class="easy_model">
+            <div id="Div1" class="easy_model_kuang">
+                <div class="easy_model_kuang_top_title">
+                    <span style="text-align: center;margin-top: -6px;margin-left: 30px">图表分析</span>
+                    <span class="easy_model_gb"></span>
+                </div>
+                <div class="easy_model_iput">
+                    <div id="blbb_title" style="width: 100%;height: 10%">
+                        <div class="int" style="width: 350px">
+                            <span style="line-height: 34px;">部门：</span>
+                            <input id="cb_bmbm" class="easyui-combotree Company" />
+
+                        </div>
+                        <div class="int" style="width: 350px">
+                            <span style="line-height: 34px;">选项：</span>
+                            <input id="cb_sjlx" class="easyui-combotree Company" />
+                        </div>
+                        <div id="btnAnalyze" class="wbk" style="float: left;margin-left: 20px">
+                            <div class="cxan_ys"></div>
+                            <span style="padding: 0px 16px 0px 6px">分析</span>
+                        </div>
+                    </div>
+                    <div id="JCGBBByUnit_Chart" class="chart_con" style="min-width: 100%; height: 90%; max-width: 100%;"></div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swx.dao.XexxMapper">
+    <resultMap id="usersMap" type="map">
+    </resultMap>
+    <resultMap id="countMap" type="map">
+    </resultMap>
+<select id="GetUnitMsg1" parameterType="java.util.HashMap" statementType="CALLABLE">
+     <![CDATA[
+        CALL pkg_xexx.proc_get_msgbypage(
+                                          #{fsrdwbm,mode=IN,jdbcType=VARCHAR },
+                                          #{jsrgh,mode=IN,jdbcType=VARCHAR },
+                                          #{xxlx,mode=IN,jdbcType=VARCHAR },
+                                          #{fsrgh,mode=IN,jdbcType=VARCHAR },
+                                          #{jsrdwbm,mode=IN,jdbcType=VARCHAR },
+                                          #{begin,mode=IN,jdbcType=VARCHAR },
+                                          #{end,mode=IN,jdbcType=VARCHAR },
+                                          #{isdc,mode=IN,jdbcType=VARCHAR },
+                                          #{xxzt,mode=IN,jdbcType=VARCHAR },
+                                          #{lx,mode=IN,jdbcType=VARCHAR },
+                                          #{index,mode=IN,jdbcType=VARCHAR },
+                                          #{size,mode=IN,jdbcType=VARCHAR },
+                                          #{p_count,mode=OUT,jdbcType=INTEGER},
+                                          #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=usersMap,javaType=java.sql.ResultSet},
+                                          #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+
+     ]]>
+</select>
+
+</mapper>

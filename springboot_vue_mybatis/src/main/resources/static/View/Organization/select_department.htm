@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <!--页面JS加载，放在头部不能正确加载-->
+    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("/Script/Organization/select_department.js");
+    </script>
+    
+    <!--部门及角色管理-->
+    <div style="margin:2px">
+<!--        <a id="btn_org_dep_dep_add" href="#" class="easyui-linkbutton">添加部门</a> 
+        <a id="btn_org_dep_dep_del" href="#" class="easyui-linkbutton">删除部门</a> 
+        <a id="btn_org_dep_role_add" href="#" class="easyui-linkbutton">添加角色</a> 
+        <a class="easyui-linkbutton" onclick="javascript:$('#p').panel('close')" disabled="disabled">删除角色</a>-->
+    </div>
+    <div class="easyui-panel" data-options="fit:'true',border:true"
+         style="border-left:0px; border-right:0px; border-bottom:0px;">
+        <!--部门信息-->
+        <div id="pnl_org_dep_select" class="easyui-panel" title="部门信息" 
+            data-options="fit:'true',border:false" style="width: 100%; padding: 10px;">
+            <div>
+                部门名称 <input id="txt_org_dep_select_bmmc" class="easyui-textbox" style="width:200px;height: 22px" />
+                部门简称 <input id="txt_org_dep_select_bmjc" class="easyui-textbox" style="width:200px;height: 22px" />
+                部门序号 <input id="txt_org_dep_select_bmxh" class="easyui-textbox" style="width:200px;height: 22px" />
+            </div>
+            <div style="margin-top: 10px">
+                输入备注 <input id="txt_org_dep_select_bmbz" class="easyui-textbox" />
+  <!--              <a id="btn_org_dep_select_edit" class="easyui-linkbutton" style="width: 80px; height: 25px;"
+                    data-options="iconCls:'icon-edit'">编辑</a>-->
+            </div>
+        </div>
+        <!--角色信息-->
+        <div id="pnl_org_role_select" class="easyui-panel" title="添加角色" 
+            style="width: 100%; padding: 10px;" data-options="closed:true,fit:'true',border:false">
+            <div>
+                角色名称 <input id="txt_org_role_select_jsmc" class="easyui-textbox" style="width:200px;height:22px" />
+                角色序号 <input id="txt_org_role_select_jsxh" class="easyui-textbox" style="width:200px;height: 22px" />
+                所属部门 <input id="txt_org_role_select_ssbm" class="easyui-textbox" />
+            </div>
+            <div style="margin-top: 10px">
+   <!--             <a id="btn_org_role_select_save" class="easyui-linkbutton" style="width: 80px; height: 25px;"
+                    data-options="iconCls:'icon-save'">保存</a>-->
+            </div>
+        </div>
+    </div>
+</body>
+</html>

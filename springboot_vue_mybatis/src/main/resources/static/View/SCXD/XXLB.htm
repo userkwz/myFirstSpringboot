@@ -1,0 +1,196 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>案管传达-信息列表</title>
+    <link rel="stylesheet" type="text/css" href="../../Style/glbb_home.css" />
+    <link rel="stylesheet" type="text/css" href="../../style/tyywzs_home.css" />
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>
+    <script type="text/javascript" src="../../Script/View/SCXD/xxlb.js"></script>
+    <style type="text/css">
+        .textkuang .textbox {
+            height: 100% !important;
+        }
+
+            .textkuang .textbox .textbox-text {
+                width: 100%;
+                height: 100% !important;
+                background: transparent;
+            }
+
+        .ajlcjklb {
+            width: 100%;
+            height: calc(100% );
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="panel_tjbb_ajjbxx" class="tyywzs_home">
+        <div class="blbb_title" id="panelTool_tjbb_ajjbxx" data-options="border:false" style="padding: 5px 0px 5px 8px; line-height: 35px; height: auto; margin-top:0px;margin-bottom: 0px;">
+            <div class="int">
+                消息类型：
+                <input id="cb_xxlx" class="easyui-combobox Company" />
+            </div>
+            <div class='int'>
+                消息状态：
+                <input id="cb_xxzt" class="easyui-combobox Company" style="width: 150px; height: 22px" />
+            </div>
+            <div class='time'>
+                <span>发送日期从：</span>
+                <div class="kais">
+                    <input id="dt_ajjbxx_begin" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                           data-options="required:true" />
+                </div>
+                <span>到</span>
+                <div class="kais">
+                    <input id="dt_ajjbxx_end" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                           data-options="required:true" />
+                </div>
+            </div>
+            <div id="btnSearch_tjbb_ajjbxx" class="wbk cx" style="float: left;margin-left: 20px">
+                <div class="cxan_ys"></div>
+                <span style="padding: 0px 16px 0px 6px">查询</span>
+            </div>
+            <div id="btnSearch_xx" class="wbk" style="float: left;margin-left: 20px;padding: 0px 4px 0px 12px">
+                <!--<div class="cxan_ys"></div>-->
+                <span style="padding: 0px 16px 0px 6px">发送消息(个人)</span>
+            </div>
+            <div id="btnSearch_xx_dw" class="wbk" style="float: left;margin-left: 20px;padding: 0px 4px 0px 12px">
+                <!--<div class="cxan_ys"></div>-->
+                <span style="padding: 0px 16px 0px 6px">发送消息(单位)</span>
+            </div>
+            <div style='clear: both;'>
+            </div>
+        </div>
+        <div id="ajlcjklb" data-options="region:'center'" style="overflow: auto; height: 100%">
+            <table id="dg_tjbb_ajjbxx"></table>
+        </div>
+    </div>
+    <div id="tjxx" class="easyui-window" title="发送消息" style="width: 650px; height: 380px;padding: 10px 10px 10px 10px;" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div data-options="border:false" style="padding: 10px 10px 10px 10px">
+            <div class="time ajlcxq">
+                <span style="color: #018ab7;font-size: 14px;width: 108px">接收人单位： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_add_jsrdwmc" class="easyui-combotree Company cc" name="dept" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 20px">
+                <span style="color: #018ab7; font-size: 14px; width: 128px; ">接收人： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_add_jsr" class="easyui-combotree Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq">
+                <span style="color: #018ab7; font-size: 14px; width: 108px">标题： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_add_xxbt" class="easyui-textbox Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 20px">
+                <span style="color: #018ab7; font-size: 14px; width: 128px">要求回复日期： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_add_yqhfrq" class="easyui-datebox Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="width: 100%">
+                <span style="color: #018ab7; font-size: 14px; width: 108px">内容： </span>
+                <div class="kais textkuang" style="width: 458px;height: 150px">
+                    <input id="tb_add_xxnr" class="easyui-textbox Company cc" name="dept" data-options="multiline:'true'" />
+                </div>
+            </div>
+            <div style="float: left;width: 100%">
+                <div class='wbk' id="btnInsert_xx" data-options="iconCls:'icon-add'" style="margin-right: 40px">
+                    <span style="padding: 0px 20px 0px 26px">发送</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="tjxx_dw" class="easyui-window" title="发送消息" style="width: 650px; height: 350px;padding: 10px 10px 10px 10px;" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div data-options="border:false" style="padding: 10px 10px 10px 10px">
+            <div class="time ajlcxq">
+                <span style="color: #018ab7;font-size: 14px;width: 108px">接收人单位： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_add_jsrdwmc_dw" class="easyui-combotree Company cc" name="dept" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 40px;">
+                <span style="color: #018ab7; font-size: 14px; width: 108px">标题： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_add_xxbt_dw" class="easyui-textbox Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="width: 100%">
+                <span style="color: #018ab7; font-size: 14px; width: 108px">内容： </span>
+                <div class="kais textkuang" style="width: 458px;height: 150px">
+                    <input id="tb_add_xxnr_dw" class="easyui-textbox Company cc" name="dept" data-options="multiline:'true'" />
+                </div>
+            </div>
+            <div style="float: left;width: 100%">
+                <div class='wbk' id="btnInsert_xx_dw" data-options="iconCls:'icon-add'" style="margin-right: 40px">
+                    <span style="padding: 0px 20px 0px 26px">发送</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="xxxq" class="easyui-window" title="信息详情" style="width: 900px; height: 400px; padding: 10px 10px 10px 10px;" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+        <div data-options="border:false" style="padding: 10px 10px 10px 10px">
+            <div class="time ajlcxq">
+                <span style="color: #018ab7;font-size: 14px;width: 108px">发送人单位： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_xx_fsrdwmc" class="easyui-combotree Company cc" name="dept" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 20px">
+                <span style="color: #018ab7; font-size: 14px; width: 88px; ">发送人： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_xx_fsr" class="easyui-combotree Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 20px">
+                <span style="color: #018ab7; font-size: 14px; width: 128px">督促日期： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_xx_dcrq" class="easyui-datebox Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq">
+                <span style="color: #018ab7;font-size: 14px;width: 108px">接收人单位： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_xx_jsrdwmc" class="easyui-combotree Company cc" name="dept" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 20px">
+                <span style="color: #018ab7; font-size: 14px; width: 88px; ">接收人： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_xx_jsr" class="easyui-combotree Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 20px">
+                <span style="color: #018ab7; font-size: 14px; width: 128px">要求回复日期： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_xx_yqhfrq" class="easyui-datebox Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq">
+                <span style="color: #018ab7; font-size: 14px; width: 108px">标题： </span>
+                <div class="kais" style="width: 420px">
+                    <input id="tb_xx_xxbt" class="easyui-textbox Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="margin-left: 20px">
+                <span style="color: #018ab7; font-size: 14px; width: 128px; ">消息状态： </span>
+                <div class="kais" style="width: 150px">
+                    <input id="tb_xx_xxzt" class="easyui-combotree Company cc" />
+                </div>
+            </div>
+            <div class="time ajlcxq" style="width: 100%">
+                <span style="color: #018ab7; font-size: 14px; width: 108px">备注： </span>
+                <div class="kais textkuang" style="width: 725px;height: 150px">
+                    <input id="tb_xx_xxnr" class="easyui-textbox Company cc" name="dept" data-options="multiline:'true'" />
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

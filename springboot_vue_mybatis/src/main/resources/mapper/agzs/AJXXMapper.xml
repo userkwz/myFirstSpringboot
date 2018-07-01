@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swx.dao.AJXXMapper">
+    <resultMap id="ajlbMap" type="java.util.Map">
+       <!-- <result property="Uid" column="dlbm"/>
+        <result property="DWBM" column="dwbm"/>
+        <result property="DWMC" column="dwmc"/>
+        <result property="Name" column="mc"/>
+        <result property="EMail" column="dzyj"/>
+        <result property="Phone" column="yddhhm"/>
+        <result property="GH" column="gh"/>
+        <result property="BMBM" column="bmbm"/>
+        <result property="BMMC" column="bmmc"/>
+        <result property="JSBM" column="jsbm"/>-->
+    </resultMap>
+    <!--获取案件类别-->
+<select id="GetAJLB" parameterType="java.util.HashMap" statementType="CALLABLE">
+     <![CDATA[
+        CALL pkg_ajxx.proc_get_ajlb(
+                                          #{p_ywbm,mode=IN,jdbcType=VARCHAR },
+                                          #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=ajlbMap,javaType=java.sql.ResultSet},
+                                          #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+
+     ]]>
+</select>
+    <!--获取首页汇总统计反查列表-->
+<select id="GetHZTJ_Ajxx" parameterType="java.util.HashMap" statementType="CALLABLE">
+        <![CDATA[
+        CALL pkg_ajxx.proc_get_hztj_ajxx(
+                                          #{p_bmsah,mode=IN,jdbcType=VARCHAR },
+                                          #{p_ajmc,mode=IN,jdbcType=VARCHAR },
+                                          #{p_dwbm,mode=IN,jdbcType=VARCHAR },
+                                          #{p_bmbm,mode=IN,jdbcType=VARCHAR },
+                                          #{p_type,mode=IN,jdbcType=VARCHAR },
+                                          #{p_cbr,mode=IN,jdbcType=VARCHAR },
+                                          #{p_lbbmjh,mode=IN,jdbcType=VARCHAR },
+                                          #{p_ysay,mode=IN,jdbcType=VARCHAR },
+                                          #{p_ysayjh,mode=IN,jdbcType=VARCHAR },
+                                          #{p_sjtype,mode=IN,jdbcType=VARCHAR },
+                                          #{p_startdate,mode=IN,jdbcType=VARCHAR },
+                                          #{p_enddate,mode=IN,jdbcType=VARCHAR },
+                                          #{p_bjrqStart,mode=IN,jdbcType=VARCHAR },
+                                          #{p_bjrqEnd,mode=IN,jdbcType=VARCHAR },
+                                          #{p_wcrqStart,mode=IN,jdbcType=VARCHAR },
+                                          #{p_wcrqEnd,mode=IN,jdbcType=VARCHAR },
+                                          #{p_size,mode=IN,jdbcType=INTEGER },
+                                          #{p_page,mode=IN,jdbcType=INTEGER },
+                                          #{p_isPaging,mode=IN,jdbcType=INTEGER },
+                                          #{p_count,mode=OUT,jdbcType=INTEGER},
+                                          #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=hztjAjxxMap,javaType=java.sql.ResultSet},
+                                          #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+
+     ]]>
+</select>
+    <resultMap id="hztjAjxxMap" type="java.util.Map">
+    </resultMap>
+</mapper>

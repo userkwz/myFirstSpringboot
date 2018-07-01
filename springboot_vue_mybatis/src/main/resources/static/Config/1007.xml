@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--罗川-->
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>1007</AJLBBM>
+      <AJLBMC>警示教育</AJLBMC>
+      <!--案卡项-->
+      <Card>
+        <CardName>card2</CardName>
+        <TITLE>警示教育</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>JSJY</OutTabName>
+          <TITLE>警示教育</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="警示教育">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1" GLTJ=" and TYYW_GG_AJJBXX.BMSAH=TYYW_YF_JSJYXCQK.BMSAH(+)">
+              <FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_YF_JSJYXCQK">
+              <FieldItem BM="SQLXRQ" XSMC="申请立项日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="LXRQ" XSMC="立项或登记日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="JSJYXCZT" XSMC="警示教育宣传主题" COLS="1" TYPE="text"/>
+              <FieldItem BM="JSJYKZXS_MC" XSMC="警示教育开展形式" COLS="1" TYPE="text"/>
+              <FieldItem BM="KZRQ" XSMC="开展日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="KZDD" XSMC="开展地点" COLS="1" TYPE="text"/>
+              <FieldItem BM="CJRS" XSMC="参加人数" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZTHYDW" XSMC="针对行业单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="HYDWXZ_MC" XSMC="行业单位性质" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+      </Card>
+      <Card>
+        <CardName>card3</CardName>
+        <TITLE>犯罪线索移送情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>JSJY</OutTabName>
+          <TITLE>犯罪线索移送情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="犯罪线索移送情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLLX="1" GLTJ=" and TYYW_GG_AJJBXX.BMSAH=TYYW_YF_FZXSYS.BMSAH(+)">
+              <FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBR" XSMC="承办人" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_YF_FZXSYS">
+              <FieldItem BM="BH" XSMC="编号" COLS="1" TYPE="text"/>
+              <FieldItem BM="DJRQ" XSMC="登记日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="XSLY_MC" XSMC="线索来源" COLS="1" TYPE="text"/>
+              <FieldItem BM="XSXZ_MC" XSMC="线索性质" COLS="1" TYPE="text"/>
+              <FieldItem BM="SAR" XSMC="涉案人" COLS="1" TYPE="text"/>
+              <FieldItem BM="SARSZDW" XSMC="涉案人所在单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="DWXZ_MC" XSMC="单位性质名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="FZXSYSBM_MC" XSMC="犯罪线索移送何部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="FZXSYSRQ" XSMC="犯罪线索移送日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="FZXSCZJG_MC" XSMC="犯罪线索处置结果" COLS="1" TYPE="text"/>
+              <FieldItem BM="FZXSCZJGFKRQ" XSMC="犯罪线索处置结果反馈日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="YLAFZYXRXM" XSMC="已立案犯罪嫌疑人姓名" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+      </Card>
+    </AjlbItem>
+  </CaseInfo>
+</Root>

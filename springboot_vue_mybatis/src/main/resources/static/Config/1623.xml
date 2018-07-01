@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--罗川-->
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>1623</AJLBBM>
+      <AJLBMC>职务犯罪案件管理</AJLBMC>
+      <!--案卡项-->
+      <Card>
+        <CardName>card1</CardName>
+        <TITLE>职务犯罪案件线索基本情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>ZWFZAJXSJBXX</OutTabName>
+          <TITLE>职务犯罪案件线索基本情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="涉案人基本情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLTJ=" and TYYW_GG_AJJBXX.BMSAH=TYYW_ZXJC_RYXX.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_ZXJC_RYXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="RYBM" XSMC="人员编码" COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+              <FieldItem BM="CSRQ" XSMC="出生日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZW_MC" XSMC="职务" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZZMM_MC" XSMC="政治面貌" COLS="1" TYPE="text"/>
+              <FieldItem BM="GZDW" XSMC="工作单位/所在学校" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZSDXXDZ" XSMC="住所地详细地址" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="职务犯罪线索信息">
+              <TableItem Name="TYYW_ZXJC_CBZWFZXSXX">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="RYBM" XSMC="人员编码" COLS="1" TYPE="text"/>
+                <FieldItem BM="KGRXM" XSMC="控告举报人姓名" COLS="1" TYPE="text"/>
+                <FieldItem BM="JBRXB_MC" XSMC="(举报人)性别" COLS="1" TYPE="text"/>
+                <FieldItem BM="CSRQ" XSMC="出生日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="JBRGGDW" XSMC="(举报人)工作单位" COLS="1" TYPE="text"/>
+                <FieldItem BM="JBRJTZZ" XSMC="(举报人)家庭住址" COLS="1" TYPE="text"/>
+                <FieldItem BM="JBFS_MC" XSMC="举报方式" COLS="1" TYPE="text"/>
+                <FieldItem BM="LXDH" XSMC="联系电话" COLS="1" TYPE="text"/>
+                <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="AJLY_MC" XSMC="案件来源" COLS="1" TYPE="text"/>
+                <FieldItem BM="XSLX_MC" XSMC="线索类型" COLS="1" TYPE="text"/>
+                <FieldItem BM="SXZM_AYMC" XSMC="涉嫌罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="YSRQ" XSMC="移送日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="BARQ" XSMC="备案日期" COLS="1" TYPE="date"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+      </Card>
+	 
+      <Card>
+        <CardName>card3</CardName>
+        <TITLE>职务犯罪办理情况</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>ZWFZBLQK</OutTabName>
+          <TITLE>职务犯罪办理情况</TITLE>
+          <TYPE>0</TYPE>
+          <TabItem Title="职务犯罪办理情况">
+            <TableItem Name="TYYW_GG_AJJBXX" GLTJ=" and TYYW_GG_AJJBXX.BMSAH=TYYW_ZXJC_ZWFZBLQK.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_ZXJC_ZWFZBLQK">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="RYBM" XSMC="人员编码" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期 " COLS="1" TYPE="date"/>
+              <FieldItem BM="CCRQ" XSMC="初查日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="LARQ" XSMC="立案日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="XSLY_MC" XSMC="线索来源" COLS="1" TYPE="text"/>
+              <FieldItem BM="DA_MC" XSMC="大案" COLS="1" TYPE="text"/>
+              <FieldItem BM="YA_MC" XSMC="要案" COLS="1" TYPE="text"/>
+              <FieldItem BM="FZZT_MC" XSMC="犯罪主体" COLS="1" TYPE="text"/>
+              <FieldItem BM="YDRZW_MC" XSMC="原担任职务" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZCZJ_MC" XSMC="侦查终结" COLS="1" TYPE="text"/>
+              <FieldItem BM="FYSXPJ_MC" XSMC="法院生效判决" COLS="1" TYPE="text"/>
+              <FieldItem BM="YQTX_MC" XSMC="有期徒刑" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJLY_MC" XSMC="案件领域" COLS="1" TYPE="text"/>
+              <FieldItem BM="XSZXHDZZWFZ_MC" XSMC="刑事执行活动中职务犯罪" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFGZRYQTHDZZWFZ_MC" XSMC="司法工作人员其他活动中职务犯罪" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJLX_MC" XSMC="案件类型" COLS="1" TYPE="text"/>
+              <FieldItem BM="TWHLFZ_MC" XSMC="贪污贿赂犯罪" COLS="1" TYPE="text"/>
+              <FieldItem BM="DZQQFZ_MC" XSMC="渎职侵权犯罪" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+        </OutTab>
+      </Card>
+	   <Card>
+          <CardName>card2</CardName>
+           <TITLE>职务犯罪备案审查情况</TITLE>
+          <TYPE>0</TYPE>
+		  <OutTab>
+		  <OutTabName>ZWFZBASCQK</OutTabName>
+		  <TITLE>职务犯罪备案审查情况</TITLE>
+		  <TYPE>0</TYPE>
+            <TabItem Title="人员信息">
+			 <TableItem Name="TYYW_GG_AJJBXX" GLTJ=" and TYYW_GG_AJJBXX.BMSAH=TYYW_ZXJC_RYXX.BMSAH(+)">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+            </TableItem>
+			<TableItem Name="TYYW_ZXJC_RYXX">
+			<FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="RYBM" XSMC="人员编码" COLS="1" TYPE="text"/>
+              <FieldItem BM="XM" XSMC="姓名" COLS="1" TYPE="text"/>
+              <FieldItem BM="XB_MC" XSMC="性别" COLS="1" TYPE="text"/>
+              <FieldItem BM="CSRQ" XSMC="出生日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="ZW_MC" XSMC="职务" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZZMM_MC" XSMC="政治面貌" COLS="1" TYPE="text"/>
+              <FieldItem BM="GGDW" XSMC="工作单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZSDXXDZ" XSMC="住所地详细地址" COLS="1" TYPE="text"/>
+			</TableItem>
+			</TabItem>
+			<OtherTab>
+			<TabItem Title="备案审查情况">
+			<TableItem Name="TYYW_ZXJC_ZWFZBASCQK">
+			  <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="BASCBH" XSMC="备案审查编号" COLS="1" TYPE="text"/>
+                <FieldItem BM="RYBH" XSMC="人员编码" COLS="1" TYPE="text"/>
+                <FieldItem BM="JYCS_MC" XSMC="羁押场所" COLS="1" TYPE="text"/>
+                <FieldItem BM="SXZM_AYMC" XSMC="涉嫌罪名" COLS="1" TYPE="text"/>
+                <FieldItem BM="BASJ" XSMC="备案时间" COLS="1" TYPE="date"/>
+                <FieldItem BM="JDSJ" XSMC="决定时间" COLS="1" TYPE="date"/>
+                <FieldItem BM="QZCS_MC" XSMC="强制措施" COLS="1" TYPE="text"/>
+                <FieldItem BM="BAJD_MC" XSMC="备案阶段" COLS="1" TYPE="text"/>
+                <FieldItem BM="PJJG_MC" XSMC="判决结果" COLS="1" TYPE="text"/>
+			</TableItem>
+			</TabItem>
+			</OtherTab>
+			</OutTab>
+        </Card>
+    </AjlbItem>
+  </CaseInfo>
+</Root>

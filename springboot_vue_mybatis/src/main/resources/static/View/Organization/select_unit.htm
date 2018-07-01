@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+</head>
+<body>
+    <!--页面JS加载，放在头部不能正确加载-->
+    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("/Script/Organization/select_unit.js");
+    </script>
+
+    <!--部门管理-->
+    <div style="margin:2px">
+        <a id="btn_org_unit_assign" href="#" class="easyui-linkbutton">下级单位授权</a> 
+<!--        <a id="btn_org_unit_add" href="#" class="easyui-linkbutton">添加部门</a> 
+        <a href="#" class="easyui-linkbutton" disabled="disabled">删除部门</a> 
+        <a href="#" class="easyui-linkbutton" disabled="disabled">添加角色</a> 
+        <a href="#" class="easyui-linkbutton" disabled="disabled">删除角色</a>-->
+    </div>
+    <div class="easyui-panel" data-options="fit:'true',border:true"
+         style="border-left:0px; border-right:0px; border-bottom:0px;">
+        <!--单位信息-->
+        <div id="pnl_org_unit_info" class="easyui-panel" title="单位信息" data-options="fit:'true',border:false"
+             style="width: 100%; padding: 10px;" >
+            <div>
+                单位名称 <input id="txt_org_unit_dwmc" class="easyui-textbox" style="width: 200px; height: 22px"/>
+                单位简称 <input id="txt_org_unit_dwjc" class="easyui-textbox" style="width: 200px; height: 22px"/>
+                单位级别 <input id="txt_org_unit_dwjb" class="easyui-textbox" style="width: 200px; height: 22px"/>
+            </div>
+        </div>
+        <!--部门新增-->
+        <div id="pnl_org_unit_department" class="easyui-panel" title="添加部门" 
+            style="width: 100%; padding: 10px;" data-options="closed:true,fit:'true',border:false">
+            <div>
+                部门名称 <input id="txt_org_unit_bmmc" class="easyui-textbox" style="width: 200px; height: 22px"/>
+                部门简称 <input id="txt_org_unit_bmjc" class="easyui-textbox" style="width: 200px; height: 22px"/>
+                部门序号 <input id="txt_org_unit_bmxh" class="easyui-textbox" style="width: 200px; height: 22px"/>
+            </div>
+            <div style="margin-top: 10px;">
+                输入备注 <input id="txt_org_unit_bmbz" class="easyui-textbox" data-options="multiline:true"
+                    style="width: 300px; height: 80px" />
+                <a id="btn_org_unit_bm_save" class="easyui-linkbutton" style="width: 80px; height: 25px;"
+                    data-options="iconCls:'icon-save'">保存</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

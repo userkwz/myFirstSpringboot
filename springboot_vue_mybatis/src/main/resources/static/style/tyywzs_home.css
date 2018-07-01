@@ -1,0 +1,267 @@
+.tyywzs_home{
+    width: 100%;
+    height: 100%;
+}
+.tyywzs_home_title{
+    background: url("../images/yew_03.png") no-repeat;
+    width: 100%;
+    height: 50px;
+    background-size: 100% 100%;
+    margin: 20px 0px;
+    padding: 0px 30px;
+}
+.tyywzs_home_title div{
+    font-size: 16px;
+    color: #00ace6;
+    line-height: 50px;
+    float: left;
+    margin: 0px 15px;
+    cursor: pointer;
+}
+.tyywzs_home_title_sy{
+    font-size: 18px !important;
+    color: #00ffff !important;
+}
+.tyywzs_home_big{
+    width: 100%;
+    height: calc(100% - 90px);
+}
+.tyywzs_home_big_left{
+    width: 275px;
+    height: 100%;
+    /* background: #08143c; */
+    padding: 20px 20px 0px 0px;
+    float: left;
+}
+.tyywzs_home_big_left >p{
+  
+   
+}
+.tyywzs_home_big_left_foot{
+       width: 100%;
+    height: calc(100% - 51px);
+    overflow: auto;
+    /* margin-top: 25px; */
+    padding-top: 20px;
+    background: rgba(255,255,255,.3);
+}
+.tyywzs_home_big_left_fl:nth-of-type(1){
+    margin-top: 0px;
+}
+.tyywzs_home_big_left_fl{
+ 
+       width: 189px;
+    overflow: hidden;
+    background-size: 100% 100%;
+    margin-top: 15px;
+    position: relative;
+    /* padding: 0px 25px 0px 35px; */
+    cursor: pointer;
+    border-radius:4px;
+    margin-left: 23px;
+    padding-left: 36px;
+}
+.ywfl_click {
+    background: #1180cc;
+    
+}
+.ywfl_click .ywsize {
+    color:#ffffff;
+}
+.drop_down{
+    width: 20px;
+    height: 18px;
+    margin-top: 14px;
+    float: left;
+    background: url(../images/erji.png) no-repeat;
+    margin-left: 16px;
+}
+.ywsize{
+    color: #0966AF;
+    font-size: 18px;
+    line-height: 38px;
+    float: left;
+    margin-left: 15px;
+}
+.zcyw{
+    background: url("../images/yew_15.png") no-repeat;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    top: 9px;
+    float: left;
+}
+.gsyw{
+    background: url("../images/yew_19.png") no-repeat;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    top: 9px;
+    float: left;
+}
+.ftyw{
+    background: url("../images/yew_22.png") no-repeat ;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    top: 9px;
+    float: left;
+}
+.fdyw{
+    background: url("../images/yew_25.png") no-repeat;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    top: 9px;
+    float: left;
+}
+.mhyw{
+    background: url("../images/yew_28.png") no-repeat;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    top: 9px;
+    float: left;
+}
+.ksyw{
+     background: url("../images/yew_32.png") no-repeat;
+     width: 20px;
+     height: 18px;
+     position: relative;
+     top: 9px;
+     float: left;
+ }
+.yfyw{
+    background: url("../images/yew_35.png") no-repeat;
+    width: 20px;
+    height: 18px;
+    position: relative;
+    top: 9px;
+    float: left;
+}
+.tyywzs_home_big_center{
+    /* background: url("../images/yew_07.png") no-repeat; */
+    background-size: 100% 100%;
+    float: left;
+    height: 100%;
+    margin: 0px 15px;
+    width: calc(100% - 755px);
+}
+.tyywzs_home_big_right{
+    /* background: url("../images/yew_09.png")no-repeat; */
+    background-size: 100% 100%;
+    width: 450px;
+    height: 100%;
+    float: right;
+}
+.tyywzs_home_big_right_top{
+    width: 100%;
+    height: 60%;
+    padding: 20px 2px;
+}
+.tyywzs_home_big_right_top_tit{
+
+   
+
+}
+.tyywzs_home_big_right_fot{
+    width: 100%;
+    height: 40%;
+    padding: 0 2px 20px 2px;
+    /*overflow: auto;*/
+}
+.tyywzs_home_big_center_top{
+    width: 100%;
+    height: 55%;
+    padding: 21px 19px 25px 0px;
+}
+.tyywzs_home_big_center_fot{
+    width: 100%;
+    height: 45%;
+    padding: 25px 18px 25px 1px;
+}
+.tyywzs_home_uldiv{
+    width: 100%;
+    padding: 20px 20px 0 20px;
+    height: calc(100% - 23px);
+    background: rgba(255,255,255,.3);
+}
+.tyywzs_home_uldiv ul{
+    float: left;
+    width: 100%;
+    border-bottom: 3px solid #8bbae3;
+    height: 30px;
+    list-style: none;
+}
+.tyywzs_home_uldiv ul li{
+    float: left;
+    color: #333333;
+    font-size: 16px;
+    padding: 0px 15px;
+    line-height: 15px;
+    height: 30px;
+    cursor: pointer;
+}
+.tyywzs_home_uldiv_click{
+    color: #0a66ae !important;
+    border-bottom: 3px solid #0c67b3;
+}
+.tyywzs_home_table_div{
+    width: 100%;
+    height: calc(100% - 50px);
+    float: left;
+    margin-top: 20px;
+    overflow: auto;
+}
+.tyywzs_home_table_div table{
+    width: 100%;
+    text-align: center;
+}
+.tyywzs_home_table_div table thead{
+    color: #00a5dd;
+    font-size: 18px;
+    /*padding-left: 30px;*/
+    background: #0c1d4a;
+    height: 34px;
+    line-height: 34px;
+}
+.tyywzs_home_table_div table tbody{
+    color: #00a5dd;
+    font-size: 14px;
+    line-height: 34px;
+}
+
+.tyywzs_home_table_div table tbody tr td a{
+    color: #00a5dd;
+}
+
+.tyywzs_ajrq{
+    width: 100%;
+}
+.ul_li {
+    width: calc(100% - 60px);
+    margin-left: 44px;
+    overflow: auto;
+    color: #0966AF;
+    display: none;
+    height: 45px;
+}
+.ul_li ul {
+   margin-top:5px; 
+}
+.ywfl_click .ul_li{
+   
+    color: #fff;
+}
+.tabe_tr1 {
+    background:rgba(255,255,255,.6);
+}
+.tabe_tr1 td {
+    color:#0a67b4
+}
+.tabe_tr {
+    border-bottom:1px dashed #b0c9de;
+}
+.tabe_tr td {
+    color:#333;
+}

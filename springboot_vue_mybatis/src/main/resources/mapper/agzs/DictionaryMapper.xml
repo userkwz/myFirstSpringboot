@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swx.dao.DictionaryMapper">
+    <resultMap id="fldmMap" type="java.util.Map">
+
+    </resultMap>
+<select id="GetDataItemListByRemote" parameterType="java.util.HashMap" statementType="CALLABLE">
+     <![CDATA[
+        CALL pkg_dictionary.proc_get_fldmbydblink(
+                                          #{p_lbbm,mode=IN,jdbcType=VARCHAR },
+                                          #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=fldmMap,javaType=java.sql.ResultSet},
+                                          #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+     ]]>
+</select>
+
+</mapper>

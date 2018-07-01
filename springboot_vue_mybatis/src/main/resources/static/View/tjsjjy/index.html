@@ -1,0 +1,44 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+		"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+<html style="height: 100%;">
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css" />
+	<link rel="stylesheet" type="text/css" href="../../Script/jquery-easyui-1.4.3/themes/icon.css" />
+	<!--<link rel="stylesheet" type="text/css" href="jquery-easyui-1.4.3/demo/demo.css" />-->
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/questionAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/unitAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/validationReport.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/operationAnalysis.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/AJXXXX.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/basechart.css"/>
+    <link rel="stylesheet" type="text/css" href="../../Style/tjsjjy/BMSAH.css"/>
+    <!--<script src="" type="text/javascript" charset="utf-8"></script>-->
+</head>
+
+<body style="height: 100%;">
+<div class="easyui-layout" style="width: 100%;height: 100%;">
+	<!--<div data-options="region:'north'" class="header">-->
+	<!--<img src="img/logo.png" />-->
+	<!--</div>-->
+	<div data-options="region:'west'" class="sidebar">
+		<ul class="menu-ul">
+			<li onclick="loadhome()"><i class="icon1" style=""></i>系统首页</li>
+			<li onclick="loadbasechart()"><i class="icon6"></i>基础表审核解析</li>
+			<li onclick="loadoperation()"><i class="icon2"></i>业务分析</li>
+			<li onclick="loadquestion()"><i class="icon3"></i>问题分析</li>
+			<li onclick="loadunit()"><i class="icon4"></i>单位分析</li>
+			<li onclick="loadvalidation()"><i class="icon5"></i>整改通知</li>
+		</ul>
+	</div>
+	<div id='con_href' data-options="region:'center'" style="min-height: 680px">
+
+	</div>
+</div>
+<div id="modal" class="easyui-window" modal="true" closed="true" shadow="true" width="95%" height="95%" title="个案查看" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,"></div>
+<!--<div id="rmodel"></div>-->
+</body>
+
+</html>

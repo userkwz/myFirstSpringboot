@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <!--李蛟龙-->
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <AjlbItem>
+      <AJLBBM>0213</AJLBBM>
+      <AJLBMC>侦查活动监督复查</AJLBMC>
+      <!--案卡项-->
+      <!--案卡项目分隔符-->
+      <Card>
+        <CardName>Card01</CardName>
+        <TITLE>侦查活动监督复查</TITLE>
+        <type>0</type>
+        <OutTab>
+          <OutTabName>CARDD1</OutTabName>
+          <TITLE>侦查活动监督复查</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="受理情况">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="TYSAH" XSMC="统一受案号" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+              <FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+
+              <FieldItem BM="YSAY_AYMC" XSMC="案由" COLS="1" TYPE="text"/>
+			  <FieldItem BM="ZCJG_DWMC" XSMC="侦查机关" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSDW_DWMC" XSMC="要求复查单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFGZAJ" XSMC="关注案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+              <FieldItem BM="YSRJDH" XSMC="移送人及电话" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBBM_MC" XSMC="承办部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="CBR" XSMC="承办检察官" COLS="1" TYPE="text"/>
+            </TableItem>
+          </TabItem>
+          <OtherTab>
+            <TabItem Title="原侦查活动监督情况">
+              <TableItem Name="TYYW_ZJ_ZCHDJD" >
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="JDLX_MC" XSMC="监督类型" COLS="1" TYPE="text"/>
+                <FieldItem BM="SARXM" XSMC="涉案人姓名" COLS="1" TYPE="text"/>
+                <FieldItem BM="AJLY_MC" XSMC="案件来源" COLS="1" TYPE="text"/>
+                <FieldItem BM="ZCHDWFQX_MCS" XSMC="侦查活动违法情形" COLS="1" TYPE="text"/>
+                <FieldItem BM="WFDWMC" XSMC="违法单位名称" COLS="1" TYPE="text"/>
+                <FieldItem BM="YQTGCLRQ" XSMC="要求提供材料日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="YQZCJGSMLYRQ" XSMC="要求侦查机关说明理由日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="SMTCJZRQ" XSMC="书面提出纠正日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="JZWFTZSWH" XSMC="纠正违法通知书文号" COLS="1" TYPE="text"/>
+                <FieldItem BM="HFRQ" XSMC="回复日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="DCLSRQ" XSMC="督促落实日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="ZCRQ" XSMC="纠正日期" COLS="1" TYPE="date"/>
+              </TableItem>
+            </TabItem>
+            <TabItem Title="复查情况">
+              <TableItem Name="TYYW_ZJ_ZCHDJD">
+                <FieldItem BM="BMSAH" XSMC="部门受案号" COLS="1" TYPE="text"/>
+                <FieldItem BM="YQFCLY" XSMC="要求复查理由" COLS="1" TYPE="text"/>
+                <FieldItem BM="FCJDRQ" XSMC="复查决定日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="FCJG_MC" XSMC="复查结果" COLS="1" TYPE="text"/>
+                <FieldItem BM="XSJYBGRQ" XSMC="向上级院报告日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="CXYJZWFTZSRQ" XSMC="撤销原纠正违法通知书日期" COLS="1" TYPE="date"/>
+                <FieldItem BM="FCJDSDRQ" XSMC="复查决定送达日期" COLS="1" TYPE="date"/>
+              </TableItem>
+            </TabItem>
+          </OtherTab>
+        </OutTab>
+      </Card>
+    </AjlbItem>
+  </CaseInfo>
+</Root>

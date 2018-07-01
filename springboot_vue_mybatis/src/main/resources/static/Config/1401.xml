@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+  <!--案件信息关联配置-->
+  <CaseInfo>
+    <!--案件类别项-->
+    <AjlbItem>
+      <AJLBBM>1401</AJLBBM>
+      <AJLBMC>不予接收案件</AJLBMC>
+      <Card>
+        <CardName>CARD0</CardName>
+        <TITLE>不予受理案件</TITLE>
+        <TYPE>0</TYPE>
+        <OutTab>
+          <OutTabName>CARDD1</OutTabName>
+          <TITLE>不予受理案件</TITLE>
+          <TYPE>0</TYPE>
+          <!--主Tab页-->
+          <TabItem Title="不予受理案件信息">
+            <TableItem Name="TYYW_GG_AJJBXX">
+              <FieldItem BM="AJMC" XSMC="案件名称" COLS="1" TYPE="text"/>
+              <FieldItem BM="SLRQ" XSMC="受理日期" COLS="1" TYPE="date"/>
+              <FieldItem BM="AJLB_MC" XSMC="案件类别" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSWSWH" XSMC="移送文书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSAY_AYMC" XSMC="移送案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSQTAY_AYMCS" XSMC="移送其他案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSDW_DWMC" XSMC="移送单位" COLS="1" TYPE="text"/>
+              <FieldItem BM="YSYJ_MC" XSMC="移送意见" COLS="1" TYPE="text"/>
+              <FieldItem BM="ZCJG_DWMC" XSMC="侦查机关" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFGZAJ" XSMC="是否关注案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFDBAJ" XSMC="是否督办案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFSWAJ" XSMC="是否涉外案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFJBAJ" XSMC="是否交办案件" COLS="1" TYPE="text"/>
+              <FieldItem BM="AQZY" XSMC="案情摘要" COLS="3" TYPE="text"/>
+              <FieldItem BM="FZ" XSMC="附注" COLS="3" TYPE="text"/>
+              <FieldItem BM="AJLB_BM" XSMC="案件类别编码" COLS="1" TYPE="text"/>
+            </TableItem>
+            <TableItem Name="TYYW_AG_LCJKXX" GLLX="1"  GLTJ="   and TYYW_GG_AJJBXX.BMSAH=TYYW_AG_LCJKXX.BMSAH(+) and TYYW_GG_AJJBXX.TYSAH=TYYW_AG_LCJKXX.TYSAH(+)">
+              <FieldItem BM="YZCJG_DWMC" XSMC="源侦查机关" COLS="1" TYPE="text"/>
+              <FieldItem BM="YAJLB_MC" XSMC="源案件类别" COLS="1" TYPE="text"/>
+              <FieldItem BM="YYSWSWH" XSMC="源移送文书文号" COLS="1" TYPE="text"/>
+              <FieldItem BM="YYSAY_AYMC" XSMC="源移送案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="YYSQTAY_AYMCS" XSMC="源移送其他案由" COLS="1" TYPE="text"/>
+              <FieldItem BM="SFFXWGQX" XSMC="是否发现违规情形" COLS="1" TYPE="text"/>
+              <FieldItem BM="JKWGQX_MCS" XSMC="监控违规情形" COLS="1" TYPE="text"/>
+              <FieldItem BM="YAQZY" XSMC="源案情摘要" COLS="3" TYPE="text"/>
+              <FieldItem BM="YCBBM_MC" XSMC="源承办部门" COLS="1" TYPE="text"/>
+              <FieldItem BM="YCBR" XSMC="源承办人" COLS="1" TYPE="text"/>
+            </TableItem>
+            <!--其他Tab页-->
+            <OtherTab>
+            </OtherTab>
+          </TabItem>
+        </OutTab>
+      </Card>
+    </AjlbItem>
+  </CaseInfo>
+</Root>
+

@@ -1,0 +1,90 @@
+.tab_left{
+    float: left;
+    cursor: pointer;
+}
+.tab_center{
+    float: left;
+    width: 93%;
+    height: 39px;
+    overflow: hidden;
+    left: 30px;
+    position: relative;
+}
+.tab{
+     height: 38px;
+    border-bottom: 3px solid #4c9bcf;
+    list-style: none;
+    cursor: pointer;
+    position: absolute;
+    float: left;
+    width: 500%;
+    top:0;
+    left:0;
+    /* width: 90%; */
+}
+.leef_width{
+    padding: 0 29px 0 23px;
+    background: #b6dcf2;
+    line-height: 35px;
+    float: left;
+    color: #0167b4;
+    font-size: 16px;
+    position: relative;
+    margin-right: 8px;
+}
+.leef_width div{
+    font-size: 16px;
+}
+.close_click{
+    position:absolute;
+    top:0;
+    right: 5px;
+    color: #4267b5;
+}
+.tab_right{
+
+    float: right;
+    cursor: pointer;
+    margin-right: 7px;
+}
+.tab_menu{
+    width: 15px;
+    height: 10px;
+    float: right;
+    margin-right: 9px;
+    background:url(../images/index/16.png);
+    margin-top: 17px;
+    cursor: pointer;
+    position: relative;
+}
+.tab_menu .gbsy{
+    position: absolute;
+    top: 10px;
+    left: -74px;
+    background: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    padding: 5px 0;
+    display: none;
+
+}
+.tab_menu .gbsy .gbsy_buttom{
+    width: 99px;
+    height: 27px;
+    border-bottom: 1px dashed #abcfe9;
+    border-top: 1px dashed #abcfe9;
+    line-height: 27px;
+    text-align: center;
+
+}
+.tab_menu .gbsy .gbsy_buttom:hover{
+    background: #4ea8e7;
+    color: #ffffff;
+}
+.leef_width_click{
+    background: #1180cc;
+    color: #ffffff;
+}
+.leef_width_click .close_click{
+    color: #ffffff;
+}

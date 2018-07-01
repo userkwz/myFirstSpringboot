@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org/DTD Mapper 3.0" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.swx.dao.CommonMapper">
+    <resultMap id="bmMap" type="java.util.Map">
+       <result property="BM" column="BM"/>
+        <result property="FBM" column="FBM"/>
+        <result property="MC" column="MC"/>
+    </resultMap>
+<select id="GetBMBM_Combo" parameterType="java.util.HashMap" statementType="CALLABLE">
+     <![CDATA[
+        CALL pkg_common.proc_get_bmbm(
+                                          #{p_dwbm,mode=IN,jdbcType=VARCHAR },
+                                          #{p_cursor,mode=OUT,jdbcType=CURSOR,resultMap=bmMap,javaType=java.sql.ResultSet},
+                                          #{p_errmsg,mode=OUT,jdbcType=VARCHAR})
+
+     ]]>
+</select>
+
+</mapper>

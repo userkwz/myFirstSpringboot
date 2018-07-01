@@ -1,0 +1,65 @@
+﻿.mainindex{padding:20px; overflow:hidden;}
+.welinfo{height:32px; line-height:32px; padding-bottom:8px;}
+.welinfo span{float:left;}
+.welinfo b{padding-left:8px;}
+.welinfo a{text-decoration:none;padding-left:15px;color:#EB5409;}
+.welinfo a:focus{text-decoration:none;color:#000;outline:none;blr:expression(this.onFocus=this.blur());}
+.welinfo a:hover{color:#000;text-decoration:none;}
+.welinfo i{font-style:normal; padding-left:8px;}
+.xline{border-bottom:solid 1px #EADCC8; height:5px;}
+.iconlist{display:block;margin:0 auto;margin-left:11px;padding:0;list-style:none; overflow:hidden;}
+.iconlist li{display: block;margin: 0;padding: 7px;
+    list-style: none;
+    box-sizing: border-box;
+    text-align: left;
+    float: left;
+    margin-right: 8px;
+    padding-top: 14px;
+    margin-top: 15px;
+    border: 1px solid #89cae5;
+    border-radius: 5px;
+    width: 292px;
+    height: 88px;}
+ .zy_pone
+ {
+    width: 200px;
+    height: 24px;
+    /* background: red; */
+    line-height: 24px;
+    font-size: 17px;
+    color: #666666;
+    float: right;
+    margin: 0px;
+     }  
+.zy_ptwo
+{
+    width: 200px;
+    height: 30px;
+    float: right;
+    /* background: red; */
+    padding: 0px;
+    margin: 0px;
+    color: #e67433;
+    margin-top: -35px;
+    font-size: 31px;
+    } 
+.iconlist li p{}
+.iconlist li p a{text-decoration:none;color:#000;}
+.iconlist li p a:focus{text-decoration:none;color:#EB5409;outline:none;blr:expression(this.onFocus=this.blur());}
+.iconlist li p a:hover{color:#EB5409;text-decoration:none;}
+.ibox{clear:both; padding-left:40px; padding-top:18px; overflow:hidden; padding-bottom:18px;}
+.ibtn{background:url(/Images/ibtnbg.png) repeat-x;border:solid 1px #bfcfe1; height:23px; line-height:23px; display:block; float:left; padding:0 15px; cursor:pointer;}
+.ibtn img{margin-top:5px; float:left; padding-right:7px;}
+.box{height:15px;}
+.infolist{display:block;margin:0;padding:0;list-style:none;padding-left:40px; padding-bottom:15px;}
+.infolist li{ display:block;margin:0;padding:0;list-style: none;line-height:23px; height:23px; margin-bottom:8px;}
+.infolist li span{float:left; display:block; margin-right:10px;}
+.infolist li a{text-decoration:none;padding-left:15px;color:#000;}
+.infolist li a:focus{text-decoration:none;color:#EB5409;outline:none;blr:expression(this.onFocus=this.blur());}
+.infolist li a:hover{color:#EB5409;text-decoration:none;}
+.uimakerinfo{padding-left:40px; background:url(../images/search.png) no-repeat 10px 15px; padding-top:15px; padding-bottom:20px;}
+.umlist{display:block;margin:0;padding:0;list-style:none;padding-left:40px;}
+.umlist li{display:block;margin:0;padding:0;list-style: none;float:left; background:url(/Images/ulist.png) no-repeat 0 5px; padding-left:10px; margin-right:15px;}
+.umlist li a{text-decoration:none;padding-left:15px;color:#000;}
+.umlist li a:focus{text-decoration:none;color:#EB5409;outline:none;blr:expression(this.onFocus=this.blur());}
+.umlist li a:hover{color:#EB5409;text-decoration:none;}

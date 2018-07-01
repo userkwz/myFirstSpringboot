@@ -1,0 +1,156 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../../style/glbb_home.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../../style/tab_tytwzs.css"/>-->
+    <link rel="stylesheet" type="text/css" href="../../style/tyywzs_home.css"/>
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js"></script>
+    <!--<script src="../../Script/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript" charset="utf-8"></script>-->
+    <script type="text/javascript" src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js"></script>
+    <script type="text/javascript" src="../../Script/View/AJXX/lcjk.js"></script>
+    <style type="text/css">
+        .ajlcjklb{
+            width: 100%;
+            height: calc(100% - 113px);
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="lcjk_panel" class="tyywzs_home">
+        <div id="blbb_title" class="blbb_title" data-options="border:false" style="padding: 5px 0px 5px 8px; line-height: 35px; height: auto; margin-top:0px;">
+            <div class='int'>
+                <span style="line-height: 34px;">承办单位：</span>
+                <input id="ct_ajjbxx_dwbm" class="easyui-combotree Company" value="" style="height: 100%;"/>
+            </div>
+            <div class='chek' style="margin-top: 5px">
+                <input id="cb_ajjbxx_sfbhxj" class="r-input" type="checkbox" name="calogin"
+                       checked="checked">
+                <label for="cb_ajjbxx_sfbhxj" style="cursor: pointer; font-weight: normal; color: #018ab7; font-size: 14px">
+                    包含下级院</label>
+            </div>
+            <!--<div class='int' style="width: 15%">-->
+                <!--<span style="line-height: 34px;">承办部门：</span>-->
+                <!--<input id="cb_ajjbxx_bmbm" class="easyui-combobox Company" value="" style="height: 100%;"/>-->
+            <!--</div>-->
+            <div class="time" style="margin: 6px 0px 0px 30px;float: left">
+                <span id="" style="color: #018ab7">承办部门： </span>
+                <div class="kais" style="width: 200px">
+                    <input id="cb_ajjbxx_bmbm" class="easyui-combobox Company cc" name="dept"/>
+                </div>
+            </div>
+            <div class="time" style="margin: 6px 0px 0px 30px;float: left">
+                <span id="" style="color: #018ab7">案件类别： </span>
+                <div class="kais" style="width: 200px">
+                    <input id="cb_ajjbxx_ajlb" class="easyui-combobox Company cc" name="dept"/>
+                </div>
+            </div>
+            <div class="time" style="margin: 6px 0px 0px 30px;float: left">
+                <span id="" style="color: #018ab7">承办人： </span>
+                <div class="kais" style="width: 200px">
+                    <input id="tb_ajjbxx_cbrmc" class="easyui-combobox Company cc" name="dept"/>
+                </div>
+            </div>
+            <div class="time" style="margin: 6px 0px 0px 30px;float: left">
+                <span id="" style="color: #018ab7">案件名称： </span>
+                <div class="kais" style="width: 200px">
+                    <input id="tb_ajjbxx_ajmc" class="easyui-combobox Company cc" name="dept"/>
+                </div>
+            </div>
+            <div class="time" style="margin: 6px 00px 0px 30px;clear: left;float: left">
+                <span style="color: #018ab7">部门受案号： </span>
+                <div class="kais kaisbig" style="width: 645px">
+                    <input id="tb_ajjbxx_xtsah" class="easyui-textbox Company cc" name="dept"/>
+                </div>
+            </div>
+            <!--<div class='int' style="width: 15%">-->
+                <!--<span style="line-height: 34px;">案件类别：</span>-->
+                <!--<input id="cb_ajjbxx_ajlb" class="easyui-combobox Company" value="" style="height: 100%;"/>-->
+            <!--</div>-->
+            <!--<div class='int' style="width: 15%">-->
+                <!--<span style="line-height: 34px;">承办人：</span>-->
+                <!--<input id="tb_ajjbxx_cbrmc" class="easyui-textbox Company cc" style="width: 150px; height: 22px" />-->
+            <!--&lt;!&ndash;</div>&ndash;&gt;-->
+            <!--<div class='int' style="width: 15%">-->
+                <!--<span style="line-height: 34px;">案件名称：</span>-->
+                <!--<input id="tb_ajjbxx_ajmc" class="easyui-textbox Company cc" style="width: 150px; height: 22px" />-->
+            <!--</div>-->
+            <!--<div class='int' style="clear: left;padding-bottom: 7px">-->
+                <!--<span style="line-height: 34px;">部门受案号：</span>-->
+                <!--<input id="tb_ajjbxx_xtsah" class="easyui-textbox Company cc" style="width: 150px; height: 22px" />-->
+            <!--</div>-->
+            <div class='time' style="float: left;margin: 6px 0px 0px 30px">
+                <span id="Span1">受理日期从：</span>
+                <div class="kais" style="width: 170px">
+                    <input id="dt_ajjbxx_begin" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                           data-options="required:true" />
+                </div>
+                <span style="margin-left: 10px">到</span>
+                <div class="kais" style="width: 170px">
+                    <input id="dt_ajjbxx_end" class="easyui-datebox Company cc" style="width: 120px; height: 22px"
+                           data-options="required:true" />
+                </div>
+            </div>
+            <!--<div class='wbk' id="btnSearch_tjbb_ajjbxx">-->
+                <!--<div class="cxan_ys">-->
+                <!--</div>-->
+                <!--<span style="padding: 0px 16px 0px 6px">查询</span>-->
+            <!--</div>-->
+            <div id="btn_lcjk_Search" class="wbk" style="float: left;margin: 6px 0px 0px 117px" data-options="iconCls:'icon-search'" >
+                <div class="cxan_ys"></div>
+                <span style="padding: 0px 21px 0px 6px">查询</span>
+            </div>
+            <div class='wbk dcwordwd' id="btn_lcjk_Exportfxwd" style="float: left;margin: 6px 0px 0px 35px">
+                <span style="padding: 0px 16px 0px 6px">导出WORD分析文档</span>
+            </div>
+            <div style='clear: both;'>
+            </div>
+        </div>
+        <div class="easy_tabel" id="ajlcjklb" data-options="region:'center'">
+            <table id="dg_tjbb_ajjbxx"></table>
+        </div>
+    </div>
+        <div id="jdxm" class="easyui-window" title="流程监控重点项目列表" style="width: 1060px; height: 640px;
+        padding: 10px 10px 10px 10px;" data-options="modal:true,collapsible:false,minimizable:false,maximizable:false,closed:true,">
+            <div style="width: 100%; height: 85%;">
+                <table id="tree_ajlb" class="easyui-treegrid" style="width: 100%; height: 100%">
+                </table>
+            </div>
+            <div style="width: 100%; height: 5%;line-height: 35px;">
+                <div class="int">
+                    部门受案号：
+                    <input id="tb_bmsah" class="easyui-textbox Company cc" style="width: 260px; height: 22px"
+                           data-options="editable:false" />
+                </div>
+                <label style="margin-left: 12px">
+                </label>
+                <div class="int">
+                    监控措施：
+                    <select id="cb_ajjbxx_jkcs" class="easyui-combobox" name="dept" style="width: 200px;">
+                        <option value="0">口头警告</option>
+                        <option value="1">书面警告</option>
+                    </select>
+                </div>
+                <label style="margin-left: 12px">
+                </label>
+                <div class="int">
+                    具体情况：
+                    <input id="tb_gznr" class="easyui-textbox" style="width: 260px; height: 22px" />
+                </div>
+                <label style="margin-left: 12px">
+                </label>
+                <br/>
+                <div class="int">
+                    <span style='margin-left: 12px;'>发现方式：</span><input id="cb_ajjbxx_fxfs" class="easyui-textbox" style="width: 260px; height: 22px" />
+                </div>
+                <label style="margin-left: 12px">
+                </label>
+                <div class="wbk" id="btnInsert_ajjbxx" >
+                    <span style="padding: 0px 16px 0px 6px">查询</span>
+                </div>
+
+            </div>
+        </div>
+</body>
+</html>

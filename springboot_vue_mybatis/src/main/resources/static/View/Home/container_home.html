@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="../../style/reset.css">
+    <link rel="stylesheet" href="../../style/container_home.css">
+    <link href="../../Script/jquery-easyui-1.4.3/themes/default/easyui.css"  rel="stylesheet" type="text/css"/>
+    <link href="../../Script/jquery-easyui-1.4.3/themes/icon.css" rel="stylesheet" type="text/css" />
+    
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.min.js" type="text/javascript"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/locale/easyui-lang-zh_CN.js" type="text/javascript"
+        charset="utf-8"></script>
+    <script src="../../Script/jquery-easyui-1.4.3/jquery.easyui.plus.js" type="text/javascript"></script>
+    <title>首页</title>
+</head>
+
+<body>
+    <style>
+        .textbox {
+            height: 180px !important;
+            border:0;
+        }
+        .panel-title {
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            height: 30px;
+            line-height: 37px;
+            padding: 0px 0px 0px 30px;
+        }
+    </style>
+    <script type="text/javascript">
+        BaseFunc.RefshHeadScriptTage("../../Script/View/Home/Index.js");
+
+    </script>
+    
+    <!-- 首页内容 -->
+    <div class="tab_content clearfix">
+        <div class="tab_content_left fl">
+            <div class="list" id="ulHome">
+                
+            </div>
+        </div>
+        <div class="tab_content_right fr">
+            <!-- 通知公告 -->
+            <div class="tzgg">
+                <div class="title">
+                    <h2>通知公告</h2>
+                </div>
+                <div class="content">
+                    <ul class="clearfix" id="home_msg">
+                        
+                    </ul>
+                </div>
+            </div>
+            <!-- 通知公告 -->
+
+            <!-- 快捷入口 -->
+            <div class="kjrk">
+                <div class="title">
+                    <h2>快捷入口</h2>
+                </div>
+                <div class="content">
+                    <div class="list" id="tab_home_kjrk">
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- 快捷入口 -->
+        </div>
+    </div>
+    <div id="tzxx_win" class="easyui-window" style="width: 1060px; height: 800px;"  title="通知公告详细" data-options="closed:true,collapsible:false,maximizable:false,minimizable:false,modal:true">
+        <div style="margin-top:10px">
+            <div style="width:100%;height:60px;line-height:30px;text-align:center;">
+                <span id="tzxx_win_bt" style="color: #127fcd; text-align: center"></span>
+
+                <div>
+                    <span id="tzxx_win_sj" style="color: #999999; text-align: center"></span>
+                </div>
+            </div>
+            <div style="width: 100%; height: 185px">
+                <br />
+                <pre id="tzxx_win_xxnr" style="width: 100%; height: 620px; border: 1px solid #b5bdc8; overflow: auto; color: #333; white-space: pre-wrap !important; word-wrap: break-word !important; overflow-y: auto;"></pre>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
